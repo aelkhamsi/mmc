@@ -19,7 +19,7 @@ import { Roles } from 'src/decorators/roles.decorator';
 import { RolesGuard } from 'src/guards/roles.guard';
 import { ADMIN_ROLE, USER_ROLE } from 'src/constants';
 
-@Controller('mdm-api/users')
+@Controller('mmc-api/users')
 export class UserController {
   constructor(private readonly userService: UserService) {}
 

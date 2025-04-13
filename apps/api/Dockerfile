@@ -10,6 +10,6 @@ RUN npm run build
 
 RUN rm -rf ./src
 
-EXPOSE 9000
+EXPOSE 9009
 
 CMD ["npm", "run", "start:prod"]

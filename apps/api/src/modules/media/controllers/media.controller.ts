@@ -9,7 +9,7 @@ import {
 import { MediaService } from 'src/modules/media/services/media.service';
 import { GetSignedURLDto } from '../dto/get-signed-url.dto';
 
-@Controller('mdm-api/media')
+@Controller('mmc-api/media')
 export class MediaController {
   constructor(private readonly mediaService: MediaService) {}
 
