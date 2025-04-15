@@ -13,9 +13,10 @@ export const sanitizeApplication = (application: any) => {
 export const excludeFileFields = ({
   status,
   fileCnie,
-  fileMembersCnie,
+  fileSchoolCertificate,
   fileGrades,
   fileParentalAuthorization,
+  fileRegulations,
   termsAgreement,
   ...keep
 }: any) => keep

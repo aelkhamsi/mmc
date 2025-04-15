@@ -19,7 +19,6 @@ export const steps: Step[] = [
     id: 'Étape 3',
     name: 'Motivations',
     getValidationFields: (formState) => {
-      console.log('formState', formState)
       const hasPreviousMathMarocParticipations = formState?.hasPreviousMathMarocParticipations === 'yes'
       const hasPreviousExperiences = formState?.hasPreviousExperiences === 'yes'
 
@@ -36,7 +35,16 @@ export const steps: Step[] = [
   {
     id: 'Étape 4',
     name: 'Uploads',
-    getValidationFields: (_) => ['fileCnieUrl', 'fileSchoolCertificateUrl', 'fileGradesUrl', 'fileRegulationsUrl', 'fileParentalAuthorizationUrl']
+    getValidationFields: (formState) => {
+      const isFileUploaded = (key: string) => !!formState?.[`${key}Url`]
+      return [
+        !isFileUploaded('fileCnie') ? 'fileCnie' : '',
+        !isFileUploaded('fileSchoolCertificate') ? 'fileSchoolCertificate' : '',
+        !isFileUploaded('fileGrades') ? 'fileGrades' : '',
+        !isFileUploaded('fileRegulations') ? 'fileRegulations' : '',
+        !isFileUploaded('fileParentalAuthorization') ? 'fileParentalAuthorization' : '',
+      ]
+    }
   },
   { id: 'Étape 5', 
     name: 'Validation',

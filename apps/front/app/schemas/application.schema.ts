@@ -52,11 +52,11 @@ export const applicationSchema: ZodSchema = z.object({
 
   /* Uploads */
   
-  fileCnieUrl: zodFileValidation,
-  fileSchoolCertificateUrl: zodFileValidation,
-  fileGradesUrl: zodFileValidation,
-  fileRegulationsUrl: zodFileValidation,
-  fileParentalAuthorizationUrl: zodFileValidation,
+  fileCnie: zodFileValidation,
+  fileSchoolCertificate: zodFileValidation,
+  fileGrades: zodFileValidation,
+  fileRegulations: zodFileValidation,
+  fileParentalAuthorization: zodFileValidation,
 
 
   /* Terms of agreement */
@@ -97,11 +97,11 @@ export const applicationDefaultValues = {
 
   /* Uploads */
   
-  fileCnieUrl: undefined,
-  fileSchoolCertificateUrl: undefined, 
-  fileGradesUrl: undefined,
-  fileRegulationsUrl: undefined,
-  fileParentalAuthorizationUrl: undefined,
+  fileCnie: undefined,
+  fileSchoolCertificate: undefined, 
+  fileGrades: undefined,
+  fileRegulations: undefined,
+  fileParentalAuthorization: undefined,
 
 
   /* Terms of agreement */

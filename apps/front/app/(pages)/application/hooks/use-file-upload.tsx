@@ -9,10 +9,10 @@ export const useFileUpload = () => {
   const getFiles = (
     formData: z.infer<typeof applicationSchema>
   ) => {
-    const { fileCnie, fileMembersCnie, fileGrades, fileParentalAuthorization } = formData;
+    const { fileCnie, fileSchoolCertificate, fileGrades, fileRegulations, fileParentalAuthorization } = formData;
     const uploadFileNames = ['cnie', 'members_cnie', 'grades', 'parental_authorization']
       .map(name => `${name}_${generateFileName()}`)
-    const files = [fileCnie, fileMembersCnie, fileGrades, fileParentalAuthorization]
+    const files = [fileCnie, fileSchoolCertificate, fileGrades, fileRegulations, fileParentalAuthorization]
       .map((files, index) => {
         if (files && files.length) {
           return new File(
@@ -37,7 +37,7 @@ export const useFileUpload = () => {
     for (const file of files) {
       if (file) {
         const checksum = await computeSHA256(file);
-        const signedURLResponse = await getSignedURL(`upload_mdm/${uploadFolderName}/${file.name}`, file.type, file.size, checksum) as any;
+        const signedURLResponse = await getSignedURL(`upload_mmc_2025/${uploadFolderName}/${file.name}`, file.type, file.size, checksum) as any;
         await uploadFile(signedURLResponse?.url, file) as any;
       }
     }
@@ -51,10 +51,11 @@ export const useFileUpload = () => {
     const uploadFolderName = getUploadFolderName(user?.firstName, user?.lastName);
 
     await putApplication(formData?.id, {
-      fileCnieUrl: files[0] ? `upload_mdm/${uploadFolderName}/${files[0].name}` : (formData?.fileCnieUrl ?? null),
-      fileMembersCnieUrl: files[1] ? `upload_mdm/${uploadFolderName}/${files[1].name}` : (formData?.fileMembersCnieUrl ?? null),
-      fileGradesUrl: files[2] ? `upload_mdm/${uploadFolderName}/${files[2].name}` : (formData?.fileGradesUrl ?? null),
-      fileParentalAuthorizationUrl: files[3] ? `upload_mdm/${uploadFolderName}/${files[3].name}` : (formData?.fileParentalAuthorizationUrl ?? null),
+      fileCnieUrl: files[0] ? `upload_mmc_2025/${uploadFolderName}/${files[0].name}` : (formData?.fileCnieUrl ?? null),
+      fileSchoolCertificateUrl: files[1] ? `upload_mmc_2025/${uploadFolderName}/${files[1].name}` : (formData?.fileSchoolCertificate ?? null),
+      fileGradesUrl: files[2] ? `upload_mmc_2025/${uploadFolderName}/${files[2].name}` : (formData?.fileGradesUrl ?? null),
+      fileRegulationsUrl: files[3] ? `upload_mmc_2025/${uploadFolderName}/${files[3].name}` : (formData?.fileRegulationsUrl ?? null),
+      fileParentalAuthorizationUrl: files[4] ? `upload_mmc_2025/${uploadFolderName}/${files[4].name}` : (formData?.fileParentalAuthorizationUrl ?? null),
     }) as any
   }
 

@@ -89,7 +89,7 @@ export const ApplicationForm = ({
           )}
 
           {/* Submit Button */}
-          {currentStep === 5 && (
+          {currentStep === 4 && (
             <div className='mt-20 text-center'> 
               <Button type="submit" onClick={() => onSubmit(form.watch())}>
                 {isFormLoading ? (
