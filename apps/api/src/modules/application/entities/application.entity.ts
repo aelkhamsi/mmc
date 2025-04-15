@@ -44,6 +44,9 @@ export class Application {
   identityCardNumber: string;
 
   @Column({ type: 'varchar', default: '' })
+  studentNumber: string;
+
+  @Column({ type: 'varchar', default: '' })
   city: string;
 
   @Column({ type: 'varchar', default: '' })
@@ -61,16 +64,12 @@ export class Application {
   @Column({ type: 'varchar', default: '' })
   relationshipWithGuardian: string;
 
-  // Choices
-  @Column({ type: 'text' })
-  activityChoices: string[];
+  @Column({ type: 'text', nullable: true })
+  healthInformations: string;
 
   /* Education */
   @Column({ type: 'varchar', default: '' })
   educationLevel: string;
-
-  @Column({ type: 'varchar', default: '' })
-  educationField: string;
 
   @Column({ type: 'varchar', default: '' })
   highschool: string;
@@ -87,47 +86,22 @@ export class Application {
   @Column({ type: 'varchar', default: '' })
   mathRanking: string;
 
-  @Column({ type: 'varchar', default: '' })
-  numberOfStudentsInClass: string;
-
   /* Motivations */
 
-  // -> Math sprint
-  @Column({ type: 'varchar', default: '' })
-  hasPreviouslyParticipated: string;
-
-  @Column({ type: 'text', nullable: true })
-  previousCompetitions: string;
-
-  // -> Best math video
-  @Column({ type: 'varchar', default: '' })
-  videoTitle: string;
-
-  @Column({ type: 'varchar', default: '' })
-  videoLink: string;
-
-  @Column({ type: 'text', nullable: true })
-  videoSubject: string;
-
-  @Column({ type: 'text', nullable: true })
-  videoMotivations: string;
-
-  @Column({ type: 'text', nullable: true })
-  videoRessources: string;
-
-  // -> Stand
-  @Column({ type: 'varchar', default: '' })
-  standSubjectTitle: string;
-
-  @Column({ type: 'text', nullable: true })
-  standSubjectDetails: string;
-
-  @Column({ type: 'text' })
-  standMembers: string[];
-
-  // -> motivations
   @Column({ type: 'text', nullable: true })
   motivations: string;
+
+  @Column({ type: 'varchar', default: '' })
+  hasPreviousMathMarocParticipations: string;
+
+  @Column({ type: 'text', nullable: true })
+  previousMathMarocParticipations: string;
+
+  @Column({ type: 'varchar', default: '' })
+  hasPreviousExperiences: string;
+
+  @Column({ type: 'text', nullable: true })
+  previousExperiences: string;
 
   @Column({ type: 'text', nullable: true })
   comments: string;
@@ -137,10 +111,13 @@ export class Application {
   fileCnieUrl: string;
 
   @Column({ type: 'varchar', nullable: true })
-  fileMembersCnieUrl: string;
+  fileSchoolCertificateUrl: string;
 
   @Column({ type: 'varchar', nullable: true })
   fileGradesUrl: string;
+
+  @Column({ type: 'varchar', nullable: true })
+  fileRegulationsUrl: string;
 
   @Column({ type: 'varchar', nullable: true })
   fileParentalAuthorizationUrl: string;
