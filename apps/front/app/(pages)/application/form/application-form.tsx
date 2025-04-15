@@ -5,7 +5,7 @@ import { FormSteps } from "./header/form-steps"
 import { FormNavigation } from "./navigation/form-navigation"
 import { PersonalInformationStep, EducationStep, MotivationStep, UploadStep, ValidationStep } from "./steps"
 import { useForm } from "react-hook-form"
-import { applicationSchema, applicationDefaultData } from "@/app/schemas/application.schema"
+import { applicationSchema, applicationDefaultValues } from "@/app/schemas/application.schema"
 import { zodResolver } from "@hookform/resolvers/zod"
 import { sanitizeApplication } from "@/app/lib/utils"
 import { z } from "zod"
@@ -26,11 +26,14 @@ export const ApplicationForm = ({
   const [previousStep, setPreviousStep] = useState(0)
   const [currentStep, setCurrentStep] = useState(0)
   const delta = currentStep - previousStep
+  const application = {
+    ...(user?.application ? sanitizeApplication(user?.application) : applicationDefaultValues),
+    firstName: user?.firstName, 
+    lastName: user?.lastName
+  }
   const form = useForm<z.infer<typeof applicationSchema>>({
     resolver: zodResolver(applicationSchema),
-    defaultValues: user?.application 
-      ? {...sanitizeApplication(user?.application), firstName: user?.firstName, lastName: user?.lastName} 
-      : applicationDefaultData,
+    defaultValues: application,
     mode: "onChange",
   })
   const {

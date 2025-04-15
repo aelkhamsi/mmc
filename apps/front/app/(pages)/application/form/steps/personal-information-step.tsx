@@ -7,6 +7,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@mdm/ui"
+import { Textarea } from "@mdm/ui"
 import {
   Select,
   SelectGroup,
@@ -28,7 +29,6 @@ import { PhoneInput } from "@mdm/ui"
 import { cn, isOverEighteen } from '@mdm/utils'
 import { Button } from "@mdm/ui"
 import { format } from "@mdm/ui"
-import { useAge } from '@/app/(pages)/application/hooks/use-age'
 
 const regions = [
   {label: "Tanger-Tétouan-Al Hoceïma", value:"tanger-tetouan-al-houceima"},
@@ -61,10 +61,6 @@ export const PersonalInformationStep = ({
   form: UseFormReturn,
   delta: number
 }) => {
-  const {
-    isAdult, 
-    setIsAdult
-  } = useAge(form)
 
   return (
     <motion.div
@@ -86,7 +82,7 @@ export const PersonalInformationStep = ({
             <FormItem>
               <FormLabel>Prénom <RequiredAsterisk /></FormLabel>
               <FormControl>
-                <Input disabled placeholder="First Name" {...field} />
+                <Input disabled placeholder="Entrez une valeur" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -101,7 +97,7 @@ export const PersonalInformationStep = ({
             <FormItem>
               <FormLabel>Nom <RequiredAsterisk /></FormLabel>
               <FormControl>
-                <Input disabled placeholder="Last Name" {...field} />
+                <Input disabled placeholder="Entrez une valeur" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -128,7 +124,7 @@ export const PersonalInformationStep = ({
                       {field.value ? (
                         format(field.value, "PPP")
                       ) : (
-                        <span>Choisis une date</span>
+                        <span>Choisissez une date</span>
                       )}
                       <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
                     </Button>
@@ -139,20 +135,10 @@ export const PersonalInformationStep = ({
                     initialFocus
                     mode="single"
                     captionLayout="dropdown" //Also: dropdown | buttons
-                    fromYear={1920} 
-                    toYear={2024}
+                    fromYear={2000} 
+                    toYear={2020}
                     selected={field.value}
-                    onSelect={(value) => {
-                      const _isAdult = isOverEighteen(value as Date)
-                      setIsAdult(_isAdult)
-                      form.clearErrors('identityCardNumber')
-                      if (_isAdult) {
-                        form.setValue('guardianFullName', '')
-                        form.setValue('guardianPhoneNumber', '')
-                        form.setValue('relationshipWithGuardian', '')
-                      }
-                      field.onChange(value)
-                    }}
+                    onSelect={(value) => field.onChange(value)}
                     className="rounded-md border"
                   />
                 </PopoverContent>
@@ -168,14 +154,29 @@ export const PersonalInformationStep = ({
           name="identityCardNumber"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Numéro CNIE{isAdult && <RequiredAsterisk />}</FormLabel>
+              <FormLabel>Numéro CNIE</FormLabel>
               <FormControl>
-                <Input placeholder="CNIE Number" {...field} />
+                <Input placeholder="Entrez une valeur" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
           )}
         />
+
+        {/* Student Number */}
+        <FormField
+          control={form.control}
+          name="studentNumber"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Code Massar ou Code National de l&apos;Etudiant (CNE)<RequiredAsterisk /></FormLabel>
+              <FormControl>
+                <Input placeholder="Entrez une valeur" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        /> 
 
         {/* City */}
         <FormField
@@ -185,7 +186,7 @@ export const PersonalInformationStep = ({
             <FormItem>
               <FormLabel>Ville de résidence<RequiredAsterisk /></FormLabel>
               <FormControl>
-                <Input placeholder="Ville" {...field} />
+                <Input placeholder="Entrez une valeur" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -202,7 +203,7 @@ export const PersonalInformationStep = ({
               <FormControl>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <SelectTrigger>
-                    <SelectValue placeholder="Select a region" />
+                    <SelectValue placeholder="Selectionnez une région" />
                   </SelectTrigger>
                   <SelectContent className="max-h-60">
                     <SelectGroup>
@@ -235,74 +236,95 @@ export const PersonalInformationStep = ({
         />
       </div>
       
-      {!isAdult && (
-        <>
-          <h2 className='text-base font-semibold leading-7 text-[#0284C7] mt-6'>
-            Informations personnelles du tuteur
-          </h2>
-          <Separator className='mt-4 bg-[#0284C7]'/>
+      <h2 className='text-base font-semibold leading-7 text-[#0284C7] mt-6'>
+        Informations personnelles du tuteur
+      </h2>
+      <Separator className='mt-4 bg-[#0284C7]'/>
 
-          <div className='mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-between'>
-            {/* Guardian Full Name */}
-            <FormField
-              control={form.control}
-              name="guardianFullName"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Nom et Prénom du tuteur<RequiredAsterisk /></FormLabel>
-                  <FormControl>
-                    <Input placeholder="Entrez un nom complet" {...field} />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-        
-            {/* Guardian Phone Number */}
-            <FormField
-              control={form.control}
-              name="guardianPhoneNumber"
-              render={({ field }) => (
-                <FormItem className="flex flex-col mt-2 items-start">
-                  <FormLabel className="text-left">Téléphone du tuteur <RequiredAsterisk /></FormLabel>
-                  <FormControl className="w-full">
-                    <PhoneInput onValueChange={field.onChange} defaultValue={field.value} defaultCountry='MA' />
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
+      <div className='mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-between'>
+        {/* Guardian Full Name */}
+        <FormField
+          control={form.control}
+          name="guardianFullName"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Nom et Prénom du tuteur<RequiredAsterisk /></FormLabel>
+              <FormControl>
+                <Input placeholder="Entrez un nom complet" {...field} />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+    
+        {/* Guardian Phone Number */}
+        <FormField
+          control={form.control}
+          name="guardianPhoneNumber"
+          render={({ field }) => (
+            <FormItem className="flex flex-col mt-2 items-start">
+              <FormLabel className="text-left">Téléphone du tuteur <RequiredAsterisk /></FormLabel>
+              <FormControl className="w-full">
+                <PhoneInput onValueChange={field.onChange} defaultValue={field.value} defaultCountry='MA' />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
 
-            {/* Relationship with Guardian */}
-            <FormField
-              control={form.control}
-              name="relationshipWithGuardian"
-              render={({ field }) => (
-                <FormItem>
-                  <FormLabel>Relation avec votre tuteur<RequiredAsterisk /></FormLabel>
-                  <FormControl>
-                    <Select onValueChange={field.onChange} defaultValue={field.value}>
-                      <SelectTrigger>
-                        <SelectValue placeholder="Choisissez une option" />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectGroup>
-                          <SelectLabel>Relation avec votre tuteur</SelectLabel>
-                          {relationshipsWithGuardian.map(relationship => 
-                            <SelectItem key={relationship.value} value={relationship.value}>{relationship.label}</SelectItem>
-                          )}
-                        </SelectGroup>
-                      </SelectContent>
-                    </Select> 
-                  </FormControl>
-                  <FormMessage />
-                </FormItem>
-              )}
-            />
-          </div>
-        </>
-      )}
-      
+        {/* Relationship with Guardian */}
+        <FormField
+          control={form.control}
+          name="relationshipWithGuardian"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Relation avec votre tuteur<RequiredAsterisk /></FormLabel>
+              <FormControl>
+                <Select onValueChange={field.onChange} defaultValue={field.value}>
+                  <SelectTrigger>
+                    <SelectValue placeholder="Choisissez une option" />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectGroup>
+                      <SelectLabel>Relation avec votre tuteur</SelectLabel>
+                      {relationshipsWithGuardian.map(relationship => 
+                        <SelectItem key={relationship.value} value={relationship.value}>{relationship.label}</SelectItem>
+                      )}
+                    </SelectGroup>
+                  </SelectContent>
+                </Select> 
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+      </div>
+
+      <h2 className='text-base font-semibold leading-7 text-[#0284C7] mt-6'>
+        Informations de santé
+      </h2>
+      <Separator className='mt-4 bg-[#0284C7]'/>
+
+      <div className='mt-6 grid grid-cols-1 gap-4 justify-between'>
+        {/* Health Informations */}
+        <FormField
+          control={form.control}
+          name="healthInformations"
+          render={({ field }) => (
+            <FormItem>
+              <FormLabel>Avez-vous des problèmes de santé, des allergies, ou toute autre information que nous devons connaître pour vous assurer des conditions adéquates sur place?</FormLabel>
+              <FormControl>
+              <Textarea
+                placeholder="Maximum 300 mots"
+                className="resize-none"
+                {...field}
+              />
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+      </div>
     </motion.div>
   )
 }

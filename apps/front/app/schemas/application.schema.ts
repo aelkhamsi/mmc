@@ -13,7 +13,7 @@ export const applicationSchema: ZodSchema = z.object({
   firstName: z.string().min(1).max(50),
   lastName: z.string().min(1).max(50),
   dateOfBirth: z.date({ required_error: "La date de naissance est obligatoire." }),
-  identityCardNumber: z.string().min(1).max(50),
+  identityCardNumber: z.string().optional(),
   studentNumber: z.string().min(1).max(50),
   city: z.string().min(1).max(50),
   region: z.string().nonempty("Choisissez une option"),
@@ -22,7 +22,12 @@ export const applicationSchema: ZodSchema = z.object({
   guardianFullName: z.string().min(1).max(50),
   guardianPhoneNumber: z.string().refine(isValidPhoneNumber, { message: "Numéro de téléphone invalide" }),
   relationshipWithGuardian: z.string().min(1).max(50),
-  healthInformations: z.string().min(1).refine(async text => text.split(' ').length <= 300, { message: "Maximum 300 mots", }),
+  healthInformations: z.string().optional().refine((val) => {
+    if (val) {
+      return val.split(' ').length <= 100
+    }
+    return true;
+  } , { message: "Maximum 100 mots"}),
 
   /* Education */
   educationField: z.string().nonempty("Choisissez une option"),
@@ -43,7 +48,7 @@ export const applicationSchema: ZodSchema = z.object({
       return val.split(' ').length <= 100
     }
     return true;
-  } , { message: "Text can't be more than 100 words"}),
+  } , { message: "Maximum 100 mots"}),
 
   /* Uploads */
   
@@ -58,7 +63,7 @@ export const applicationSchema: ZodSchema = z.object({
   termsAgreement: z.boolean().default(false).refine(value => value === true, { message: "Vous devez accepter les Conditions Générales."}),
 })
 
-export const applicationDefaultData = {
+export const applicationDefaultValues = {
   /* Personal Informations */
   firstName: '',
   lastName: '',
