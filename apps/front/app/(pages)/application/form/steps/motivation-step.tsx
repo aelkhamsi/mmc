@@ -1,3 +1,4 @@
+import { useEffect, useState } from 'react';
 import { motion } from 'framer-motion'
 import { UseFormReturn } from 'react-hook-form'
 import {
@@ -19,6 +20,15 @@ export const MotivationStep = ({
   form: UseFormReturn,
   delta: number,
 }) => {
+  const [hasPreviousMathMarocParticipations, setHasPreviousMathMarocParticipations] = useState(false)
+  const [hasPreviousExperiences, setHasPreviousExperiences] = useState(false)
+
+  useEffect(() => {
+    const formState = form.watch()
+    setHasPreviousMathMarocParticipations(formState?.hasPreviousMathMarocParticipations === 'yes')
+    setHasPreviousExperiences(formState?.hasPreviousExperiences === 'yes')
+  }, [])
+
   return (
     <motion.div
       initial={{ x: delta >= 0 ? '50%' : '-50%', opacity: 0 }}
@@ -62,10 +72,17 @@ export const MotivationStep = ({
           name="hasPreviousMathMarocParticipations"
           render={({ field }) => (
             <FormItem className="space-y-3">
-              <FormLabel>Avez-vous déjà participé à des compétitions (Olympiades, concours nationaux...)  <RequiredAsterisk /></FormLabel>
+              <FormLabel>Avez-vous déjà participé à des activités de Math&Maroc?<RequiredAsterisk /></FormLabel>
               <FormControl>
                 <RadioGroup
-                  onValueChange={field.onChange}
+                  onValueChange={(value) => {
+                    setHasPreviousMathMarocParticipations(value === 'yes')
+                    if (value === 'no') {
+                      form.setValue('previousMathMarocParticipations', '')
+                      form.clearErrors('previousMathMarocParticipations')
+                    }
+                    field.onChange(value)}
+                  }
                   defaultValue={field.value}
                   className="flex flex-col space-y-1"
                 >
@@ -93,23 +110,25 @@ export const MotivationStep = ({
         />
 
         {/* Previous Math&Maroc Participations */}
-        <FormField
-          control={form.control}
-          name="previousMathMarocParticipations"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Si oui, veuillez spécifier lesquelles et le résultat obtenu.</FormLabel>
-              <FormControl>
-              <Textarea
-                placeholder="Parlez-nous de vos accomplissements"
-                className="resize-none"
-                {...field}
-              />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+        {hasPreviousMathMarocParticipations && 
+          <FormField
+            control={form.control}
+            name="previousMathMarocParticipations"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Veuillez spécifier lesquelles et le résultat obtenu<RequiredAsterisk /></FormLabel>
+                <FormControl>
+                <Textarea
+                  placeholder="Parlez-nous de vos accomplissements"
+                  className="resize-none"
+                  {...field}
+                />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        }
       </div>
 
       <div className='mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 justify-between'>
@@ -119,10 +138,18 @@ export const MotivationStep = ({
           name="hasPreviousExperiences"
           render={({ field }) => (
             <FormItem className="space-y-3">
-              <FormLabel>Avez-vous déjà participé à des compétitions (Olympiades, concours nationaux...)  <RequiredAsterisk /></FormLabel>
+              
+              <FormLabel>Avez-vous participé à d&apos;autres compétitions ou vécu des expériences pertinentes pour cette candidature?<RequiredAsterisk /></FormLabel>
               <FormControl>
                 <RadioGroup
-                  onValueChange={field.onChange}
+                  onValueChange={(value) => {
+                    setHasPreviousExperiences(value === 'yes')
+                    if (value === 'no') {
+                      form.setValue('previousExperiences', '')
+                      form.clearErrors('previousExperiences')
+                    }
+                    field.onChange(value)}
+                  }
                   defaultValue={field.value}
                   className="flex flex-col space-y-1"
                 >
@@ -150,23 +177,25 @@ export const MotivationStep = ({
         />
 
         {/* Previous Experiences */}
-        <FormField
-          control={form.control}
-          name="previousExperiences"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Si oui, veuillez spécifier lesquelles et le résultat obtenu.</FormLabel>
-              <FormControl>
-              <Textarea
-                placeholder="Parlez-nous de vos accomplissements"
-                className="resize-none"
-                {...field}
-              />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
+        {hasPreviousExperiences && 
+          <FormField
+            control={form.control}
+            name="previousExperiences"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Veuillez spécifier lesquelles et le résultat obtenu<RequiredAsterisk /></FormLabel>
+                <FormControl>
+                <Textarea
+                  placeholder="Parlez-nous de vos accomplissements"
+                  className="resize-none"
+                  {...field}
+                />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        }
       </div>
 
       <div className='mt-6 grid grid-cols-1 gap-4 justify-between'>
