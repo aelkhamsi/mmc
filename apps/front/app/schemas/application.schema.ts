@@ -30,7 +30,7 @@ export const applicationSchema: ZodSchema = z.object({
   } , { message: "Maximum 100 mots"}),
 
   /* Education */
-  educationField: z.string().nonempty("Choisissez une option"),
+  educationLevel: z.string().nonempty("Choisissez une option"),
   highschool: z.string().min(1).max(50),
   averageGrade: z.string().min(1).max(50),
   ranking: z.string().min(1).max(50),

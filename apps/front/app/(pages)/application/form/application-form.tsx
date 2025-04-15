@@ -15,7 +15,6 @@ import { LoadingDots } from "@mdm/ui"
 import { User } from "@mdm/types"
 import FormHeader from "./header/form-header"
 import FormErrorDialog from "./error/form-error-dialog"
-import { ActivityChoiceStep } from "./steps/activity-choice-step"
 import { useApplicationHandlers } from "@/app/(pages)/application/hooks/use-application-handlers"
 
 export const ApplicationForm = ({
@@ -74,22 +73,18 @@ export const ApplicationForm = ({
           )}
 
           {currentStep === 1 && (
-            <ActivityChoiceStep form={form} delta={delta} applicationStatus={user?.application?.status?.status}/>
+            <EducationStep form={form} delta={delta} />
           )}
 
           {currentStep === 2 && (
-            <EducationStep form={form} delta={delta} applicationStatus={user?.application?.status?.status}/>
+            <MotivationStep form={form} delta={delta} />
           )}
 
           {currentStep === 3 && (
-            <MotivationStep form={form} delta={delta} applicationStatus={user?.application?.status?.status}/>
+            <UploadStep form={form} delta={delta} />
           )}
 
           {currentStep === 4 && (
-            <UploadStep form={form} delta={delta} applicationStatus={user?.application?.status?.status}/>
-          )}
-
-          {currentStep === 5 && (
             <ValidationStep form={form} delta={delta} />
           )}
 
