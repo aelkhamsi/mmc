@@ -25,7 +25,6 @@ const PartnerCard = ({
 
       <div className="h-fit w-[16rem] p-4 md:w-[20rem] flex flex-col space-y-2">
         {children}
-        {/* <div><span className='mb-8 text-[#084981] font-semibold'>Managem</span> est un leader dans le secteur minier, alliant innovation et durabilité pour extraire et valoriser des ressources naturelles de manière durable. Son engagement envers l'excellence et l'environnement soutient le développement économique.</div> */}
       </div>
     </div>
   )

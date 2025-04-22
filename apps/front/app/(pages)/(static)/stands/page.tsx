@@ -1,11 +1,11 @@
 import CtaSection from "@/app/components/cta/cta-section"
-import DivCircuitBg from "@/app/components/div-circuit-bg"
+import TextureBg from "@/app/components/texture-bg"
 import { AwardIcon, BoardGamesIcon, LightbulbIcon, Separator, StarShineIcon } from "@mdm/ui"
 
 export default function StandsPage() {
 
   return (
-    <DivCircuitBg classNameBgImage="opacity-50 -z-[8]">
+    <TextureBg>
       <div className="flex flex-col items-center w-full lg:w-3/4 px-5 lg:px-0 space-y-14 mb-20">
         {/* TITLE */}
         <div className="space-y-4">
@@ -124,6 +124,6 @@ export default function StandsPage() {
         {/* FOOTER */}
         <CtaSection />
       </div>
-    </DivCircuitBg>
+    </TextureBg>
   )
 }

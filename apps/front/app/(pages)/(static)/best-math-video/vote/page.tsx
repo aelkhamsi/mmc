@@ -1,11 +1,11 @@
-import DivCircuitBg from "@/app/components/div-circuit-bg"
+import TextureBg from "@/app/components/texture-bg"
 import { videos } from "./videos"
 import CtaButton from "./cta-button"
 
 export default function BestMathVideoVotePage() {
 
   return (
-    <DivCircuitBg classNameBgImage="opacity-50 -z-[8]">
+    <TextureBg>
       <div className="flex flex-col items-center w-full lg:w-3/4 px-5 lg:px-0 space-y-14 mb-20">
         <div className="space-y-10">
           <h1 className="text-center text-4xl font-bold drop-shadow-sm">
@@ -64,6 +64,6 @@ export default function BestMathVideoVotePage() {
 
         </div>
       </div>
-    </DivCircuitBg>
+    </TextureBg>
   )
 }

@@ -1,5 +1,5 @@
 import React from 'react'
-import DivCircuitBg from '../div-circuit-bg'
+import TextureBg from '../texture-bg'
 import Link from 'next/link'
 import Image from 'next/image'
 import CtaButton from '../cta/cta-button'
@@ -7,9 +7,8 @@ import FaqButton from '../cta/faq-button'
 
 const HeroSection = () => {
   return (
-    <DivCircuitBg 
-      className='bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-100/[.8] via-cyan-50/[.5] to-[#FFF]'
-      classNameBgImage='opacity-70'
+    <TextureBg 
+      className='bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-[#d38e31]/[.3] via-[#F8CC9D]/[.0] to-cyan-200/[.3]'
     > 
       {/* Hero Section */}
       <div className="w-full flex flex-col items-center max-w-xl space-y-10">
@@ -19,10 +18,10 @@ const HeroSection = () => {
           style={{ animationDelay: "0.20s", animationFillMode: "forwards" }}
         >
           <Image
-            src="/mdm_logo.svg"
+            src="/summercamp.png"
             alt="MDM logo"
-            width='400'
-            height='200'
+            width='300'
+            height='150'
           />
         </div>
 
@@ -31,8 +30,8 @@ const HeroSection = () => {
             className="animate-fade-up opacity-0 text-center font-display text-4xl font-bold tracking-[0.05em] text-wrap:balance md:text-5xl md:leading-[3rem]"
             style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
           >
-            <span className='bg-gradient-to-br from-[#292660] via-[#292660] to-stone-800 inline-block text-transparent bg-clip-text'>
-              Le plus grand événement de mathématiques au Maroc
+            <span className='bg-gradient-to-b from-[#462660] via-[#292660] to-[#292660] inline-block text-transparent bg-clip-text'>
+              Une semaine en immersion dans l&apos;univers des mathématiques et des sciences
             </span>
           </h1>
         </div>
@@ -82,10 +81,10 @@ const HeroSection = () => {
               />
             </Link>
 
-            <Link className="h-5 flex items-center bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#E5FF52]/[.15] via-transparent to-transparent" href="/partners">
+            <Link className="h-11 flex items-center bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-[#E5FF52]/[.15] via-transparent to-transparent" href="/partners">
               <Image
-                src="/uemf_logo_2.png"
-                alt="UEMF Logo"
+                src="/lymed.png"
+                alt="LYMED Logo"
                 width={0}
                 height={0}
                 sizes="100vw"
@@ -95,7 +94,7 @@ const HeroSection = () => {
           </div>
         </div>
       </div>
-    </DivCircuitBg>
+    </TextureBg>
   )
 }
 

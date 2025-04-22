@@ -1,4 +1,4 @@
-import DivCircuitBg from "@/app/components/div-circuit-bg"
+import TextureBg from "@/app/components/texture-bg"
 import PartnerCard from "./partner-card"
 
 const organizers = [
@@ -21,9 +21,9 @@ const partners = [
 
 const hosts = [
   {
-    key: 'uemf',
-    label: 'UEMF',
-    imageHref: '/uemf_logo.png',
+    key: 'lymed',
+    label: 'LYMED',
+    imageHref: '/lymed.png',
     imageHeight: '100px',
   }
 ]
@@ -57,7 +57,7 @@ const sponsors = [
 
 export default function PartnersPage() {
   return (
-    <DivCircuitBg classNameBgImage="opacity-50">
+    <TextureBg>
       <div className="w-full max-w-sm md:max-w-7xl px-5 xl:px-0 mt-10 mb-20">
         <div className="space-y-6">
           <div>
@@ -135,8 +135,7 @@ export default function PartnersPage() {
                   imageHeight={hosts[0].imageHeight}
                 >
                   <div className="text-sm">
-                    <div>L&apos;<span className='mb-8 bg-gradient-to-br from-[#005598] to-sky-600 text-transparent bg-clip-text font-semibold'>UEMF</span> est une institution d&apos;enseignement supérieur qui favorise l&apos;échange et la coopération internationale dans l&apos;espace <span className="font-bold">Europe-Méditerranée-Afrique</span>, réunissant plus de <span className="font-bold">32 nationalités</span>.</div>
-                    <div>Elle se distingue par son engagement envers l&apos;excellence académique et sa quête d&apos;innovation en recherche de pointe.</div>
+                    <div>Le <span className='mb-8 bg-gradient-to-br from-[#005598] to-sky-600 text-transparent bg-clip-text font-semibold'>Lycée Méditerranéen (LYMED)</span>, porté par la Fondation Tanger Med, s&apos;appuie fondamentalement sur la valeur d&apos;excellence, et a pour vocation de préparer les élèves marocains à fort potentiel aux concours d&apos;accès aux Grandes Écoles d&apos;Ingénieurs marocaines et françaises</div>
                   </div>
                 </PartnerCard>
               </div>
@@ -164,36 +163,11 @@ export default function PartnersPage() {
                 >
                   <div><span className='mb-8 bg-gradient-to-br from-[#7cb9ff] to-[#3691FB] text-transparent bg-clip-text font-semibold'>Evalmee</span> est une plateforme d&apos;évaluation en ligne offrant des outils précis et personnalisés pour dévoiler et perfectionner les compétences. Découvrez une approche dynamique pour révéler le potentiel caché et atteindre l&apos;excellence professionnelle.</div>
                 </PartnerCard>
-
-                <PartnerCard
-                  key={sponsors[1].key}
-                  imageSrc={sponsors[1].imageHref}
-                  imageHeight={sponsors[1].imageHeight}
-                >
-                  <div><span className='mb-8 text-[#222e84] font-semibold'>Evasan</span> est un courtier en assurances suisse de renom, offrant des solutions sur mesure pour la santé, le voyage et les visas. Grâce à son expertise et à son service d'assistance 24h/24, il garantit à ses clients une protection fiable et de qualité.</div>
-                </PartnerCard>
-
-
-                <PartnerCard
-                  key={sponsors[2].key}
-                  imageSrc={sponsors[2].imageHref}
-                  imageHeight={sponsors[2].imageHeight}
-                >
-                  <div><span className='mb-8 text-[#084981] font-semibold'>Managem</span> est un leader dans le secteur minier, alliant innovation et durabilité pour extraire et valoriser des ressources naturelles de manière durable. Son engagement envers l'excellence et l'environnement soutient le développement économique.</div>
-                </PartnerCard>
-
-                <PartnerCard
-                  key={sponsors[3].key}
-                  imageSrc={sponsors[3].imageHref}
-                  imageHeight={sponsors[3].imageHeight}
-                >
-                  <div><span className='mb-8 text-[#084981] font-semibold'>Sidi Ali</span> est une entreprise engagée à offrir une eau minérale naturelle d'une pureté exceptionnelle, puisée au cœur des montagnes marocaines. <br/>Elle s&apos;impose comme un leader emblématique alliant qualité, tradition et innovation.</div>
-                </PartnerCard>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </DivCircuitBg>
+    </TextureBg>
   )
 }

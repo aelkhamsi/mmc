@@ -1,4 +1,4 @@
-import DivCircuitBg from "@/app/components/div-circuit-bg"
+import TextureBg from "@/app/components/texture-bg"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@mdm/ui"
 import { generalQuestions, mathSprintQuestions, bestMathVideoQuestions, standQuestions, conferencesQuestions } from "./questions"
 import { FaqAccordion } from "./faq-accordion"
@@ -7,7 +7,7 @@ import { FaqAccordion } from "./faq-accordion"
 export default function ConferencesPage() {
 
   return (
-    <DivCircuitBg classNameBgImage="opacity-50 -z-[8]">
+    <TextureBg>
       <div className="w-full max-w-sm md:max-w-screen-md px-5 xl:px-0 space-y-6 mb-20">
         <h1 className="text-center text-3xl font-bold drop-shadow-sm">
           <span className='bg-gradient-to-br from-sky-800 to-[#272162] inline-block text-transparent bg-clip-text'>FAQ</span>
@@ -65,6 +65,6 @@ export default function ConferencesPage() {
           </Tabs>
         </div>
       </div>
-    </DivCircuitBg>
+    </TextureBg>
   )
 }
