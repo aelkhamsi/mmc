@@ -27,7 +27,7 @@ export const ImageStack = ({
 
   useEffect(() => {
     if (autoplay) {
-      const interval = setInterval(handleNext, 4000);
+      const interval = setInterval(handleNext, 3000);
       return () => clearInterval(interval);
     }
   }, [autoplay]);
