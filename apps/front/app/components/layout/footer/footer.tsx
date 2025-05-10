@@ -48,18 +48,9 @@ export default function Footer() {
           {/* RIGHT */}
           <div className='flex text-sm space-x-12'>
             <div className='space-y-6'>
-              <h1 className='font-bold'>Activités</h1>
-              <ul className='space-y-2'>
-                <li><Link href='/math-sprint' className='hover:underline'>Math Sprint</Link></li>
-                <li><Link href='/best-math-video' className='hover:underline'>Best Math Video</Link></li>
-                <li><Link href='/stands' className='hover:underline'>Stands</Link></li>
-                <li><Link href='/conferences' className='hover:underline'>Conférences</Link></li>
-              </ul>
-            </div>
-
-            <div className='space-y-6'>
               <h1 className='font-bold'>Pages</h1>
               <ul className='space-y-2'>
+                <li><Link href='/selection' className='hover:underline'>Test de sélection</Link></li>
                 <li><Link href='/organizing-team' className='hover:underline'>Equipe organisatrice</Link></li>
                 <li><Link href='/partners' className='hover:underline'>Partenaires</Link></li>
                 <li><Link href='/faq' className='hover:underline'>FAQ</Link></li>

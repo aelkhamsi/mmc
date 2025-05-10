@@ -15,7 +15,6 @@ export const excludeFileFields = ({
   fileCnie,
   fileSchoolCertificate,
   fileGrades,
-  fileParentalAuthorization,
   fileRegulations,
   termsAgreement,
   ...keep

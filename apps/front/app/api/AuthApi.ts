@@ -28,3 +28,20 @@ export const resetPassword = (email: string) => {
   };
   return ApiMethods.post(url, body);
 }
+
+export const sendEmailVerificationCode = (email: string) => {
+  const url = 'auth/send-email-verification';
+  const body = {
+    email,
+  };
+  return ApiMethods.post(url, body);
+}
+
+export const checkEmailVerificationCode = (email: string, verificationCode: string) => {
+  const url = 'auth/verify-email';
+  const body = {
+    email,
+    verificationCode,
+  };
+  return ApiMethods.post(url, body);
+}

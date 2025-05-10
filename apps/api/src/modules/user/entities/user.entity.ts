@@ -48,6 +48,18 @@ export class User {
   })
   password: string;
 
+  @Column({
+    type: 'boolean',
+    default: false,
+  })
+  verified: boolean;
+
+  @Column({
+    type: 'varchar',
+    default: '',
+  })
+  verificationCode: string;
+
   @OneToOne(() => Application, (application) => application.user)
   @JoinColumn()
   application: Application;

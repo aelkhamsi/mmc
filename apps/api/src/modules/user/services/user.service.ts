@@ -52,6 +52,14 @@ export class UserService {
     return this.userRepository.update({ id }, updateUserDto);
   }
 
+  updateEmaiVerificationCode(id: number, verificationCode: string) {
+    return this.userRepository.update({ id }, { verificationCode });
+  }
+
+  updateVerifiedStatus(id: number, verified: boolean) {
+    return this.userRepository.update({ id }, { verified });
+  }
+
   remove(id: number) {
     return this.userRepository.delete({ id });
   }

@@ -8,12 +8,12 @@ export const steps: Step[] = [
   {
     id: 'Étape 1',
     name: 'Informations Personnelles',
-    getValidationFields: (_) => (['firstName', 'lastName', 'dateOfBirth', 'identityCardNumber', 'studentNumber', 'city', 'region', 'phoneNumber', 'guardianFullName', 'guardianPhoneNumber', 'relationshipWithGuardian', 'healthInformations'])
+    getValidationFields: (_) => (['firstName', 'lastName', 'dateOfBirth', 'identityCardNumber', 'city', 'region', 'phoneNumber', 'emergencyContactFullName', 'emergencyContactPhoneNumber', 'emergencyContactRelationship'])
   },
   {
     id: 'Étape 2',
     name: 'Éducation',
-    getValidationFields: (_) => ['educationLevel', 'highschool', 'averageGrade', 'ranking', 'mathAverageGrade', 'mathRanking']
+    getValidationFields: (_) => ['educationLevel', 'universityType', 'universityName', 'educationField']
   },
   {
     id: 'Étape 3',
@@ -42,7 +42,6 @@ export const steps: Step[] = [
         !isFileUploaded('fileSchoolCertificate') ? 'fileSchoolCertificate' : '',
         !isFileUploaded('fileGrades') ? 'fileGrades' : '',
         !isFileUploaded('fileRegulations') ? 'fileRegulations' : '',
-        !isFileUploaded('fileParentalAuthorization') ? 'fileParentalAuthorization' : '',
       ]
     }
   },

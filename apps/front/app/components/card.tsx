@@ -4,15 +4,15 @@ import Link from 'next/link'
 
 const Card = ({
   children,
-  href,
+  href
 }: {
   children: ReactNode;
-  href: string,
+  href: string
 }) => {
   return (
     <Link 
       href={href} 
-      className='border group/canvas-card flex items-center justify-center border-white/[0.2] max-w-sm w-full mx-auto p-4 relative h-[15rem] md:h-[20rem] relative hover:cursor-pointer'
+      className="border group/canvas-card flex items-center justify-center border-white/[0.2] max-w-sm w-full mx-auto p-4 relative h-[10rem] relative hover:cursor-pointer"
       scroll={true}
     >
       <CustomPlusIcon className="absolute h-6 w-6 -top-3 -left-3 text-white" />

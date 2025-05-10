@@ -57,13 +57,10 @@ export const UploadStep = ({
 
             return (
               <FormItem>
-                <FormLabel>Justificatif d&apos;identité du participant avec photo (carte d&apos;identité, passeport, carte d&apos;élève...) <RequiredAsterisk /></FormLabel>
+                <FormLabel>CNIE (recto & verso) <RequiredAsterisk /></FormLabel>
                 <FormControl>
                   <FileInput form={form} id="fileCnie" />
                 </FormControl>
-                <FormDescription>
-                  <span className="text-blue-500">Remarque</span>: Le document doit de préference être la CNIE ou le passeport. Sinon, vous pouvez envoyer tout document contenant les informations de l&apos;élève avec sa photo; ou bien son acte de naissance accompagné de sa photo dans le même PDF.
-                </FormDescription>
                 <FormMessage />
               </FormItem>
             )
@@ -89,50 +86,6 @@ export const UploadStep = ({
           }}
         />
 
-        {/* GRADES */}
-        <FormField
-          control={form.control}
-          name="fileGrades"
-          render={({ field }) => {
-            initFileInput(field, "fileGrades")
-
-            return (
-              <FormItem>
-                <FormLabel>Bulletin du premier semestre 2024-2025 (avec les notes du contrôle continu)<RequiredAsterisk /></FormLabel>
-                <FormControl>
-                  <FileInput form={form} id="fileGrades" />
-                </FormControl>
-                <FormDescription>
-                  <span className="text-blue-500">Remarque</span>: votre bulletin sera utilisé pour vérifier les notes que vous avez fournies précédemment.
-                </FormDescription>
-                <FormMessage />
-              </FormItem>
-            )
-          }}
-        />
-
-        {/* PARENTAL AUTHORIZATION */}
-        <FormField
-          control={form.control}
-          name="fileParentalAuthorization"
-          render={({ field }) => {
-            initFileInput(field, "fileParentalAuthorization")
-
-            return (
-              <FormItem>
-                <FormLabel>Autorisation parentale signée et légalisée par le tuteur légal (<Link className="text-blue-500 underline" href='#' target="_blank">fichier</Link>)<RequiredAsterisk /></FormLabel>
-                <FormControl>
-                  <FileInput form={form} id="fileParentalAuthorization" />
-                </FormControl>
-                <FormDescription>
-                    <span className="text-blue-500">Remarque</span>: il faut l&apos;imprimer, la signer à la main, la légaliser, puis la scanner; La légalisation est obligatoire.<span className="font-bold">la légalisation est obligatoire</span>.
-                </FormDescription>
-                <FormMessage />
-              </FormItem>
-            )
-          }}
-        />
-
         {/* REGULATIONS */}
         <FormField
           control={form.control}
@@ -142,13 +95,32 @@ export const UploadStep = ({
 
             return (
               <FormItem>
-                <FormLabel>Règlement signé par l&apos;élève et le tuteur légal(<Link className="text-blue-500 underline" href='#' target="_blank">fichier</Link>)<RequiredAsterisk /></FormLabel>
+                <FormLabel>Règlement signé (<Link className="text-blue-500 underline" href='https://drive.google.com/file/d/14jqiEL7UmfPmz5ekbjpyowHtFUniETtq/view?usp=sharing' target="_blank">fichier</Link>)<RequiredAsterisk /></FormLabel>
                 <FormControl>
                   <FileInput form={form} id="fileRegulations" />
                 </FormControl>
                 <FormDescription>
-                    <span className="text-blue-500">Remarque</span>: il faut l&apos;imprimer, la signer à la main, puis la scanner; Pas besoin de légaliser. <span className="font-bold">la légalisation est obligatoire</span>.
+                    <span className="text-blue-500">Remarque</span>: il faut l&apos;imprimer, la signer à la main, puis la scanner. <span className="font-bold">Pas besoin de légaliser</span>.
                 </FormDescription>
+                <FormMessage />
+              </FormItem>
+            )
+          }}
+        />
+
+        {/* GRADES */}
+        <FormField
+          control={form.control}
+          name="fileGrades"
+          render={({ field }) => {
+            initFileInput(field, "fileGrades")
+
+            return (
+              <FormItem>
+                <FormLabel>Dernier bulletin obtenu<RequiredAsterisk /></FormLabel>
+                <FormControl>
+                  <FileInput form={form} id="fileGrades" />
+                </FormControl>
                 <FormMessage />
               </FormItem>
             )

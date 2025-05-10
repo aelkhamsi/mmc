@@ -12,9 +12,14 @@ import { useState } from "react"
 import { signInDefaultValues, signInSchema } from "@/app/schemas/signin.schema"
 import { logIn } from "@/app/api/AuthApi"
 
-interface SignInFormProps extends React.HTMLAttributes<HTMLDivElement> {}
 
-export function SignInForm({ className, ...props }: SignInFormProps) {
+export function SignInForm({ 
+  className, 
+  verifyEmail 
+}:{
+  className?: string,
+  verifyEmail: (email: string, accessToken: string) => void
+}) {
   const form = useForm<z.infer<typeof signInSchema>>({
     resolver: zodResolver(signInSchema),
     defaultValues: signInDefaultValues,
@@ -30,10 +35,14 @@ export function SignInForm({ className, ...props }: SignInFormProps) {
 
     switch(response?.statusCode) {
       case 200:
-        localStorage.setItem('access_token', response?.access_token);
-        document.cookie = `access_token=${response?.access_token}`;
-        router.push('/')
-        window.location.reload()
+        if (response?.verified) {
+          localStorage.setItem('access_token', response?.access_token);
+          document.cookie = `access_token=${response?.access_token}`;
+          router.push('/')
+          window.location.reload()
+        } else {
+          verifyEmail(email, response?.access_token)
+        }
         break;
       case 400:
       case 401:
@@ -48,7 +57,7 @@ export function SignInForm({ className, ...props }: SignInFormProps) {
   }
 
   return (
-    <div className={cn("grid gap-6", className)} {...props}>
+    <div className={cn("grid gap-6", className)}>
       {/* Email Sign In */}
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)}>

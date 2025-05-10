@@ -21,6 +21,7 @@ export function SignUpForm({ className, ...props }: SignUpFormProps) {
   const router = useRouter()
   const [isFormLoading, setIsFormLoading] = React.useState<boolean>(false)
   const [errorMessage, setErrorMessage] = React.useState<string>('')
+  const [successMessage, setSuccessMessage] = React.useState<string>('')
 
   const onSubmit = async (formData: any) => {
     setIsFormLoading(true)
@@ -30,29 +31,15 @@ export function SignUpForm({ className, ...props }: SignUpFormProps) {
     switch(response?.statusCode) {
       case 200:
         toast({
-          title: 'Account created!',
-          description: "You'll be redirected to the homepage",
+          title: 'Votre compte a été créé! Reconnectez-vous.',
+          description: "Vous allez être redirigé vers la page d'acceuil",
         })
+        setSuccessMessage('Votre compte a été créé! Reconnectez-vous.')
+
         
-        await delay(500)
-        const response = await logIn(email, password) as any
-        switch(response?.statusCode) {
-          case 200:
-            localStorage.setItem('access_token', response?.access_token);
-            document.cookie = `access_token=${response?.access_token}`;
-            setTimeout(() => {
-              window.location.reload();
-            }, 1000)
-            router.push('/');
-            
-            break;
-          case 400:
-            setTimeout(() => {
-              window.location.reload();
-            }, 1000)
-            router.push('/');
-            break;
-        }
+        await delay(5000)
+        router.push('/')
+        window.location.reload()
         break;
       case 400:
       case 401:
@@ -192,6 +179,12 @@ export function SignUpForm({ className, ...props }: SignUpFormProps) {
             {errorMessage
               ? <p className="w-full text-red-600 text-sm">
                 {errorMessage}
+              </p>
+              : null
+            }
+            {successMessage
+              ? <p className="w-full text-green-700 text-sm font-medium">
+                {successMessage}
               </p>
               : null
             }

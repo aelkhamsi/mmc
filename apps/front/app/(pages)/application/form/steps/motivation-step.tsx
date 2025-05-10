@@ -10,6 +10,7 @@ import {
 } from "@mdm/ui"
 import { Separator, Textarea } from "@mdm/ui"
 import { RadioGroup, RadioGroupItem } from '@mdm/ui';
+import Link from 'next/link';
 
 const RequiredAsterisk = () => <span className="text-red-500"> * </span>;
 
@@ -51,7 +52,7 @@ export const MotivationStep = ({
           name="motivations"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Quelles sont vos motivations à participer au Summer Camp<RequiredAsterisk /></FormLabel>
+              <FormLabel>Quelles sont vos motivations à participer à MMC ?<RequiredAsterisk /></FormLabel>
               <FormControl>
               <Textarea
                 placeholder="Maximum 300 mots"
@@ -66,72 +67,6 @@ export const MotivationStep = ({
       </div>
 
       <div className='mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 justify-between'>
-        {/* Has Previous Math&Maroc Participations */}
-        <FormField
-          control={form.control}
-          name="hasPreviousMathMarocParticipations"
-          render={({ field }) => (
-            <FormItem className="space-y-3">
-              <FormLabel>Avez-vous déjà participé à des activités de Math&Maroc?<RequiredAsterisk /></FormLabel>
-              <FormControl>
-                <RadioGroup
-                  onValueChange={(value) => {
-                    setHasPreviousMathMarocParticipations(value === 'yes')
-                    if (value === 'no') {
-                      form.setValue('previousMathMarocParticipations', '')
-                      form.clearErrors('previousMathMarocParticipations')
-                    }
-                    field.onChange(value)}
-                  }
-                  defaultValue={field.value}
-                  className="flex flex-col space-y-1"
-                >
-                  <FormItem className="flex items-center space-x-3 space-y-0">
-                    <FormControl>
-                      <RadioGroupItem value="yes" />
-                    </FormControl>
-                    <FormLabel className="font-normal">
-                      Oui
-                    </FormLabel>
-                  </FormItem>
-                  <FormItem className="flex items-center space-x-3 space-y-0">
-                    <FormControl>
-                      <RadioGroupItem value="no" />
-                    </FormControl>
-                    <FormLabel className="font-normal">
-                      Non
-                    </FormLabel>
-                  </FormItem>
-                </RadioGroup>
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-
-        {/* Previous Math&Maroc Participations */}
-        {hasPreviousMathMarocParticipations && 
-          <FormField
-            control={form.control}
-            name="previousMathMarocParticipations"
-            render={({ field }) => (
-              <FormItem>
-                <FormLabel>Veuillez spécifier lesquelles et le résultat obtenu<RequiredAsterisk /></FormLabel>
-                <FormControl>
-                <Textarea
-                  placeholder="Parlez-nous de vos accomplissements"
-                  className="resize-none"
-                  {...field}
-                />
-                </FormControl>
-                <FormMessage />
-              </FormItem>
-            )}
-          />
-        }
-      </div>
-
-      <div className='mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 justify-between'>
         {/* Has Previous Experiences */}
         <FormField
           control={form.control}
@@ -139,7 +74,7 @@ export const MotivationStep = ({
           render={({ field }) => (
             <FormItem className="space-y-3">
               
-              <FormLabel>Avez-vous participé à d&apos;autres compétitions ou vécu des expériences pertinentes pour cette candidature?<RequiredAsterisk /></FormLabel>
+              <FormLabel>Avez-vous déjà participé à des compétitions auparavant (olympiades, concours général...)<RequiredAsterisk /></FormLabel>
               <FormControl>
                 <RadioGroup
                   onValueChange={(value) => {
@@ -184,6 +119,73 @@ export const MotivationStep = ({
             render={({ field }) => (
               <FormItem>
                 <FormLabel>Veuillez spécifier lesquelles et le résultat obtenu<RequiredAsterisk /></FormLabel>
+                <FormControl>
+                <Textarea
+                  placeholder="Parlez-nous de vos accomplissements"
+                  className="resize-none"
+                  {...field}
+                />
+                </FormControl>
+                <FormMessage />
+              </FormItem>
+            )}
+          />
+        }
+      </div>
+
+      <div className='mt-6 grid grid-cols-1 md:grid-cols-2 gap-4 justify-between'>
+        {/* Has Previous Experiences */}
+        <FormField
+          control={form.control}
+          name="hasPreviousMathMarocParticipations"
+          render={({ field }) => (
+            <FormItem className="space-y-3">
+              
+              <FormLabel>Avez-vous déjà participé à Math Maroc Competition (MMC) ?<RequiredAsterisk /></FormLabel>
+              <FormControl>
+                <RadioGroup
+                  onValueChange={(value) => {
+                    setHasPreviousMathMarocParticipations(value === 'yes')
+                    if (value === 'no') {
+                      form.setValue('previousExperiences', '')
+                      form.clearErrors('previousExperiences')
+                    }
+                    field.onChange(value)}
+                  }
+                  defaultValue={field.value}
+                  className="flex flex-col space-y-1"
+                >
+                  <FormItem className="flex items-center space-x-3 space-y-0">
+                    <FormControl>
+                      <RadioGroupItem value="yes" />
+                    </FormControl>
+                    <FormLabel className="font-normal">
+                      Oui
+                    </FormLabel>
+                  </FormItem>
+                  <FormItem className="flex items-center space-x-3 space-y-0">
+                    <FormControl>
+                      <RadioGroupItem value="no" />
+                    </FormControl>
+                    <FormLabel className="font-normal">
+                      Non
+                    </FormLabel>
+                  </FormItem>
+                </RadioGroup>
+              </FormControl>
+              <FormMessage />
+            </FormItem>
+          )}
+        />
+
+        {/* Previous Experiences */}
+        {hasPreviousMathMarocParticipations && 
+          <FormField
+            control={form.control}
+            name="previousMathMarocParticipations"
+            render={({ field }) => (
+              <FormItem>
+                <FormLabel>Veuillez spécifier dans quelle édition (2023 ou 2024) et quel était ton classement (<Link className="text-blue-500 underline" href='#' target="_blank">lien résultat</Link>)?<RequiredAsterisk /></FormLabel>
                 <FormControl>
                 <Textarea
                   placeholder="Parlez-nous de vos accomplissements"

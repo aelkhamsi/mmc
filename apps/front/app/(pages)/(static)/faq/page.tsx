@@ -7,10 +7,10 @@ import { FaqAccordion } from "./faq-accordion"
 export default function ConferencesPage() {
 
   return (
-    <TextureBg>
+    <TextureBg className="bg-[#fff9f3]">
       <div className="w-full max-w-sm md:max-w-screen-md px-5 xl:px-0 space-y-6 mb-20">
-        <h1 className="text-center text-3xl font-bold drop-shadow-sm">
-          <span className='bg-gradient-to-br from-sky-800 to-[#272162] inline-block text-transparent bg-clip-text'>FAQ</span>
+        <h1 className="text-center text-3xl font-bold font-pally drop-shadow-sm text-[#FF4925]">
+          FAQ
         </h1>
 
         <p

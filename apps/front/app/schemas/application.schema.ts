@@ -13,29 +13,20 @@ export const applicationSchema: ZodSchema = z.object({
   firstName: z.string().min(1).max(50),
   lastName: z.string().min(1).max(50),
   dateOfBirth: z.date({ required_error: "La date de naissance est obligatoire." }),
-  identityCardNumber: z.string().optional(),
-  studentNumber: z.string().min(1).max(50),
+  identityCardNumber: z.string().min(1).max(50),
   city: z.string().min(1).max(50),
   region: z.string().nonempty("Choisissez une option"),
   phoneNumber: z.string().refine(isValidPhoneNumber, { message: "Numéro de téléphone invalide" }),
 
-  guardianFullName: z.string().min(1).max(50),
-  guardianPhoneNumber: z.string().refine(isValidPhoneNumber, { message: "Numéro de téléphone invalide" }),
-  relationshipWithGuardian: z.string().min(1).max(50),
-  healthInformations: z.string().optional().refine((val) => {
-    if (val) {
-      return val.split(' ').length <= 100
-    }
-    return true;
-  } , { message: "Maximum 100 mots"}),
+  emergencyContactFullName: z.string().min(1).max(50),
+  emergencyContactPhoneNumber: z.string().refine(isValidPhoneNumber, { message: "Numéro de téléphone invalide" }),
+  emergencyContactRelationship: z.string().min(1).max(50),
 
   /* Education */
   educationLevel: z.string().nonempty("Choisissez une option"),
-  highschool: z.string().min(1).max(50),
-  averageGrade: z.string().min(1).max(50),
-  ranking: z.string().min(1).max(50),
-  mathAverageGrade: z.string().min(1).max(50),
-  mathRanking: z.string().min(1).max(50),
+  universityType: z.string().nonempty("Choisissez une option"),
+  universityName: z.string().min(1).max(50),
+  educationField: z.string().min(1).max(50),
 
   /* Motivation */
   motivations: z.string().min(1).refine(async text => text.split(' ').length <= 300, { message: "Maximum 300 mots", }),
@@ -56,8 +47,6 @@ export const applicationSchema: ZodSchema = z.object({
   fileSchoolCertificate: zodFileValidation,
   fileGrades: zodFileValidation,
   fileRegulations: zodFileValidation,
-  fileParentalAuthorization: zodFileValidation,
-
 
   /* Terms of agreement */
   termsAgreement: z.boolean().default(false).refine(value => value === true, { message: "Vous devez accepter les Conditions Générales."}),
@@ -69,23 +58,19 @@ export const applicationDefaultValues = {
   lastName: '',
   dateOfBirth: '',
   identityCardNumber: '',
-  studentNumber: '', 
   city: '',
   region: '',
   phoneNumber: '',
 
-  guardianFullName: '',
-  guardianPhoneNumber: '',
-  relationshipWithGuardian: '', 
-  healthInformations: '', 
+  emergencyContactFullName: '',
+  emergencyContactPhoneNumber: '',
+  emergencyContactRelationship: '',
 
   /* Education */
+  educationLevel: '',
+  universityType: '',
+  universityName: '',
   educationField: '',
-  highschool: '',
-  averageGrade: '', 
-  ranking: '',
-  mathAverageGrade: '',
-  mathRanking: '',
 
   /* Motivation */
   motivations: '',
@@ -101,7 +86,6 @@ export const applicationDefaultValues = {
   fileSchoolCertificate: undefined, 
   fileGrades: undefined,
   fileRegulations: undefined,
-  fileParentalAuthorization: undefined,
 
 
   /* Terms of agreement */

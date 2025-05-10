@@ -1,7 +1,7 @@
 import "./globals.css";
 import "@mdm/ui/globals.css";
 import cx from "classnames";
-import { sfPro, inter } from "../lib/fonts";
+import { pally, poppins } from "../lib/fonts";
 import Footer from "@/app/components/layout/footer/footer";
 import { Suspense } from "react";
 import { Analytics as VercelAnalytics } from "@vercel/analytics/react";
@@ -12,8 +12,8 @@ import { Toaster } from "@mdm/ui";
 
 
 export const metadata = {
-  title: "MDM 2025",
-  description: "MDM: La grande rencontre des passionnés de mathématiques",
+  title: "Summer Camp 2025",
+  description: "Summer Camp: Une semaine en immersion dans l'univers des mathématiques",
   metadataBase: new URL("https://mathmaroc.org"),
 };
 
@@ -24,7 +24,7 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={cx(sfPro.variable, inter.variable)}>
+      <body className={`${cx(pally.variable, poppins.variable)} font-poppins`}>
         <JotaiContextProvider>
           <DataProvider>
             <Suspense fallback="...">

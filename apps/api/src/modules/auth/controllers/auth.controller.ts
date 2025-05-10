@@ -83,4 +83,28 @@ export class AuthController {
       statusCode: 200,
     };
   }
+
+  @Public()
+  @HttpCode(HttpStatus.OK)
+  @Post('send-email-verification')
+  async sendEmailVerification(@Body() body: { email: string }) {
+    const { email } = body;
+    await this.authService.sendEmailVerificationCode(email);
+
+    return {
+      statusCode: 200,
+    };
+  }
+
+  @Public()
+  @HttpCode(HttpStatus.OK)
+  @Post('verify-email')
+  async verifyEmail(@Body() body: { email: string; verificationCode: string }) {
+    const { email, verificationCode } = body;
+    await this.authService.checkEmailVerificationCode(email, verificationCode);
+
+    return {
+      statusCode: 200,
+    };
+  }
 }

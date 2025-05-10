@@ -44,9 +44,6 @@ export class Application {
   identityCardNumber: string;
 
   @Column({ type: 'varchar', default: '' })
-  studentNumber: string;
-
-  @Column({ type: 'varchar', default: '' })
   city: string;
 
   @Column({ type: 'varchar', default: '' })
@@ -56,38 +53,28 @@ export class Application {
   phoneNumber: string;
 
   @Column({ type: 'varchar', default: '' })
-  guardianFullName: string;
+  emergencyContactFullName: string;
 
   @Column({ type: 'varchar', default: '' })
-  guardianPhoneNumber: string;
+  emergencyContactPhoneNumber: string;
 
   @Column({ type: 'varchar', default: '' })
-  relationshipWithGuardian: string;
-
-  @Column({ type: 'text', nullable: true })
-  healthInformations: string;
+  emergencyContactRelationship: string;
 
   /* Education */
   @Column({ type: 'varchar', default: '' })
   educationLevel: string;
 
   @Column({ type: 'varchar', default: '' })
-  highschool: string;
+  universityType: string;
 
   @Column({ type: 'varchar', default: '' })
-  averageGrade: string;
+  universityName: string;
 
   @Column({ type: 'varchar', default: '' })
-  mathAverageGrade: string;
-
-  @Column({ type: 'varchar', default: '' })
-  ranking: string;
-
-  @Column({ type: 'varchar', default: '' })
-  mathRanking: string;
+  educationField: string;
 
   /* Motivations */
-
   @Column({ type: 'text', nullable: true })
   motivations: string;
 
@@ -118,9 +105,6 @@ export class Application {
 
   @Column({ type: 'varchar', nullable: true })
   fileRegulationsUrl: string;
-
-  @Column({ type: 'varchar', nullable: true })
-  fileParentalAuthorizationUrl: string;
 
   /* createAt & updatedAt */
   @CreateDateColumn({

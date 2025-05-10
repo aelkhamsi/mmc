@@ -50,6 +50,7 @@ const relationshipsWithGuardian = [
   {label: "Père", value:"father"},
   {label: "Mère", value:"mother"},
   {label: "Tuteur", value:"guardian"},
+  {label: "Autre", value:"other"},
 ]
 
 const RequiredAsterisk = () => <span className="text-red-500"> * </span>;
@@ -163,21 +164,6 @@ export const PersonalInformationStep = ({
           )}
         />
 
-        {/* Student Number */}
-        <FormField
-          control={form.control}
-          name="studentNumber"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Code Massar ou Code National de l&apos;Etudiant (CNE)<RequiredAsterisk /></FormLabel>
-              <FormControl>
-                <Input placeholder="Entrez une valeur" {...field} />
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        /> 
-
         {/* City */}
         <FormField
           control={form.control}
@@ -237,7 +223,7 @@ export const PersonalInformationStep = ({
       </div>
       
       <h2 className='text-base font-semibold leading-7 text-[#0284C7] mt-6'>
-        Informations personnelles du tuteur
+        Informations sur le contact d&apos;urgence
       </h2>
       <Separator className='mt-4 bg-[#0284C7]'/>
 
@@ -245,10 +231,10 @@ export const PersonalInformationStep = ({
         {/* Guardian Full Name */}
         <FormField
           control={form.control}
-          name="guardianFullName"
+          name="emergencyContactFullName"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Nom et Prénom du tuteur<RequiredAsterisk /></FormLabel>
+              <FormLabel>Nom et Prénom du contact d&apos;urgence<RequiredAsterisk /></FormLabel>
               <FormControl>
                 <Input placeholder="Entrez un nom complet" {...field} />
               </FormControl>
@@ -260,10 +246,10 @@ export const PersonalInformationStep = ({
         {/* Guardian Phone Number */}
         <FormField
           control={form.control}
-          name="guardianPhoneNumber"
+          name="emergencyContactPhoneNumber"
           render={({ field }) => (
             <FormItem className="flex flex-col mt-2 items-start">
-              <FormLabel className="text-left">Téléphone du tuteur <RequiredAsterisk /></FormLabel>
+              <FormLabel className="text-left">Téléphone du contact d&apos;urgence <RequiredAsterisk /></FormLabel>
               <FormControl className="w-full">
                 <PhoneInput onValueChange={field.onChange} defaultValue={field.value} defaultCountry='MA' />
               </FormControl>
@@ -275,10 +261,10 @@ export const PersonalInformationStep = ({
         {/* Relationship with Guardian */}
         <FormField
           control={form.control}
-          name="relationshipWithGuardian"
+          name="emergencyContactRelationship"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Relation avec votre tuteur<RequiredAsterisk /></FormLabel>
+              <FormLabel>Relation avec cette personne<RequiredAsterisk /></FormLabel>
               <FormControl>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <SelectTrigger>
@@ -286,39 +272,13 @@ export const PersonalInformationStep = ({
                   </SelectTrigger>
                   <SelectContent>
                     <SelectGroup>
-                      <SelectLabel>Relation avec votre tuteur</SelectLabel>
+                      <SelectLabel>Relation avec le contact d&apos;urgence</SelectLabel>
                       {relationshipsWithGuardian.map(relationship => 
                         <SelectItem key={relationship.value} value={relationship.value}>{relationship.label}</SelectItem>
                       )}
                     </SelectGroup>
                   </SelectContent>
                 </Select> 
-              </FormControl>
-              <FormMessage />
-            </FormItem>
-          )}
-        />
-      </div>
-
-      <h2 className='text-base font-semibold leading-7 text-[#0284C7] mt-6'>
-        Informations de santé
-      </h2>
-      <Separator className='mt-4 bg-[#0284C7]'/>
-
-      <div className='mt-6 grid grid-cols-1 gap-4 justify-between'>
-        {/* Health Informations */}
-        <FormField
-          control={form.control}
-          name="healthInformations"
-          render={({ field }) => (
-            <FormItem>
-              <FormLabel>Avez-vous des problèmes de santé, des allergies, ou toute autre information que nous devons connaître pour vous assurer des conditions adéquates sur place?</FormLabel>
-              <FormControl>
-              <Textarea
-                placeholder="Maximum 300 mots"
-                className="resize-none"
-                {...field}
-              />
               </FormControl>
               <FormMessage />
             </FormItem>
