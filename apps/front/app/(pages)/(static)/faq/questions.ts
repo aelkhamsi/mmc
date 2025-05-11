@@ -1,38 +1,64 @@
 export const generalQuestions = [
   {
-    question: "Qui peut participer ?",
-    anwser: "Les élèves inscrits en dernière année de collège (“9ème”) et en première année de lycée (“Tronc Commun”) pendant l'année scolaire 2024-2025 peuvent participer à cette édition de Summer Camp. Quelques élèves de 1ère et 2ème année collège (“7ème” et “8ème”) exceptionnels pourront participer, s'ils arrivent à passer le test de sélection niveau “9ème”."
+    question: "Who can apply?",
+    anwser: "Students officially enrolled in a higher education program, from bac+1 to bac+4, during the academic year 2024-2025. This includes Moroccans studying in Morocco or abroad, and non-Moroccans studying in Morocco."
   },
   {
-    question: "Quelle est la date limite de candidature ?",
-    anwser: "La date limite est le 23 mai à 23h59, heure marocaine. Ne tardez pas à soumettre votre candidature. Aucune exception ne sera accordée pour les soumissions tardives, quelles que soient les raisons, qu'il s'agisse d'un oubli, de problèmes de connexion Internet ou de toute autre excuse."
+    question: "When is the deadline to apply?",
+    anwser: "The deadline is May 31st at 23:59 Moroccan time. Do not wait until the last day to submit your application. No exceptions will be granted for late submissions, regardless of reasons such as forgetting to submit the application or experiencing internet connectivity issues or any other excuse."
   },
   {
-    question: "Est-ce que la participation à cet événement est gratuite ?",
-    anwser: "La participation à cet événement est gratuite. Elle inclut l’hébergement et les repas à partir du dimanche 20 juillet au soir jusqu’au dimanche 27 juillet au matin."
+    question: "What is the level of the exams?",
+    anwser: "All participants will undergo the same set of exercises. The questions will be based on the first-year program only and will not require theoretical knowledge beyond that level. Our goal is to assess mathematical excellence without favoring to older students."
   },
   {
-    question: "Si j’ai une question, que dois-je faire ?",
-    anwser: "Écrivez à math.maroc.summer.camp@gmail.com. Toute réponse fournie par un autre moyen ou par une autre personne n'est pas considérée comme officielle."
+    question: "How can I prepare?",
+    anwser: "We provide a detailed syllabus of the required knowledge on our competition’s website. You can also review a collection of practice exercises and past exam papers."
   },
   {
-    question: "Si je n’ai pas les bulletins de cette année, que dois-je faire ?",
-    anwser: "Tous les documents sont requis et seront vérifiés individuellement par notre équipe. Si vous n'avez pas encore obtenu votre relevé de notes officiel, vous devez profiter de la période d'inscription que nous offrons pour le demander à votre école. Dans ce cas, nous vous recommandons d'attendre d'avoir tous vos documents avant de soumettre votre candidature (évitez cependant d'attendre le dernier jour). Si vous ne l'avez toujours pas reçu le 19 mai, veuillez nous envoyer un mail à ce moment-là pour expliquer la situation en détail."
+    question: "Is participation free?",
+    anwser: "Participation is free and includes accommodation for the nights of July 28th, 29th, 30th and 31st, as well as meals from July 28th dinner to August 1st breakfast. This doesn’t include transportation to/from UM6P."
   },
   {
-    question: "Comment faut-il signer le document du règlement ?",
-    anwser: "L'élève et le tuteur légal doivent signer le règlement: il faut imprimer le document, le remplir et le signer à la main, puis le scanner. Cependant, il n’est pas nécessaire de le légaliser."
+    question: "Am I required to come in person?",
+    anwser: "Yes. You must come in person at UM6P and stay during the entire duration of the event."
   },
   {
-    question: "Comment faut-il signer le document de l’autorisation parentale ?",
-    anwser: "Le parent/tuteur légal doit signer le document d’autorisation parentale: il faut imprimer le document, le remplir et le signer à la main, puis le scanner. Ce document doit être légalisé."
+    question: "What should I bring with me to the Math&Maroc Competition 2025?",
+    anwser: `To ensure a smooth and enriching experience at the competition, please bring the following items:\n
+        1. Personal Identification: A valid CINE or passport is mandatory for verification purposes.\n
+        2. Personal Computer: While not mandatory, bringing a personal laptop is recommended to fully participate in workshops and interactive sessions.\n
+        3. Writing Materials: Notebooks, pens, pencils, and any other preferred stationery for note-taking and problem-solving exercises.​\n
+        4. Personal Items: Any necessary personal items, such as medications or toiletries, to ensure your comfort during the event.​\n
+    `
   },
   {
-    question: "Quand est-ce que vous allez répondre à ma candidature ?",
-    anwser: "Les résultats seront annoncés quelques semaines après la date limite de dépôt des candidatures. Chaque candidat, qu'il soit sélectionné, mis en liste d'attente ou non sélectionné, recevra une réponse. Nous vous prions de ne pas envoyer de mail à ce sujet."
+    question: "What if I have a question, a special request ?",
+    anwser: "Write to math.maroc.competition@gmail.com. Any response provided through any other method or by any other individual is not considered official."
   },
   {
-    question: "Quand puis-je espérer recevoir une réponse définitive si je suis sur la liste d'attente ?",
-    anwser: "Nous contacterons les candidats sur liste d'attente individuellement et progressivement au fur et à mesure que des places se libèrent. La libération d'une place peut se produire jusqu'à quelques jours avant l'événement, donc nous ne pouvons pas fournir de calendrier précis. Nous vous prions de ne pas envoyer de mails concernant votre position sur la liste d'attente, car nous ne répondrons pas à ceux-ci."
+    question: "What if I don’t have my official transcripts for this year?",
+    anwser: "All documents are required and will be checked individually by our team. If you haven't obtained your official transcript yet, you should utilize the ample registration period we offer to request it from your university. In that case, we recommend waiting until you have all your documents to submit your application (avoid waiting until the last day). If you still haven't received it on May 27th, please email us at that time to explain the situation in detail (but not before)."
+  },
+
+  {
+    question: "How should I sign the rules document?",
+    anwser: "You need to print it, then fill it and sign it in handwriting. However, there is no need to certify this document by the administration (“legalisation”)."
+  },
+  {
+    question: "What equipment is required to participate in the online selection test?",
+    anwser: "To participate in the online selection test, you must use a computer equipped with a functional webcam and grant the necessary permissions for camera access. This setup is essential for monitoring and maintaining the integrity of the examination process. Ensure that your testing environment is well-lit and free from distractions."
+  },
+  {
+    question: "When can I expect a response to my application?",
+    anwser: "Results will be announced a few weeks after the selection test. Every applicant, whether selected, waitlisted or not selected will receive a response. Please do not send emails on this matter, as we will not be responding to them."
+  },
+  {
+    question: "When can I expect a final response if I'm on the waitlist?",
+    anwser: "We will reach out to waitlisted applicants on an individual basis and gradually as spots become available. Clearing a spot could happen up to a few days before the event, therefore we cannot provide any timeline. Please do not send emails about your waitlist position, as we will not be responding to them."
+  },
+  {
+    question: "Will the conferences be available online?",
+    anwser: "Yes, the conferences and ceremonies will be live-streamed on our social media, and will remain accessible after the event."
   },
 ]

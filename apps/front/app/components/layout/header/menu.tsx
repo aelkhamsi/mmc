@@ -32,7 +32,7 @@ export const Menu = () => {
             href="/selection"
             onClick={() => {setShowMenu(false)}}
           >
-            Test de sélection
+            Selection Test
           </Link>
         </NavigationMenuItem>
 
@@ -42,7 +42,7 @@ export const Menu = () => {
             href="/organizing-team"
             onClick={() => {setShowMenu(false)}}
           >
-            Equipe organisatrice
+            Organizing Team
           </Link>
         </NavigationMenuItem>
 
@@ -52,7 +52,7 @@ export const Menu = () => {
             href="/partners"
             onClick={() => {setShowMenu(false)}}
           >
-            Partenaires
+            Partners
           </Link>
         </NavigationMenuItem>
 

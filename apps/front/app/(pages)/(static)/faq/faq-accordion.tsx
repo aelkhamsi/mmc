@@ -21,7 +21,7 @@ export const FaqAccordion = ({
       {items.map((item, index) => 
         <AccordionItem value={`item-${index}`}>
           <AccordionTrigger>{item.question}</AccordionTrigger>
-          <AccordionContent className="text-gray-700">
+          <AccordionContent className="text-gray-700 whitespace-pre-line">
             {item.anwser}
           </AccordionContent>
         </AccordionItem>

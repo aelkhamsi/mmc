@@ -21,10 +21,10 @@ const partners = [
 
 const hosts = [
   {
-    key: 'lymed',
-    label: 'LYMED',
-    imageHref: '/lymed.png',
-    imageHeight: '100px',
+    key: 'um6p_cc',
+    label: 'UM6P CC',
+    imageHref: '/um6p_cc.png',
+    imageHeight: '120px',
   }
 ]
 
@@ -67,7 +67,7 @@ export default function PartnersPage() {
                 className="animate-fade-up opacity-0 text-center text-3xl font-bold drop-shadow-sm"
                 style={{ animationDelay: "0.30s", animationFillMode: "forwards" }}
               >
-                <span className='font-pally text-[#FF4925]'>Organisateur</span>
+                <span className='font-pally text-[#FF4925]'>Organizer</span>
               </h1>
 
               <div
@@ -80,9 +80,8 @@ export default function PartnersPage() {
                   imageHeight={organizers[0].imageHeight}
                 >
                   <div className="text-sm space-y-2">
-                    <div><span className='mb-8 bg-gradient-to-br from-sky-500 to-[#272162] text-transparent bg-clip-text font-semibold'>Math&Maroc</span> est une association à but non lucratif créée en 2016 par de jeunes Marocains souhaitant redonner à la collectivité.</div>
-                    <div><span className="font-bold">Notre mission</span> est de promouvoir les mathématiques et les sciences au Maroc, et ainsi guider les jeunes vers l&apos;excellence.</div>
-                    <div><span className='mb-8 bg-gradient-to-br from-sky-500 to-[#272162] text-transparent bg-clip-text font-semibold'>Math&Maroc</span> organise <span className="font-bold">Summer Camp</span> depuis sa première édition en juillet 2024.</div>
+                    <div><span className='mb-8 bg-gradient-to-br from-sky-500 to-[#272162] text-transparent bg-clip-text font-semibold'>Math&Maroc</span> is a non-profit organization established in 2016 by young Moroccans eager to give back to the community.</div>
+                    <div><span className="font-bold">Our mission</span> is to promote mathematics and science in Morocco, inspire and guide youth towards excellence, and contribute to the development of our country.</div>
                   </div>
                 </PartnerCard>
               </div>
@@ -96,7 +95,7 @@ export default function PartnersPage() {
                 className="animate-fade-up opacity-0 text-center text-3xl font-bold drop-shadow-sm"
                 style={{ animationDelay: "0.30s", animationFillMode: "forwards" }}
               >
-                <span className='font-pally text-[#FF4925]'>Partenaire Officiel</span>
+                <span className='font-pally text-[#FF4925]'>Official Partner</span>
               </h1>
 
               <div 
@@ -109,8 +108,8 @@ export default function PartnersPage() {
                   imageHeight={partners[0].imageHeight}
                 >
                   <div className="text-sm space-y-2">
-                    <div><span className='mb-8 bg-gradient-to-br from-stone-500 to-[#FC5C00] text-transparent bg-clip-text font-semibold'>Adria Business and Technology</span> est un expert dans l&apos;édition et l&apos;intégration des logiciels destinés aux institutions financières.</div>
-                    <div>Il s&apos;agit du <span className="font-semibold">partenaire officiel</span> de <span className='mb-8 bg-gradient-to-br from-sky-500 to-[#272162] text-transparent bg-clip-text font-semibold'>Math&Maroc</span>, qui a permis à la majorité de nos événements de voir le jour.</div>
+                    <div><span className='mb-8 bg-gradient-to-br from-stone-500 to-[#FC5C00] text-transparent bg-clip-text font-semibold'>Adria Business and Technology</span> is an expert in the development and integration of software for financial institutions.</div>
+                    <div>It is the <span className="font-semibold">official partner</span> of <span className='mb-8 bg-gradient-to-br from-sky-500 to-[#272162] text-transparent bg-clip-text font-semibold'>Math&Maroc</span>, enabling the majority of our events to come to life.</div>
                   </div>
                 </PartnerCard>
               </div>
@@ -135,7 +134,7 @@ export default function PartnersPage() {
                   imageHeight={hosts[0].imageHeight}
                 >
                   <div className="text-sm">
-                    <div>Le <span className='mb-8 bg-gradient-to-br from-[#005598] to-sky-600 text-transparent bg-clip-text font-semibold'>Lycée Méditerranéen (LYMED)</span>, porté par la Fondation Tanger Med, s&apos;appuie fondamentalement sur la valeur d&apos;excellence, et a pour vocation de préparer les élèves marocains à fort potentiel aux concours d&apos;accès aux Grandes Écoles d&apos;Ingénieurs marocaines et françaises</div>
+                    <div>The <span className="text-slate-800 font-semibold">UM6P College of Computing</span>, located at <span className='text-[#FF4925] font-semibold'>Mohammed VI Polytechnic University (UM6P)</span> in Benguerir,  establishes itself as a leading institution in Computer Science education and research, offering world-class university education led by esteemed professors, while promoting innovation in Computer Science.</div>
                   </div>
                 </PartnerCard>
               </div>
@@ -161,7 +160,7 @@ export default function PartnersPage() {
                   imageSrc={sponsors[0].imageHref}
                   imageHeight={sponsors[0].imageHeight}
                 >
-                  <div><span className='mb-8 bg-gradient-to-br from-[#7cb9ff] to-[#3691FB] text-transparent bg-clip-text font-semibold'>Evalmee</span> est une plateforme d&apos;évaluation en ligne offrant des outils précis et personnalisés pour dévoiler et perfectionner les compétences. Découvrez une approche dynamique pour révéler le potentiel caché et atteindre l&apos;excellence professionnelle.</div>
+                  <div><span className='mb-8 bg-gradient-to-br from-[#7cb9ff] to-[#3691FB] text-transparent bg-clip-text font-semibold'>Evalmee</span> is a remote examination platform that is simple, secure, and educational. Its goal is to support teachers and students towards comprehensive and caring education.</div>
                 </PartnerCard>
               </div>
             </div>

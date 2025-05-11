@@ -21,27 +21,33 @@ export default function MathSprintPage() {
     <TextureBg className="bg-[#fff9f3]">
       <div className="w-full flex flex-col items-center max-w-sm md:max-w-screen-xl px-5 xl:px-0 space-y-10 mb-20">
         <h1 className="text-center text-4xl font-bold drop-shadow-sm">
-          <span className='font-pally text-[#FF4925]'>Test de séléction</span>
+          <span className='font-pally text-[#FF4925]'>Selection Test</span>
         </h1>
 
         <div
           className="flex flex-col w-full md:flex-row md:justify-between md:space-x-8"
         >
           <div className="w-full space-y-4 p-4">
-            <p className='font-bold text-sm text-[#1C55FF]'>La sélection</p>
-            <h1 className='font-bold text-3xl'>Comment se passera la sélection ?</h1>
-            <p>À la suite de votre candidature, vous serez invités à passer un test de sélection qui se déroulera sur la plateforme <span className="font-bold">Evalmee</span> le matin du dimanche <span className="font-bold">25 mai</span>.</p>
-            <p>Ce test prendra la forme d&apos;un <span className="font-bold">questionnaire à choix multiples (QCM)</span> et portera sur divers concepts mathématiques.</p>
-            <p>Il nous permettra d&apos;évaluer votre logique, votre capacité à résoudre des problèmes complexes et, plus généralement, votre niveau en mathématiques.</p>
-            <p>Après ce test, les candidats ayant obtenu les meilleures notes seront convoqués pour des <span className="font-bold">entretiens individuels</span> en ligne. Ces entretiens constitueront une seconde phase de sélection permettant d&apos;évaluer plus en profondeur leurs compétences et leur adéquation avec nos attentes.</p>
+            <p className='font-bold text-sm text-[#1C55FF]'>The selection</p>
+            <h1 className='font-bold text-3xl'>How will the selection process work ?</h1>
+            <p>For the 2025 edition, the selection will take place in two clearly defined stages:</p>
+
+            <h2 className="font-bold">Online test</h2>
+            <p>Each candidate will take a 90-minute online test on the secure platform Evalmee. The questions will be entirely based on the official syllabus, available for download on this page.</p>
+            <p>To ensure the integrity of the selection, the webcam must remain activated throughout; therefore, ensure you have a reliable computer, a stable internet connection, and a quiet, well-lit workspace.</p>
+            
+            <h2 className="font-bold">Academic Record Review</h2>
+            <p>This stage involves reviewing your academic record. We will examine your latest official transcripts. These documents must be submitted by May 31, 2025, at 11:59 PM (Morocco time). Any incomplete submission beyond this deadline will be considered invalid.</p>
+            <p>Final results will be communicated individually by email.</p>
+
           </div>
 
           <div className="w-full space-y-4 p-4">
-            <p className='font-bold text-sm text-[#1C55FF]'>Le syllabus</p>
-            <h1 className='font-bold text-3xl'>Préparation au test</h1>
+            <p className='font-bold text-sm text-[#1C55FF]'>The syllabus</p>
+            <h1 className='font-bold text-3xl'>Test preparation</h1>
             
             <div className="flex flex-col items-center space-y-4 md:flex-row md:space-x-4 md:space-y-0">
-              Le programme des cours concernés vous sera transmis très prochainement afin de vous permettre de vous préparer dans les meilleures conditions.
+              To help you thoroughly prepare for the test, we have provided a clear and detailed syllabus outlining precisely the topics to revise. You will also find some practice problems to gently familiarize yourself with the test format. Feel free to start reviewing them now. Happy preparation, and most importantly, enjoy practicing!
             </div>
 
             <div className="flex flex-col items-center space-y-4 md:flex-row md:space-x-4 md:space-y-0">
@@ -54,7 +60,7 @@ export default function MathSprintPage() {
                     <ExamIcon className="h-[4rem]"/>
                   </div>
                 </div>
-                <div className="text-xs text-gray-500 mt-1">Disponible prochainement</div>
+                <div className="text-xs text-gray-500 mt-1">Available soon</div>
               </Link>
             </div>
           </div>

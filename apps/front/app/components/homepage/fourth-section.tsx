@@ -1,9 +1,9 @@
 import Link from "next/link";
 import { AnimatedTooltip } from '@/app/components/animated-tooltip';
-import { brandDesign, organizingCommittee, webDevelopment } from "@/app/(pages)/(static)/organizing-team/data";
+import { organizingCommittee, webDevelopment } from "@/app/(pages)/(static)/organizing-team/data";
 
 const FourthSection = () => {
-  const members = [...organizingCommittee, ...brandDesign, ...webDevelopment]
+  const members = [...organizingCommittee, ...webDevelopment]
     .sort((a, b) => 0.5 - Math.random())
     .slice(0, 9)
     .map((member, index) => ({id: index, image: member?.imageSrc, name: member?.name}))

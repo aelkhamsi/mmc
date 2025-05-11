@@ -7,7 +7,7 @@ export const sfPro = localFont({
 });
 
 export const pally = localFont({
-  src: "./Pally-Variable.ttf",
+  src: "./SF-Pro-Display-Medium.otf",
   variable: "--font-pally",
 })
 

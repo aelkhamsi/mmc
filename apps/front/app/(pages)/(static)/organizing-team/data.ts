@@ -1,48 +1,63 @@
 export const organizingCommittee = [
   {
-    name: 'Abderrahmane Echaarani',
-    imageSrc: '/organizing-team/abderrahmane_echaarani.webp',
-    linkedinSrc: 'https://www.linkedin.com/in/abderrahmane-echaarani-41ab66201/',
-  },
-  {
-    name: 'Adam El Kharraze',
-    imageSrc: '/organizing-team/adam_elkharraze.webp',
-    linkedinSrc: 'https://www.linkedin.com/in/adam-el-kharraze-7a46b2333/',
-  },
-  {
-    name: 'Alae Belkhadir',
-    imageSrc: '/organizing-team/alae_belkhadir.webp',
-    linkedinSrc: 'https://www.linkedin.com/in/alae-belkhadir-03a082255',
-  },
-  {
-    name: 'Ayman Amasrour',
-    imageSrc: '/organizing-team/ayman_amasrour.webp',
-    linkedinSrc: 'https://www.linkedin.com/in/ayman-amasrour-1a280228a/',
-  },
-  {
-    name: 'Ayoub Boufous',
-    imageSrc: '/organizing-team/ayoub_boufous.webp',
-    linkedinSrc: 'https://www.linkedin.com/in/ayoub-boufous-036953287/',
-  },
-  {
-    name: 'Malak Khaldouni',
-    imageSrc: '/organizing-team/malak_khaldouni.webp',
-    linkedinSrc: 'https://www.linkedin.com/in/malak-khaldouni-383472253/',
-  },
-  {
-    name: 'Mohammed Ali Benchekroun',
+    name: 'Mohammed Ali BENCHEKROUN',
     imageSrc: '/organizing-team/mohammed_ali_benchekroun.webp',
     linkedinSrc: 'https://www.linkedin.com/in/mohammed-ali-benchekroun',
   },
   {
-    name: 'Mohcine Khotbi',
-    imageSrc: '/organizing-team/mohcine_khotbi.webp',
-    linkedinSrc: 'https://www.linkedin.com/in/mohcine-khotbi',
+    name: 'Ziad OUMZIL',
+    imageSrc: '/organizing-team/ziad_oumzil.webp',
+    linkedinSrc: 'https://www.linkedin.com/in/ziad-oumzil',
   },
   {
-    name: 'Chaimaa RADIOUSSE',
-    imageSrc: '/organizing-team/chaimaa_radiousse.webp',
-    linkedinSrc: 'http://www.linkedin.com/in/chaimaa-radiousse-59aa9b322',
+    name: 'Abdelbar GHASSOUB',
+    imageSrc: '/organizing-team/abdelbar_ghassoub.webp',
+    linkedinSrc: 'https://www.linkedin.com/in/abdelbar-ghassoub-b4a042238',
+  },
+  {
+    name: 'Amine SAADI',
+    imageSrc: '/organizing-team/amine_saadi.webp',
+    linkedinSrc: 'https://www.linkedin.com/in/saadi-amine-8633202a3',
+  },
+  {
+    name: 'Ahmed CHAHLAOUI',
+    imageSrc: '/organizing-team/ahmed_chahlaoui.webp',
+    linkedinSrc: 'https://www.linkedin.com/in/ahmed-chahlaoui-82b523163',
+  },
+  {
+    name: 'Aymane MAAITAT',
+    imageSrc: '/organizing-team/aymane_maaitat.webp',
+    linkedinSrc: 'https://www.linkedin.com/in/aymanemtt',
+  },
+  {
+    name: 'Issam TAUIL',
+    imageSrc: '/organizing-team/issam_taouil.webp',
+    linkedinSrc: 'https://www.linkedin.com/in/issam-tauil-8b70a9205',
+  },
+  {
+    name: 'Moaad ELMOUTASSIM',
+    imageSrc: '/organizing-team/moaad_elmoutassim.webp',
+    linkedinSrc: 'https://www.linkedin.com/in/moaad-elmoutassim-7745172a6',
+  },
+  {
+    name: 'Abdelhaq Chaoui',
+    imageSrc: '/organizing-team/abdelhaq_chaoui.webp',
+    linkedinSrc: 'https://www.linkedin.com/in/abdelhaq-chaoui-9627042ab/',
+  },
+  {
+    name: 'Aymane Moutei',
+    imageSrc: '/organizing-team/aymane_moutei.webp',
+    linkedinSrc: 'https://www.linkedin.com/in/aymanemoutei/',
+  },
+  {
+    name: 'Mohamed Taha RAMLAOUI',
+    imageSrc: '/organizing-team/mohammed_taha_ramlaoui.webp',
+    linkedinSrc: 'https://www.linkedin.com/in/mohamed-taha-ramlaoui-0b384a31a/',
+  },
+  {
+    name: 'Adam EL KHARRAZE',
+    imageSrc: '/organizing-team/adam_elkharraz.webp',
+    linkedinSrc: 'https://www.linkedin.com/in/adam-el-kharraze-7a46b2333/',
   },
   {
     name: 'Mouad Enoua',
@@ -50,101 +65,86 @@ export const organizingCommittee = [
     linkedinSrc: 'https://www.linkedin.com/in/mouad-enoua-48a984327/',
   },
   {
-    name: 'Raihane Hebaz',
-    imageSrc: '/organizing-team/raihane_hebaz.webp',
-    linkedinSrc: 'https://www.linkedin.com/in/raihane-hebaz-0b8035248/',
+    name: 'Anas Labgoul',
+    imageSrc: '/organizing-team/anas_labgoul.webp',
+    linkedinSrc: 'https://www.linkedin.com/in/anas-labgoul-ab4118214/',
   },
   {
     name: 'Saad Chairi',
     imageSrc: '/organizing-team/saad_chairi.webp',
-    linkedinSrc: 'https://www.linkedin.com/in/saad-chairi',
+    linkedinSrc: 'https://www.linkedin.com/in/saad-chairi-b7a70334a/',
   },
   {
-    name: 'Samy Lakhnati',
-    imageSrc: '/organizing-team/samy_lakhnati.webp',
-    linkedinSrc: '',
+    name: 'Ali Hakim',
+    imageSrc: '/organizing-team/ali_hakim.webp',
+    linkedinSrc: 'https://www.linkedin.com/in/ali-hakim-79a81424a/',
   },
   {
-    name: 'Souhail Elbakkar',
-    imageSrc: '/organizing-team/souhail_elbakkar.webp',
-    linkedinSrc: 'https://www.linkedin.com/in/souhail-elbakkar-9aab2a284/',
+    name: 'Ahmed Yassine GHOSNE',
+    imageSrc: '/organizing-team/ahmedyassine_ghosne.webp',
+    linkedinSrc: 'https://www.linkedin.com/in/ahmed-yassine-ghosne-77556b217/',
   },
   {
-    name: 'Ziad Oumzil',
-    imageSrc: '/organizing-team/ziad_oumzil.webp',
-    linkedinSrc: 'https://www.linkedin.com/in/ziad-oumzil',
-  },
-
-  {
-    name: 'Ayman Riad Solh ',
-    imageSrc: '/organizing-team/ayman_riad_solh.webp',
-    linkedinSrc: 'https://www.linkedin.com/in/ayman-riad-solh-06276a338/',
+    name: 'Zouhair ESSEQALLY',
+    imageSrc: '/organizing-team/zouhair_esseqally.webp',
+    linkedinSrc: 'https://www.linkedin.com/in/zouhair-esseqally-5833a2247/',
   },
   {
-    name: 'Salma Es-safi',
-    imageSrc: '/organizing-team/salma_essafi.webp',
-    linkedinSrc: 'https://www.linkedin.com/in/salma-es-safi-20a709315',
+    name: 'Wassel Ben Yahia',
+    imageSrc: '/organizing-team/wassel_benyahya.webp',
+    linkedinSrc: 'https://www.linkedin.com/in/wassel-ben-yahia-2b14aa244/',
   },
   {
-    name: 'Aya Ait El Madani',
-    imageSrc: '/organizing-team/aya_ait_elmadani.webp',
-    linkedinSrc: 'https://www.linkedin.com/in/aya-ait-el-madani-036b06264',
+    name: 'Youssef Lazzouzi',
+    imageSrc: '/organizing-team/youssef_lazzouzi.webp',
+    linkedinSrc: 'https://www.linkedin.com/in/youssef-lazzouzi-3613a9181/',
   },
   {
-    name: 'Mohammed Eladbiri',
-    imageSrc: '/organizing-team/mohammed_el_adbiri.webp',
-    linkedinSrc: 'https://www.linkedin.com/in/mohammedelabridi',
+    name: 'Abderrahmane Ait Mansour',
+    imageSrc: '/organizing-team/abderrahmane_aitmansour.webp',
+    linkedinSrc: 'https://www.linkedin.com/in/abderrahmane-ait-mansour-ba8b39324/',
   },
   {
-    name: 'Samia Mayssan',
-    imageSrc: '/organizing-team/samia_mayssan.webp',
-    linkedinSrc: 'https://www.linkedin.com/in/samia-mayssan',
+    name: 'Ilyas ET-TABOUTI',
+    imageSrc: '/organizing-team/ilyas_ettabouti.webp',
+    linkedinSrc: 'https://www.linkedin.com/in/ilyas-et-tabouti-b7b82b323/',
   },
   {
-    name: 'Abdelkayoum Kaddouri',
+    name: 'Aya Majdoub',
+    imageSrc: '/organizing-team/aya_majdoub.webp',
+    linkedinSrc: 'https://www.linkedin.com/in/aya-majdoub-319339274/',
+  },
+  {
+    name: 'Amine Mahdane',
+    imageSrc: '/organizing-team/amine_mahdane.webp',
+    linkedinSrc: 'https://www.linkedin.com/in/amine-mahdane/',
+  },
+  {
+    name: 'Abdelkayoum KADDOURI',
     imageSrc: '/organizing-team/abdelkayoum_kaddouri.webp',
     linkedinSrc: 'https://www.linkedin.com/in/abdelkayoum-kaddouri-1213ab321/',
   },
   {
-    name: 'Adam Lachkar',
-    imageSrc: '/organizing-team/adam_lachkar.webp',
-    linkedinSrc: 'https://www.linkedin.com/in/adam-lachkar-630010305',
+    name: 'Aymen EL OUADRHIRI',
+    imageSrc: '/organizing-team/aymane_elouadrhiri.webp',
+    linkedinSrc: 'https://www.linkedin.com/in/aymen-e-6a303732a/',
   },
   {
-    name: 'Nour El Houda El Bouz',
-    imageSrc: '/organizing-team/nour_el_houda_el_bouz.webp',
-    linkedinSrc: 'https://www.linkedin.com/in/el-bouz-nour-el-houda-631425308',
+    name: 'Hiba Lahmadi',
+    imageSrc: '/organizing-team/hiba_lahmadi.webp',
+    linkedinSrc: 'https://www.linkedin.com/in/hiba-lahmadi/',
   },
   {
-    name: 'Rinas Nejjari',
-    imageSrc: '/organizing-team/rinas_nejjari.webp',
-    linkedinSrc: 'https://www.linkedin.com/in/rinas-nejjari-1ba702358',
-  },
-  {
-    name: 'Hadi Mouline',
-    imageSrc: '/organizing-team/hadi_mouline.webp',
-    linkedinSrc: '',
-  },
-  {
-    name: 'Moaad El Moutassim',
-    imageSrc: '/organizing-team/moaad_el_moutassim.webp',
-    linkedinSrc: 'https://www.linkedin.com/in/moaad-elmoutassim-7745172a6',
+    name: 'Ayoub El Moussaoui',
+    imageSrc: '/organizing-team/ayoub_elmoussaoui.webp',
+    linkedinSrc: 'https://www.linkedin.com/in/ayoub-elmoussaoui-77066a283/',
   },
 ];
-
-export const brandDesign = [
-  {
-    name: 'Ayoub BENNOUNA',
-    imageSrc: '/organizing-team/ayoub_bennouna.webp',
-    linkedinSrc: '',
-    portfolioSrc: 'https://www.ayoubbennouna.com/',
-  },
-]
 
 export const webDevelopment = [
   {
     name: 'Achraf EL KHAMSI',
-    imageSrc: '/organizing-team/achraf_el_khamsi.webp',
+    imageSrc: '/organizing-team/achraf_elkhamsi.webp',
     linkedinSrc: 'https://linkedin.com/in/achrafelkhamsi',
   },
 ]

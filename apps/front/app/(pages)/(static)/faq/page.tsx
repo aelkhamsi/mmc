@@ -17,15 +17,16 @@ export default function ConferencesPage() {
           className="animate-fade-up bg-clip-text text-center font-display opacity-0"
           style={{ animationDelay: "0.15s", animationFillMode: "forwards" }}
         >
-          Une question ? Consultez cette FAQ, où vous trouverez les réponses aux demandes les plus fréquentes des participants de l&apos;édition précédente.
+          A question? Take a look at this FAQ, where you'll find answers to the most frequently asked questions from last year&apos;s participants.
         </p>
 
         <p
           className="animate-fade-up bg-clip-text text-center font-display opacity-0"
           style={{ animationDelay: "0.20s", animationFillMode: "forwards" }}
         >
-          Pour toute autre question non traitée sur le site vous pouvez nous contacter via nos réseaux sociaux ou par email sur <span className="text-blue-500">math.maroc.summer.camp@gmail.com</span><br/>
-          Notez cependant que nous ne pouvons répondre qu&apos;aux questions non discutées sur le site.
+          
+          For any other questions not covered on this page, you can contact us via our social networks or by email at <span className="text-blue-500">math.maroc.competition@gmail.com</span>.<br/>
+          Please note that we will not respond to emails for questions already addressed in this FAQ.
         </p>
 
         <div

@@ -50,15 +50,15 @@ export default function Footer() {
             <div className='space-y-6'>
               <h1 className='font-bold'>Pages</h1>
               <ul className='space-y-2'>
-                <li><Link href='/selection' className='hover:underline'>Test de sélection</Link></li>
-                <li><Link href='/organizing-team' className='hover:underline'>Equipe organisatrice</Link></li>
-                <li><Link href='/partners' className='hover:underline'>Partenaires</Link></li>
+                <li><Link href='/selection' className='hover:underline'>Selection Test</Link></li>
+                <li><Link href='/organizing-team' className='hover:underline'>Organizing Team</Link></li>
+                <li><Link href='/partners' className='hover:underline'>Partners</Link></li>
                 <li><Link href='/faq' className='hover:underline'>FAQ</Link></li>
               </ul>
             </div>
 
             <div className='space-y-6'>
-              <h1 className='font-bold'>Réseaux</h1>
+              <h1 className='font-bold'>Social Media</h1>
               <ul className='space-y-2'>
                 <li><Link href='https://www.instagram.com/mathmaroc/' target='_blank' className='hover:underline'>Instagram</Link></li>
                 <li><Link href='https://www.youtube.com/@mathmaroc1396' target='_blank' className='hover:underline'>Youtube</Link></li>

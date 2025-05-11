@@ -8,7 +8,7 @@ const TextureBg = ({
   className?: string,
 }) => {
   return (
-    <div className="w-full bg-[url(/white-waves.webp)] bg-center bg-repeat z-1">
+    <div className="w-full bg-[url(/paper_bg.webp)] bg-center bg-repeat z-1">
       <div className={`w-full flex flex-col justify-center items-center py-6 pt-24 z-0 ${className}`}>
           {children}
       </div>

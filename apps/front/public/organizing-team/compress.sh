@@ -6,7 +6,7 @@ for img in *.jpeg; do
   if [[ -f "$img" ]]; then
     # Convert PNG to WebP using cwebp and rename the output to lowercase
     output_name=$(echo "$img" | tr '[:upper:]' '[:lower:]') # Convert the filename to lowercase
-    cwebp -q 60 "$img" -o "${output_name%.png}.webp"
+    cwebp -q 60 "$img" -o "${output_name}.webp"
     rm "$img"
   fi
 done
