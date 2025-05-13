@@ -8,7 +8,9 @@ import { BookIcon, CalendarMDMIcon, LocationIcon } from '@mdm/ui'
 
 const HeroSection = () => {
   return (
-    <TextureBg> 
+    <TextureBg
+      className='bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-transparent via-[#fff9f3] to-transparent'
+    > 
       {/* Hero Section */}
       <div className="w-full flex flex-col items-center max-w-2xl">
         {/* Logo */}
@@ -25,8 +27,8 @@ const HeroSection = () => {
         </div>
 
         <div className="w-[25rem] md:w-[80rem] relative mb-6">
-          <div className="absolute inset-x-40 top-0 bg-gradient-to-r from-transparent via-stone-200 to-transparent h-[2px] md:w-3/4 blur-sm" />
-          <div className="absolute inset-x-40 top-0 bg-gradient-to-r from-transparent via-stone-200 to-transparent h-px md:w-3/4" />
+          <div className="absolute inset-x-40 top-0 bg-gradient-to-r from-transparent via-cyan-100 to-transparent h-[2px] md:w-3/4 blur-sm" />
+          <div className="absolute inset-x-40 top-0 bg-gradient-to-r from-transparent via-cyan-100 to-transparent h-px md:w-3/4" />
           <div className="absolute inset-x-80 top-0 bg-gradient-to-r from-transparent via-[#252162] to-transparent h-[5px] md:w-2/4 blur-sm" />
           <div className="absolute inset-x-80 top-0 bg-gradient-to-r from-transparent via-cyan-600 to-transparent h-px md:w-2/4" />
         </div>
@@ -39,26 +41,35 @@ const HeroSection = () => {
               style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
             >
               <span className='text-[#000102] font-pally'>
-                Une semaine en immersion dans l&apos;univers des mathématiques
+                The Ultimate University Math Challenge
               </span>
             </h1>
           </div>
 
           {/* Time and Location */}
           <div className='flex flex-col items-start space-y-2 gap-x-8 md:flex-row md:justify-center md:space-y-0'>
-            <div className='flex items-center justify-center w-auto md:w-1/3 space-x-2'>
+            <div className='flex items-center justify-center w-auto md:w-1/3 min-h-[4rem] space-x-2'>
               <CalendarMDMIcon className='h-12'/>
-              <div className="text-sm font-semibold text-[#000102]">du 25 au 29 juillet 2025</div>
+              <div className="text-sm font-semibold text-gray-600">
+                <span className='text-[#252162]'> July 25th</span> to <br/> 
+                <span className='text-[#252162]'> July 29th</span>  2025
+              </div>
             </div>
 
-            <div className='flex items-center justify-center w-auto md:w-1/3 space-x-2'>
+            <div className='flex items-center justify-center w-auto md:w-1/3 min-h-[4rem] space-x-2'>
               <BookIcon className='h-12' />
-              <div className="text-sm font-semibold text-[#000102]">Étudiants de Bac+1 à Bac+4</div>
+              <div className="text-sm font-semibold text-gray-600">
+                Top students from
+                <span className='text-[#252162]'> Bac+1</span> to
+                <span className='text-[#252162]'> Bac+4</span>
+              </div>
             </div>
 
-            <div className='flex items-center justify-center w-auto md:w-1/3 space-x-2'>
+            <div className='flex items-center justify-center w-auto md:w-1/3 min-h-[4rem] space-x-2'>
               <LocationIcon className='h-12' />
-              <div className="text-sm font-semibold text-[#000102] text-center">UM6P | College of Computing,<br/> Benguerir</div>
+              <div className="text-sm font-semibold text-gray-600 text-center">
+                <span className='text-[#252162]'>UM6P | College of Computing</span>,<br/> Benguerir
+              </div>
             </div>
           </div>
 

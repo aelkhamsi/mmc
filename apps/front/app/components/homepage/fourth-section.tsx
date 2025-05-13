@@ -15,8 +15,8 @@ const FourthSection = () => {
       </h1>
 
       <div className='max-w-screen-md text-center my-6 xl:p-0'>
-        Nous sommes avant tout des gens passionnés par la science, et unis par l'envie de partager et de former les leaders de demain.
-        Notre vision est celle d'un Maroc où chaque jeune a l'opportunité de réaliser son plein potentiel grâce à une éducation de qualité
+        We are people with a passion for science, united by a desire to share and train the leaders of tomorrow. 
+        Our vision is of a Morocco where every young person has the opportunity to realize his or her full potential through quality education.
       </div>
 
       {/* <div 

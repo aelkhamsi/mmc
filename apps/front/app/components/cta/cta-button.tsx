@@ -41,7 +41,7 @@ const CtaButton = ({
           <Scroll className='h-5 w-5'/>
 
           {!isLoading
-            ? label ?? 'Participer'
+            ? label ?? 'Participate'
             : <LoadingDots color="#808080" />
           }
         </span>
