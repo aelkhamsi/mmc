@@ -1,1 +1,1 @@
-# Summer Camp Website
+# MMC Website

@@ -1,26 +1,31 @@
-import { BookIcon, CalendarMDMIcon, LocationIcon } from '@mdm/ui'
+import { Button} from '@mdm/ui'
 import { ImageStack } from '../image-stack'
+import Link from 'next/link';
 
 const images = [
   {
     name: 'Summer camp photo',
-    src: '/past-edition/sc_1.webp' 
+    src: '/past-edition/contest.webp' 
   },
   {
     name: 'Summer camp photo',
-    src: '/past-edition/sc_2.webp' 
+    src: '/past-edition/panel.webp' 
   },
   {
     name: 'Summer camp photo',
-    src: '/past-edition/sc_3.webp' 
+    src: '/past-edition/sports.webp' 
   },
   {
     name: 'Summer camp photo',
-    src: '/past-edition/sc_4.webp' 
+    src: '/past-edition/board_games.webp' 
   },
   {
     name: 'Summer camp photo',
-    src: '/past-edition/sc_5.webp'
+    src: '/past-edition/closing_ceremony.webp'
+  },
+  {
+    name: 'Summer camp photo',
+    src: '/past-edition/closing_ceremony_2.webp'
   },
 ]
 
@@ -31,11 +36,14 @@ const SecondSection = () => {
         className="flex flex-col w-full space-y-4 md:flex-row md:justify-between md:space-x-8 lg:w-3/4 text-base mb-12 md:mb-20"
       >
         <div className="w-full space-y-4 p-4 lg:p-0">
-          <p className='font-bold text-xs text-[#1C55FF]'>C'est quoi Summer Camp ?</p>
-          <h1 className='font-bold text-3xl font-neco'>Summer Camp, une aventure scientifique et mathématique au cœur de l&apos;été</h1>
-          <p>Le <span className='font-bold'>Summer Camp</span>, c&apos;est une semaine d&apos;immersion dédiée aux mathématiques et aux sciences, pensée pour les jeunes curieux et passionnés.</p>
-          <p>À travers des séances de haut niveau en mathématiques, une introduction à l&apos;informatique, des ateliers et des workshops, les élèves explorent les notions scientifiques de façon concrète et ludique.</p>
-          <p>Bien plus qu&apos;un camp d&apos;été, c&apos;est une aventure intellectuelle, une rencontre entre esprits vifs, et une occasion unique de nourrir sa passion tout en s&apos;amusant.</p>
+          <p className='font-bold text-xs text-[#1C55FF]'>C'est quoi MMC ?</p>
+          <h1 className='font-bold text-3xl font-neco'>Math Maroc Competition, The Summit of Moroccan Mathematical Minds</h1>
+          <p><span className='font-semibold'>MMC (Math&Maroc Competition)</span> is a 5 days annual math competition gathering 200+ university students.</p>
+          <p>MMC is where Morocco&apos;s brightest university students challenge their minds through <span className='font-semibold'>competition</span>, grow through inspiring <span className='font-semibold'>talks</span> and <span className='font-semibold'>workshops</span>, and bond through <span className='font-semibold'>games</span>, <span className='font-semibold'>sports</span>, and shared moments.</p>
+
+          <p className='p-2 bg-[#fff9f3] shadow-md rounded-md'>
+            Top-ranked participants earn the opportunity to take part in the <span className='font-semibold'>IMC (International Mathematics Competition for University Students)</span>.
+          </p>
         </div>
 
         <div className="w-full">
@@ -47,7 +55,7 @@ const SecondSection = () => {
       </div>
 
       <div className='text-3xl font-bold p-4 lg:p-0 font-neco'>
-        Retour sur Summer Camp 2024
+        Looking back at MMC 2024
       </div>
 
       <div
@@ -55,18 +63,22 @@ const SecondSection = () => {
       >
         <div className='w-full flex justify-start p-4 lg:p-0'>
           <div className="w-fit space-y-4 font-medium text-3xl">
-            <p><span className='bg-gradient-to-br from-[#1C55FF] to-[#ABA8A9] inline-block text-transparent bg-clip-text'>75+</span> Participants</p>
-            <p><span className='bg-gradient-to-br from-[#1C55FF] to-[#ABA8A9] inline-block text-transparent bg-clip-text'>1</span> Semaine prise en charge</p>
-            <p>✨ Des formations d&apos;excellence</p>
-            <p>🏖️ Des jeux, du sport et des activités</p>
+            <p><span className='bg-gradient-to-br from-[#1C55FF] to-[#ABA8A9] inline-block text-transparent bg-clip-text'>5</span> Fully sponsored days</p>
+            <p><span className='bg-gradient-to-br from-[#1C55FF] to-[#ABA8A9] inline-block text-transparent bg-clip-text'>200+</span> Participants</p>
+            <p><span className='bg-gradient-to-br from-[#1C55FF] to-[#ABA8A9] inline-block text-transparent bg-clip-text'>5+</span> Speakers</p>
+            <p>⚽ Games, sports and activities</p>
           </div>
         </div>
 
         <div className="w-full flex flex-col px-4 space-y-4">
-          <p>L'édition passée de Summer Camp s'est tenue à Martil en collaboration avec LYMED</p>
-          <p>Cet événement a rassemblé près d&apos;une cinquantaine de jeunes passionnés de sciences et de mathématiques, issus de la dernière année du collège.</p>
-          <p>En 2025, le Summer Camp voit plus grand : il s&apos;ouvrira à tous les niveaux du collège, ainsi qu&apos;aux élèves du tronc commun.</p>
-          <p>L&apos;objectif ? Offrir une expérience encore plus riche, à travers de nouvelles activités, une formation de haut niveau et des opportunités inédites pour éveiller la curiosité et nourrir l&apos;ambition des participants.</p>
+          <p>The last edition of MMC was held in Benguerir in collaboration with UM6P College of Computing.</p>
+          <p>The event was a groundbreaking success, bringing together over 200 participants that competed, connected with top professors and engineers, and bonded through games and fun activities.</p>
+
+          <Link href="partners">
+            <Button className='w-fit bg-transparent text-black border border-black hover:text-white'>
+              Learn more
+            </Button>
+          </Link>
         </div>
       </div>
     </div>
