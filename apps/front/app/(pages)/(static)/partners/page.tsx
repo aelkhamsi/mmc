@@ -67,7 +67,7 @@ export default function PartnersPage() {
                 className="animate-fade-up opacity-0 text-center text-3xl font-bold drop-shadow-sm"
                 style={{ animationDelay: "0.30s", animationFillMode: "forwards" }}
               >
-                <span className='font-pally text-[#FF4925]'>Organizer</span>
+                <span className='font-neco text-[#FF4925]'>Organizer</span>
               </h1>
 
               <div
@@ -95,7 +95,7 @@ export default function PartnersPage() {
                 className="animate-fade-up opacity-0 text-center text-3xl font-bold drop-shadow-sm"
                 style={{ animationDelay: "0.30s", animationFillMode: "forwards" }}
               >
-                <span className='font-pally text-[#FF4925]'>Official Partner</span>
+                <span className='font-neco text-[#FF4925]'>Official Partner</span>
               </h1>
 
               <div 
@@ -121,7 +121,7 @@ export default function PartnersPage() {
                 className="animate-fade-up opacity-0 text-center text-3xl font-bold drop-shadow-sm"
                 style={{ animationDelay: "0.30s", animationFillMode: "forwards" }}
               >
-                <span className='font-pally text-[#FF4925]'>En partenariat avec</span>
+                <span className='font-neco text-[#FF4925]'>En partenariat avec</span>
               </h1>
 
               <div
@@ -148,7 +148,7 @@ export default function PartnersPage() {
                 className="animate-fade-up opacity-0 text-center text-3xl font-bold drop-shadow-sm"
                 style={{ animationDelay: "0.30s", animationFillMode: "forwards" }}
               >
-                <span className='font-pally text-[#FF4925]'>Sponsors</span>
+                <span className='font-neco text-[#FF4925]'>Sponsors</span>
               </h1>
 
               <div

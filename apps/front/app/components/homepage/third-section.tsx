@@ -23,7 +23,7 @@ const ThirdSection = () => {
 
       {/* Content */}
       <div className='relative isolate overflow-hidden w-full flex flex-col justify-center items-center py-14 bg-[#000102] text-white space-y-10'>
-        <h1 className='text-3xl text-center font-bold font-pally'>
+        <h1 className='text-3xl text-center font-bold font-neco'>
           Comment y participer ?
         </h1>
 

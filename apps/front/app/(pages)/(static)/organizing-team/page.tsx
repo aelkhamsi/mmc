@@ -48,7 +48,7 @@ export default function OrganizingTeamPage() {
   return (
     <TextureBg className="bg-[#fff9f3]">
       <div className="w-full max-w-sm md:max-w-screen-lg px-5 xl:px-0 mt-10 space-y-6">
-        <h1 className="text-center text-4xl font-bold font-pally drop-shadow-sm">
+        <h1 className="text-center text-4xl font-bold font-neco drop-shadow-sm">
           <span className='text-[#252162]'>Math&Maroc</span> <span className='font-extralight'>{" | "}</span>
           <span className='bg-gradient-to-br from-black to-stone-500 inline-block text-transparent bg-clip-text'>Organizing Committee</span>
         </h1>
@@ -69,7 +69,7 @@ export default function OrganizingTeamPage() {
         <div className='flex flex-col justify-around space-y-6 flex-wrap gap-y-6 md:flex-row md:space-y-0'>          
           {/* WEB DEV */}
           <div className='w-full md:w-1/2 space-y-4'>
-            <h1 className="text-center text-3xl font-bold font-pally drop-shadow-sm">
+            <h1 className="text-center text-3xl font-bold font-neco drop-shadow-sm">
               <span className='text-[#252162]'>Math&Maroc</span> <span className='font-extralight'>{" | "}</span>
               <span className='bg-gradient-to-br from-black to-stone-500 inline-block text-transparent bg-clip-text'>Web Development</span>
             </h1>

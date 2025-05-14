@@ -32,7 +32,7 @@ const SecondSection = () => {
       >
         <div className="w-full space-y-4 p-4 lg:p-0">
           <p className='font-bold text-xs text-[#1C55FF]'>C'est quoi Summer Camp ?</p>
-          <h1 className='font-bold text-3xl font-pally'>Summer Camp, une aventure scientifique et mathématique au cœur de l&apos;été</h1>
+          <h1 className='font-bold text-3xl font-neco'>Summer Camp, une aventure scientifique et mathématique au cœur de l&apos;été</h1>
           <p>Le <span className='font-bold'>Summer Camp</span>, c&apos;est une semaine d&apos;immersion dédiée aux mathématiques et aux sciences, pensée pour les jeunes curieux et passionnés.</p>
           <p>À travers des séances de haut niveau en mathématiques, une introduction à l&apos;informatique, des ateliers et des workshops, les élèves explorent les notions scientifiques de façon concrète et ludique.</p>
           <p>Bien plus qu&apos;un camp d&apos;été, c&apos;est une aventure intellectuelle, une rencontre entre esprits vifs, et une occasion unique de nourrir sa passion tout en s&apos;amusant.</p>
@@ -46,7 +46,7 @@ const SecondSection = () => {
         </div>
       </div>
 
-      <div className='text-3xl font-bold p-4 lg:p-0 font-pally'>
+      <div className='text-3xl font-bold p-4 lg:p-0 font-neco'>
         Retour sur Summer Camp 2024
       </div>
 

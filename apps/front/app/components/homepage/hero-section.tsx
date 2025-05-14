@@ -40,7 +40,7 @@ const HeroSection = () => {
               className="animate-fade-up opacity-0 text-center font-display text-4xl font-bold tracking-[0.05em] text-wrap:balance md:text-5xl md:leading-[3rem]"
               style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
             >
-              <span className='text-[#000102] font-pally'>
+              <span className='text-[#000102] font-neco'>
                 The Ultimate University Math Challenge
               </span>
             </h1>

@@ -10,7 +10,7 @@ const FourthSection = () => {
 
   return (
     <div className='relative isolate overflow-hidden w-full flex flex-col justify-center items-center py-12 px-2 space-y-6'>
-      <h1 className='text-3xl font-bold font-pally text-[#FF4925] bg-[#fff9f3] px-14 py-6 rounded-full'>
+      <h1 className='text-3xl font-bold font-neco text-[#FF4925] bg-[#fff9f3] px-14 py-6 rounded-full'>
         Qui sommes-nous ?
       </h1>
 
