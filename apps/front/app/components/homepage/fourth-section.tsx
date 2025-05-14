@@ -1,6 +1,9 @@
 import Link from "next/link";
 import { AnimatedTooltip } from '@/app/components/animated-tooltip';
 import { organizingCommittee, webDevelopment } from "@/app/(pages)/(static)/organizing-team/data";
+import { Card } from '@/app/components/card';
+import CtaButton from '../cta/cta-button';
+import { Button } from "@mdm/ui";
 
 const FourthSection = () => {
   const members = [...organizingCommittee, ...webDevelopment]
@@ -10,42 +13,49 @@ const FourthSection = () => {
 
   return (
     <div className='relative isolate overflow-hidden w-full flex flex-col justify-center items-center py-12 px-2 space-y-6'>
-      <h1 className='text-3xl font-bold font-neco text-[#FF4925] bg-[#fff9f3] px-14 py-6 rounded-full'>
-        Qui sommes-nous ?
+      <h1 className='text-3xl text-center font-bold font-neco'>
+        How to participate ?
       </h1>
 
-      <div className='max-w-screen-md text-center my-6 xl:p-0'>
-        We are people with a passion for science, united by a desire to share and train the leaders of tomorrow. 
-        Our vision is of a Morocco where every young person has the opportunity to realize his or her full potential through quality education.
-      </div>
-
-      {/* <div 
-        className="relative overflow-hidden flex flex-col justify-center"  
+      <div
+        className="flex flex-col space-y-10 md:flex-row md:space-y-0 w-full lg:w-3/4 my-4"
       >
-        <ImageSlider
-          images={getSlideshowImages()}
-          direction="left"
-          speed="normal"
-          className='grayscale-[20%]'
-        />
-      </div> */}
+        <div className='w-full text-center'>
+          <span className="inline-block border border-black px-4 py-2 rounded-full text-2xl bg-[#252162] text-white">
+            1
+          </span>
 
-      <div className="flex flex-row items-center justify-center mb-10 w-full">
-        <AnimatedTooltip items={members} />
-      </div>
-
-      <Link
-        href='organizing-team'
-      >
-        <button
-          className="p-[3px] relative text-sm"
-        >
-          <div className="absolute inset-0 bg-gradient-to-r from-[#1C55FF] to-cyan-600 rounded-lg" />
-          <div className="px-8 py-2 bg-white rounded-[6px] relative group transition duration-200 text-black hover:bg-transparent hover:text-white">
-            Découvrir l&apos;équipe organisatrice
+          <div className='text-center p-6 text-lg font-semibold'>
+            Submit your application
           </div>
-        </button>
-      </Link>
+
+          <div className='text-center p-6'>
+            You have to fill and submit your application before the  <span className='font-semibold'>(month) (day)th</span>
+          </div>
+
+          <CtaButton label="Application Form"/>
+        </div>
+
+        <div className='w-full text-center'>
+          <span className="inline-block border border-black px-4 py-2 rounded-full text-2xl bg-[#252162] text-white">
+            2
+          </span>
+
+          <div className='text-center p-6 text-lg font-semibold'>
+            Pass the Selection Test
+          </div>
+
+          <div className='text-center p-6'>
+            After the <span className='font-bold'>(month) (day)th</span>, participants with complete applications will be required to take a selection test.
+          </div>
+
+          <Link href="selection">
+            <Button className='w-fit bg-transparent text-black border border-black hover:text-white'>
+              Learn more
+            </Button>
+          </Link>
+        </div>
+      </div>
     </div>
   )
 }

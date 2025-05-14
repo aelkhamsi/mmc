@@ -3,6 +3,7 @@ import SecondSection from "@/app/components/homepage/second-section";
 import ThirdSection from "@/app/components/homepage/third-section";
 import FourthSection from "@/app/components/homepage/fourth-section";
 import CtaSection from "@/app/components/cta/cta-section";
+import FifthSection from "../components/homepage/fifth-section";
 
 export default async function Home() {
   return (
@@ -11,7 +12,7 @@ export default async function Home() {
       <SecondSection />
       <ThirdSection />
       <FourthSection />
-      <CtaSection className="mt-6 mb-20" />
+      <FifthSection />
     </>
   );
 }
