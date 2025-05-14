@@ -1,5 +1,5 @@
-import { Card } from '@/app/components/card';
-import CtaButton from '../cta/cta-button';
+import { Card } from "../card"
+
 
 const ThirdSection = () => {
   return (
@@ -22,7 +22,37 @@ const ThirdSection = () => {
       </div>
 
       <div className='relative isolate overflow-hidden w-full flex flex-col justify-center items-center py-14 bg-[#000102] text-white space-y-10'>
-        Achraf
+        <h1 className='text-3xl font-bold font-neco'>
+          You Event Journey
+        </h1>
+
+        <div className='max-w-screen-md text-center xl:p-0'>
+          Structured to educate, challenge, and connect — here&apos;s what&apos;s on the agenda
+        </div>
+
+        <div
+          className="md:flex w-full lg:w-3/4 text-sm my-4"
+        >
+          <div className='w-full'>
+            <div className="flex flex-col space-y-8 md:flex-row md:space-y-0 md:space-x-6 text-center px-14">
+              <Card className="h-[20rem]" bgImageUrl="/past-edition/contest.webp">
+                Math Competition
+              </Card>
+
+              <Card className="h-[20rem]" bgImageUrl="/past-edition/panel.webp">
+                Conferences & Panel
+              </Card>
+
+              <Card className="h-[20rem]" bgImageUrl="/past-edition/workshop.webp">
+                Workshops
+              </Card>
+
+              <Card className="h-[20rem]" bgImageUrl="/past-edition/board_games.webp">
+                Games & Fun
+              </Card>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Transition border */}
