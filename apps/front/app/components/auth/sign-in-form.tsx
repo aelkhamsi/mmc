@@ -91,7 +91,7 @@ export function SignInForm({
                   <FormControl>
                     <Input
                       id="password"
-                      placeholder="Mot de passe"
+                      placeholder="Password"
                       type="password"
                       autoCapitalize="none"
                       autoComplete="email"
@@ -109,7 +109,7 @@ export function SignInForm({
               {isFormLoading ? (
                 <LoadingDots color="#808080" />
               ) : (
-                <p>Se connecter</p>
+                <p>Log In</p>
               )}
             </Button>
             

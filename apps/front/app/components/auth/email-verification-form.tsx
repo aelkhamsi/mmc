@@ -58,7 +58,7 @@ export function EmailVerificationForm({
         login()
         break;
       case 403:
-        setErrorMessage('Le code de vérification est incorrect')
+        setErrorMessage('The verification code is incorrect')
         setIsFormLoading(false)
         break;
       default:
@@ -73,12 +73,12 @@ export function EmailVerificationForm({
       {/* Sending email verification code */}
       {formStep === 1 &&
         <>
-          <p>Nous allons envoyer un code de vérification à votre adresse mail</p>
+          <p>We will send a verification code to your e-mail address</p>
           <Button type="submit" disabled={isFormLoading} onClick={onSendingVerificationCode}>
             {isFormLoading ? (
               <LoadingDots color="#808080" />
             ) : (
-              <p>Envoyer le code</p>
+              <p>Send the code</p>
             )}
           </Button>
           {errorMessage
@@ -94,8 +94,8 @@ export function EmailVerificationForm({
       {formStep === 2 &&
         <>
           <p className="w-full text-green-800 text-sm font-bold">
-            Un code de vérification a été envoyé à votre adresse mail.<br/>
-            Pensez à vérifier vos spams si nécessaire.
+            A verification code was sent to your mail inbox<br/>
+            Remember to check your spam if necessary.
           </p>
           <Form {...form}>
             <form onSubmit={form.handleSubmit(onCheckingVerificationCode)}>
@@ -124,7 +124,7 @@ export function EmailVerificationForm({
                   {isFormLoading ? (
                     <LoadingDots color="#808080" />
                   ) : (
-                    <p>Vérifier mon compte </p>
+                    <p>Verify my account </p>
                   )}
                 </Button>
                 

@@ -75,7 +75,7 @@ export function ResetPasswordForm({ className, ...props }: ResetPasswordFormProp
               {isFormLoading ? (
                 <LoadingDots color="#808080" />
               ) : (
-                <p>Réinitialiser</p>
+                <p>Reset password</p>
               )}
             </Button>
             
