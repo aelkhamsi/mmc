@@ -17,7 +17,7 @@ export const generalQuestions = [
   },
   {
     question: "Is participation free?",
-    anwser: "Participation is free and includes accommodation for the nights of July 28th, 29th, 30th and 31st, as well as meals from July 28th dinner to August 1st breakfast. This doesn’t include transportation to/from UM6P."
+    anwser: "Participation is free and includes accommodation for the nights from July 25th to July 28th, as well as meals from July 25th dinner to July 29th breakfast. This doesn’t include transportation to/from UM6P."
   },
   {
     question: "Am I required to come in person?",

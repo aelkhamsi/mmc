@@ -155,7 +155,7 @@ export const PersonalInformationStep = ({
           name="identityCardNumber"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>CNIE Number</FormLabel>
+              <FormLabel>CNIE Number<RequiredAsterisk /></FormLabel>
               <FormControl>
                 <Input placeholder="Enter a value" {...field} />
               </FormControl>

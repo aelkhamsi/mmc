@@ -36,8 +36,8 @@ const SecondSection = () => {
         className="flex flex-col w-full space-y-4 md:flex-row md:justify-between md:space-x-8 lg:w-3/4 text-base mb-12 md:mb-20"
       >
         <div className="w-full space-y-4 p-4 lg:p-0">
-          <p className='font-bold text-xs text-[#1C55FF]'>C'est quoi MMC ?</p>
-          <h1 className='font-bold text-3xl font-neco'>Math Maroc Competition, The Summit of Moroccan Mathematical Minds</h1>
+          <p className='font-bold text-xs text-[#1C55FF]'>What is MMC ?</p>
+          <h1 className='font-bold text-3xl font-neco'>Math&Maroc Competition, The Summit of Moroccan Mathematical Minds</h1>
           <p><span className='font-semibold'>MMC (Math&Maroc Competition)</span> is a 5 days annual math competition gathering 200+ university students.</p>
           <p>MMC is where Morocco&apos;s brightest university students challenge their minds through <span className='font-semibold'>competition</span>, grow through inspiring <span className='font-semibold'>talks</span> and <span className='font-semibold'>workshops</span>, and bond through <span className='font-semibold'>games</span>, <span className='font-semibold'>sports</span>, and shared moments.</p>
 

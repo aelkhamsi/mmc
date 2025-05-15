@@ -30,14 +30,11 @@ export default function MathSprintPage() {
           <div className="w-full space-y-4 p-4">
             <p className='font-bold text-sm text-[#1C55FF]'>The selection</p>
             <h1 className='font-bold text-3xl'>How will the selection process work ?</h1>
-            <p>For the 2025 edition, the selection will take place in two clearly defined stages:</p>
+            <p>For the 2025 edition, the selection will take place after June 4th, the application deadline.</p>
 
             <h2 className="font-bold">Online test</h2>
             <p>Each candidate will take a 90-minute online test on the secure platform Evalmee. The questions will be entirely based on the official syllabus, available for download on this page.</p>
             <p>To ensure the integrity of the selection, the webcam must remain activated throughout; therefore, ensure you have a reliable computer, a stable internet connection, and a quiet, well-lit workspace.</p>
-            
-            <h2 className="font-bold">Academic Record Review</h2>
-            <p>This stage involves reviewing your academic record. We will examine your latest official transcripts. These documents must be submitted by May 31, 2025, at 11:59 PM (Morocco time). Any incomplete submission beyond this deadline will be considered invalid.</p>
             <p>Final results will be communicated individually by email.</p>
 
           </div>
