@@ -1,16 +1,8 @@
 import Link from "next/link";
-import { AnimatedTooltip } from '@/app/components/animated-tooltip';
-import { organizingCommittee, webDevelopment } from "@/app/(pages)/(static)/organizing-team/data";
-import { Card } from '@/app/components/card';
 import CtaButton from '../cta/cta-button';
 import { Button } from "@mdm/ui";
 
 const FourthSection = () => {
-  const members = [...organizingCommittee, ...webDevelopment]
-    .sort((a, b) => 0.5 - Math.random())
-    .slice(0, 9)
-    .map((member, index) => ({id: index, image: member?.imageSrc, name: member?.name}))
-
   return (
     <div className='relative isolate overflow-hidden w-full flex flex-col justify-center items-center py-12 px-2 space-y-6'>
       <h1 className='text-3xl text-center font-bold font-neco'>
@@ -21,7 +13,7 @@ const FourthSection = () => {
         className="flex flex-col space-y-10 md:flex-row md:space-y-0 w-full lg:w-3/4 my-4"
       >
         <div className='w-full text-center'>
-          <span className="inline-block border border-black px-4 py-2 rounded-full text-2xl bg-[#252162] text-white">
+          <span className="inline-block border border-black px-4 py-2 rounded-full text-2xl">
             1
           </span>
 
@@ -37,7 +29,7 @@ const FourthSection = () => {
         </div>
 
         <div className='w-full text-center'>
-          <span className="inline-block border border-black px-4 py-2 rounded-full text-2xl bg-[#252162] text-white">
+          <span className="inline-block border border-black px-4 py-2 rounded-full text-2xl">
             2
           </span>
 
