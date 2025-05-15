@@ -41,7 +41,7 @@ const SecondSection = () => {
           <p><span className='font-semibold'>MMC (Math&Maroc Competition)</span> is a 5 days annual math competition gathering 200+ university students.</p>
           <p>MMC is where Morocco&apos;s brightest university students challenge their minds through <span className='font-semibold'>competition</span>, grow through inspiring <span className='font-semibold'>talks</span> and <span className='font-semibold'>workshops</span>, and bond through <span className='font-semibold'>games</span>, <span className='font-semibold'>sports</span>, and shared moments.</p>
 
-          <p className='p-2 bg-[#fff9f3] shadow-md rounded-md'>
+          <p>
             Top-ranked participants earn the opportunity to take part in the <span className='font-semibold'>IMC (International Mathematics Competition for University Students)</span>.
           </p>
         </div>
