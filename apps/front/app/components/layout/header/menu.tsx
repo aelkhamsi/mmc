@@ -39,6 +39,16 @@ export const Menu = () => {
         <NavigationMenuItem>
           <Link 
             className="text-sm font-medium mr-6 hover:cursor-pointer hover:underline"
+            href="/past-editions"
+            onClick={() => {setShowMenu(false)}}
+          >
+            Past Editions
+          </Link>
+        </NavigationMenuItem>
+
+        <NavigationMenuItem>
+          <Link 
+            className="text-sm font-medium mr-6 hover:cursor-pointer hover:underline"
             href="/organizing-team"
             onClick={() => {setShowMenu(false)}}
           >

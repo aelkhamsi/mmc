@@ -74,7 +74,7 @@ const SecondSection = () => {
           <p>The last edition of MMC was held in Benguerir in collaboration with UM6P College of Computing.</p>
           <p>The event was a groundbreaking success, bringing together over 200 participants that competed, connected with top professors and engineers, and bonded through games and fun activities.</p>
 
-          <Link href="partners">
+          <Link href="/past-editions">
             <Button className='w-fit bg-transparent text-black border border-black hover:text-white'>
               Learn more
             </Button>
