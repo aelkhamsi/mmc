@@ -8,4 +8,4 @@ services:
     container_name: mmc_api
     restart: always
     ports:
-      - "9009:9009"
+      - "5000:5000"

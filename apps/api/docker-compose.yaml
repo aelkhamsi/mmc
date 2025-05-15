@@ -36,7 +36,7 @@ services:
     depends_on:
       - mmc_db
     ports:
-      - "9009:9009"
+      - "5000:5000"
     volumes:
       - ".:/home/node/app"
     environment:
