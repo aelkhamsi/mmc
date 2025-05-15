@@ -6,17 +6,17 @@ type Step = {
 
 export const steps: Step[] = [
   {
-    id: 'Étape 1',
-    name: 'Informations Personnelles',
+    id: 'Step 1',
+    name: 'Personal Informations',
     getValidationFields: (_) => (['firstName', 'lastName', 'dateOfBirth', 'identityCardNumber', 'city', 'region', 'phoneNumber', 'emergencyContactFullName', 'emergencyContactPhoneNumber', 'emergencyContactRelationship'])
   },
   {
-    id: 'Étape 2',
-    name: 'Éducation',
+    id: 'Step 2',
+    name: 'Education',
     getValidationFields: (_) => ['educationLevel', 'universityType', 'universityName', 'educationField']
   },
   {
-    id: 'Étape 3',
+    id: 'Step 3',
     name: 'Motivations',
     getValidationFields: (formState) => {
       const hasPreviousMathMarocParticipations = formState?.hasPreviousMathMarocParticipations === 'yes'
@@ -33,7 +33,7 @@ export const steps: Step[] = [
     }
   },
   {
-    id: 'Étape 4',
+    id: 'Step 4',
     name: 'Uploads',
     getValidationFields: (formState) => {
       const isFileUploaded = (key: string) => !!formState?.[`${key}Url`]
@@ -45,7 +45,7 @@ export const steps: Step[] = [
       ]
     }
   },
-  { id: 'Étape 5', 
+  { id: 'Step 5', 
     name: 'Validation',
     getValidationFields: (_) => ['termsAgreement']
   }

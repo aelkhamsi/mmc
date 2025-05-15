@@ -43,7 +43,7 @@ export const UploadStep = ({
       </h2>
 
       <p className='mt-1 text-sm leading-6 text-gray-600'>
-        Fournissez les documents personnels de l&apos;élève
+        Provide the student&apos;s personal documents
         <Separator className='mt-4 bg-[#0284C7]'/>
       </p>
 
@@ -76,7 +76,7 @@ export const UploadStep = ({
 
             return (
               <FormItem>
-                <FormLabel>Certificat de scolarité pour l’année 2024-2025<RequiredAsterisk /></FormLabel>
+                <FormLabel>Schooling certificate for the year 2024-2025<RequiredAsterisk /></FormLabel>
                 <FormControl>
                   <FileInput form={form} id="fileSchoolCertificate" />
                 </FormControl>
@@ -95,12 +95,12 @@ export const UploadStep = ({
 
             return (
               <FormItem>
-                <FormLabel>Règlement signé (<Link className="text-blue-500 underline" href='https://drive.google.com/file/d/14jqiEL7UmfPmz5ekbjpyowHtFUniETtq/view?usp=sharing' target="_blank">fichier</Link>)<RequiredAsterisk /></FormLabel>
+                <FormLabel>Regulations signed (<Link className="text-blue-500 underline" href='https://drive.google.com/file/d/1spkc0-KyaBbeq9sWT2x8Vj0EEoO-FGi7/view?usp=sharing' target="_blank">file</Link>)<RequiredAsterisk /></FormLabel>
                 <FormControl>
                   <FileInput form={form} id="fileRegulations" />
                 </FormControl>
                 <FormDescription>
-                    <span className="text-blue-500">Remarque</span>: il faut l&apos;imprimer, la signer à la main, puis la scanner. <span className="font-bold">Pas besoin de légaliser</span>.
+                    <span className="text-blue-500">Remark</span>:  print it out, sign it by hand, then scan it. <span className="font-bold">No need to legalize.</span>.
                 </FormDescription>
                 <FormMessage />
               </FormItem>
@@ -117,7 +117,7 @@ export const UploadStep = ({
 
             return (
               <FormItem>
-                <FormLabel>Dernier bulletin obtenu<RequiredAsterisk /></FormLabel>
+                <FormLabel>Last bulletin obtained<RequiredAsterisk /></FormLabel>
                 <FormControl>
                   <FileInput form={form} id="fileGrades" />
                 </FormControl>

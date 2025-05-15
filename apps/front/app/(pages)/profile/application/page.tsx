@@ -51,21 +51,21 @@ export default function ApplicationPage() {
 
     if (!application) {
       setContent({
-        title: "Vous n'avez pas soumis une candidature",
-        subtitle: "On attend votre candidature avec impatience! N'hésitez pas à en créer une.",
-        ctaLabel: "Créer votre candidature",
+        title: "You have not submitted an application",
+        subtitle: "We look forward to receiving your application! Don't hesitate to create one.",
+        ctaLabel: "Create an application",
       })
     } else if (applicationStatus === 'DRAFT') {
       setContent({
-        title: "Vous avez sauvegardé un brouillon de candidature. Elle n'est pas encore soumise.",
-        subtitle: "On attend votre candidature avec impatience! Attention, Vous ne l'avez pas encore finalisé!",
-        ctaLabel: "Continuer votre candidature",
+        title: "You have saved a draft application. It has not yet been submitted.",
+        subtitle: "We look forward to receiving your application! You haven't finalized it yet!",
+        ctaLabel: "Continue your application",
       })
     } else {
       setContent({
-        title: "Vous avez déjà soumis une candidature",
-        subtitle: "Vous trouverez l'avancement de votre candidature ci-dessous. On vous notifiera des prochaines étapes par mail.",
-        ctaLabel: "Mettre à jour votre candidature",
+        title: "You have already submitted an application",
+        subtitle: "You'll find the status of your application below. You will be notified of the next steps by e-mail.",
+        ctaLabel: "Update your application",
       })
     }
   }, [user])
@@ -84,8 +84,8 @@ export default function ApplicationPage() {
       <CardContent>
         {user?.application && 
           <>
-            <div className="text-sm"><span className="font-bold">Date de soumission</span>: {formatDate(user?.application?.createdAt)}</div>
-            <div className="text-sm"><span className="font-bold">Date de sauvegarde</span>: {formatDate(user?.application?.updatedAt)}</div>
+            <div className="text-sm"><span className="font-bold">Submission date</span>: {formatDate(user?.application?.createdAt)}</div>
+            <div className="text-sm"><span className="font-bold">Last update</span>: {formatDate(user?.application?.updatedAt)}</div>
             <div className="text-sm"><span className="font-bold">Status</span>: <Badge className={`px-4 ${getBadgeClassname(user?.application?.status?.status)}`}>{user?.application?.status?.status}</Badge></div>
           </>
         }
@@ -105,9 +105,9 @@ export default function ApplicationPage() {
   return (
     <div className="space-y-6">
       <div>
-        <div className="text-lg font-medium">Candidature</div>
+        <div className="text-lg font-medium">Applicationœ</div>
         <p className="text-sm text-muted-foreground">
-          C&apos;est ici que vous trouverez le statut de votre candidature.
+          This is where you'll find the status of your application.
         </p>
       </div>
 

@@ -47,10 +47,10 @@ const regions = [
 ]
 
 const relationshipsWithGuardian = [
-  {label: "Père", value:"father"},
-  {label: "Mère", value:"mother"},
-  {label: "Tuteur", value:"guardian"},
-  {label: "Autre", value:"other"},
+  {label: "Father", value:"father"},
+  {label: "Mother", value:"mother"},
+  {label: "Tutor", value:"guardian"},
+  {label: "Other", value:"other"},
 ]
 
 const RequiredAsterisk = () => <span className="text-red-500"> * </span>;
@@ -70,7 +70,7 @@ export const PersonalInformationStep = ({
       transition={{ duration: 0.3, ease: 'easeInOut' }}
     >
       <h2 className='text-base font-semibold leading-7 text-[#0284C7]'>
-        Informations personnelles
+        Personal Informations
       </h2>
       <Separator className='my-6 bg-[#0284C7]'/>
 
@@ -81,7 +81,7 @@ export const PersonalInformationStep = ({
           name="firstName"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Prénom <RequiredAsterisk /></FormLabel>
+              <FormLabel>First Name <RequiredAsterisk /></FormLabel>
               <FormControl>
                 <Input disabled placeholder="Entrez une valeur" {...field} />
               </FormControl>
@@ -96,7 +96,7 @@ export const PersonalInformationStep = ({
           name="lastName"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Nom <RequiredAsterisk /></FormLabel>
+              <FormLabel>Last Name <RequiredAsterisk /></FormLabel>
               <FormControl>
                 <Input disabled placeholder="Entrez une valeur" {...field} />
               </FormControl>
@@ -111,7 +111,7 @@ export const PersonalInformationStep = ({
           name="dateOfBirth"
           render={({ field }) => (
             <FormItem className="flex flex-col mt-2">
-              <FormLabel>Date de naissance <RequiredAsterisk /></FormLabel>
+              <FormLabel>Date of birth <RequiredAsterisk /></FormLabel>
               <Popover>
                 <PopoverTrigger asChild>
                   <FormControl>
@@ -125,7 +125,7 @@ export const PersonalInformationStep = ({
                       {field.value ? (
                         format(field.value, "PPP")
                       ) : (
-                        <span>Choisissez une date</span>
+                        <span>Choose a date</span>
                       )}
                       <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
                     </Button>
@@ -155,9 +155,9 @@ export const PersonalInformationStep = ({
           name="identityCardNumber"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Numéro CNIE</FormLabel>
+              <FormLabel>CNIE Number</FormLabel>
               <FormControl>
-                <Input placeholder="Entrez une valeur" {...field} />
+                <Input placeholder="Enter a value" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -170,9 +170,9 @@ export const PersonalInformationStep = ({
           name="city"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Ville de résidence<RequiredAsterisk /></FormLabel>
+              <FormLabel>City of residency<RequiredAsterisk /></FormLabel>
               <FormControl>
-                <Input placeholder="Entrez une valeur" {...field} />
+                <Input placeholder="Enter a value" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -185,15 +185,15 @@ export const PersonalInformationStep = ({
           name="region"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Région de résidence<RequiredAsterisk /></FormLabel>
+              <FormLabel>Region of residency<RequiredAsterisk /></FormLabel>
               <FormControl>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <SelectTrigger>
-                    <SelectValue placeholder="Selectionnez une région" />
+                    <SelectValue placeholder="Select a region" />
                   </SelectTrigger>
                   <SelectContent className="max-h-60">
                     <SelectGroup>
-                      <SelectLabel>Régions</SelectLabel>
+                      <SelectLabel>Regions</SelectLabel>
                       {regions.map(region =>
                         <SelectItem key={region.value} value={region.value}>{region.label}</SelectItem>
                       )}
@@ -212,7 +212,7 @@ export const PersonalInformationStep = ({
           name="phoneNumber"
           render={({ field }) => (
             <FormItem className="flex flex-col mt-2 items-start">
-              <FormLabel className="text-left">Téléphone <RequiredAsterisk /></FormLabel>
+              <FormLabel className="text-left">Phone Number <RequiredAsterisk /></FormLabel>
               <FormControl className="w-full">
                 <PhoneInput onValueChange={field.onChange} defaultValue={field.value} defaultCountry='MA' />
               </FormControl>
@@ -223,7 +223,7 @@ export const PersonalInformationStep = ({
       </div>
       
       <h2 className='text-base font-semibold leading-7 text-[#0284C7] mt-6'>
-        Informations sur le contact d&apos;urgence
+        Emergency Contact Informations
       </h2>
       <Separator className='mt-4 bg-[#0284C7]'/>
 
@@ -234,9 +234,9 @@ export const PersonalInformationStep = ({
           name="emergencyContactFullName"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Nom et Prénom du contact d&apos;urgence<RequiredAsterisk /></FormLabel>
+              <FormLabel>Full Name of Emergency Contact<RequiredAsterisk /></FormLabel>
               <FormControl>
-                <Input placeholder="Entrez un nom complet" {...field} />
+                <Input placeholder="Enter a full name" {...field} />
               </FormControl>
               <FormMessage />
             </FormItem>
@@ -249,7 +249,7 @@ export const PersonalInformationStep = ({
           name="emergencyContactPhoneNumber"
           render={({ field }) => (
             <FormItem className="flex flex-col mt-2 items-start">
-              <FormLabel className="text-left">Téléphone du contact d&apos;urgence <RequiredAsterisk /></FormLabel>
+              <FormLabel className="text-left">Phone Number of Emergency Contact <RequiredAsterisk /></FormLabel>
               <FormControl className="w-full">
                 <PhoneInput onValueChange={field.onChange} defaultValue={field.value} defaultCountry='MA' />
               </FormControl>
@@ -264,15 +264,15 @@ export const PersonalInformationStep = ({
           name="emergencyContactRelationship"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Relation avec cette personne<RequiredAsterisk /></FormLabel>
+              <FormLabel>Relationship with this person<RequiredAsterisk /></FormLabel>
               <FormControl>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <SelectTrigger>
-                    <SelectValue placeholder="Choisissez une option" />
+                    <SelectValue placeholder="Choose an option" />
                   </SelectTrigger>
                   <SelectContent>
                     <SelectGroup>
-                      <SelectLabel>Relation avec le contact d&apos;urgence</SelectLabel>
+                      <SelectLabel>Relationship with Emergency contact</SelectLabel>
                       {relationshipsWithGuardian.map(relationship => 
                         <SelectItem key={relationship.value} value={relationship.value}>{relationship.label}</SelectItem>
                       )}

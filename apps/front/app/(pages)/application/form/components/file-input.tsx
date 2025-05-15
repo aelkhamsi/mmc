@@ -14,7 +14,7 @@ export const FileInput = ({
 
   const onFileChange = (file: File|undefined) => {
     setPlaceholder(file ? file?.name : placeholder)
-    setLabel('Modifier le fichier')
+    setLabel('Modify file')
   }
 
   useEffect(() => {
@@ -25,16 +25,16 @@ export const FileInput = ({
     if (fileField?.length) {
       onFileChange(fileField[0])
     } else if (fileUrl) {
-      setLabel('Modifier le fichier')
-      setPlaceholder('✅ Fichier Uploadé!')
+      setLabel('Modify file')
+      setPlaceholder('✅ File Uploaded!')
     } else {
-      setLabel('Ajouter un fichier')
-      setPlaceholder('Aucun fichier')
+      setLabel('Add a file')
+      setPlaceholder('No file')
     }
   }, [])
 
   const register = form.register(id, {
-    required: "Ce document est obligatoire",
+    required: "This document is mandatory",
   })
 
   return (

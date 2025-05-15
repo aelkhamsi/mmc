@@ -41,7 +41,7 @@ export const MotivationStep = ({
       </h2>
 
       <p className='mt-1 text-sm leading-6 text-gray-600'>
-        Fournissez des informations à propos de vos participations passées et vos motivations.
+        Provide information about your past participations and your motivations.
         <Separator className='mt-4 bg-[#0284C7]'/>
       </p>
 
@@ -52,10 +52,10 @@ export const MotivationStep = ({
           name="motivations"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Quelles sont vos motivations à participer à MMC ?<RequiredAsterisk /></FormLabel>
+              <FormLabel>What are your motivations to participate in MMC ?<RequiredAsterisk /></FormLabel>
               <FormControl>
               <Textarea
-                placeholder="Maximum 300 mots"
+                placeholder="Maximum 300 words"
                 className="resize-none"
                 {...field}
               />
@@ -74,7 +74,7 @@ export const MotivationStep = ({
           render={({ field }) => (
             <FormItem className="space-y-3">
               
-              <FormLabel>Avez-vous déjà participé à des compétitions auparavant (olympiades, concours général...)<RequiredAsterisk /></FormLabel>
+              <FormLabel>Have you taken part in competitions before (Olympiads, concour, etc.)?<RequiredAsterisk /></FormLabel>
               <FormControl>
                 <RadioGroup
                   onValueChange={(value) => {
@@ -93,7 +93,7 @@ export const MotivationStep = ({
                       <RadioGroupItem value="yes" />
                     </FormControl>
                     <FormLabel className="font-normal">
-                      Oui
+                      Yes
                     </FormLabel>
                   </FormItem>
                   <FormItem className="flex items-center space-x-3 space-y-0">
@@ -101,7 +101,7 @@ export const MotivationStep = ({
                       <RadioGroupItem value="no" />
                     </FormControl>
                     <FormLabel className="font-normal">
-                      Non
+                      No
                     </FormLabel>
                   </FormItem>
                 </RadioGroup>
@@ -118,10 +118,10 @@ export const MotivationStep = ({
             name="previousExperiences"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Veuillez spécifier lesquelles et le résultat obtenu<RequiredAsterisk /></FormLabel>
+                <FormLabel>Please specify which ones and the result obtained<RequiredAsterisk /></FormLabel>
                 <FormControl>
                 <Textarea
-                  placeholder="Parlez-nous de vos accomplissements"
+                  placeholder="Tell us about your achievements"
                   className="resize-none"
                   {...field}
                 />
@@ -141,7 +141,7 @@ export const MotivationStep = ({
           render={({ field }) => (
             <FormItem className="space-y-3">
               
-              <FormLabel>Avez-vous déjà participé à Math Maroc Competition (MMC) ?<RequiredAsterisk /></FormLabel>
+              <FormLabel>Have you ever taken part in Math Maroc Competition (MMC)?<RequiredAsterisk /></FormLabel>
               <FormControl>
                 <RadioGroup
                   onValueChange={(value) => {
@@ -160,7 +160,7 @@ export const MotivationStep = ({
                       <RadioGroupItem value="yes" />
                     </FormControl>
                     <FormLabel className="font-normal">
-                      Oui
+                      Yes
                     </FormLabel>
                   </FormItem>
                   <FormItem className="flex items-center space-x-3 space-y-0">
@@ -168,7 +168,7 @@ export const MotivationStep = ({
                       <RadioGroupItem value="no" />
                     </FormControl>
                     <FormLabel className="font-normal">
-                      Non
+                      No
                     </FormLabel>
                   </FormItem>
                 </RadioGroup>
@@ -185,10 +185,10 @@ export const MotivationStep = ({
             name="previousMathMarocParticipations"
             render={({ field }) => (
               <FormItem>
-                <FormLabel>Veuillez spécifier dans quelle édition (2023 ou 2024) et quel était ton classement (<Link className="text-blue-500 underline" href='#' target="_blank">lien résultat</Link>)?<RequiredAsterisk /></FormLabel>
+                <FormLabel>Please specify in which edition (2023 or 2024) and what was your ranking (<Link className="text-blue-500 underline" href='/past-editions' target="_blank">results link</Link>)?<RequiredAsterisk /></FormLabel>
                 <FormControl>
                 <Textarea
-                  placeholder="Parlez-nous de vos accomplissements"
+                  placeholder="Tell us about your achievements"
                   className="resize-none"
                   {...field}
                 />
@@ -207,10 +207,10 @@ export const MotivationStep = ({
           name="comments"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Remarques / Commentaires</FormLabel>
+              <FormLabel>Remarks / Comments</FormLabel>
               <FormControl>
               <Textarea
-                placeholder="Quelque chose à ajouter ?"
+                placeholder="Anything to add?"
                 className="resize-none"
                 {...field}
               />

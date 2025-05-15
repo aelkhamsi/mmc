@@ -52,8 +52,8 @@ const AuthModal = ({
         <div className="flex flex-col items-center justify-center space-y-3 border-b border-gray-200 bg-white px-4 py-6 pt-8 text-center md:px-16">
           <a href="/">
             <Image
-              src="/logomark_orange.svg"
-              alt="MDM logo"
+              src="/logomark.png"
+              alt="MMC logo"
               width={55}
               height={55}
               className="mr-2 rounded-sm"

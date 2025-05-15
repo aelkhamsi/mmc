@@ -27,9 +27,9 @@ const educationLevels = [
 
 const universityTypes = [
   {label: "Classes préparatoires (CPGE)", value:"cpge"},
-  {label: "Université", value:"university"},
-  {label: "Ecole d'ingénieur post-Bac", value:"engineering-post-bac"},
-  {label: "Ecole d'ingénieur post-CPGE", value:"engineering-post-cpge"},
+  {label: "University", value:"university"},
+  {label: "Engineering School post-Bac", value:"engineering-post-bac"},
+  {label: "Engineering School post-CPGE", value:"engineering-post-cpge"},
 ]
 
 const RequiredAsterisk = () => <span className="text-red-500"> * </span>;
@@ -48,11 +48,11 @@ export const EducationStep = ({
       transition={{ duration: 0.3, ease: 'easeInOut' }}
     >
       <h2 className='text-base font-semibold leading-7 text-[#0284C7]'>
-        Éducation
+        Education
       </h2>
 
       <p className='mt-1 text-sm leading-6 text-gray-600'>
-        Fournir des informations sur votre niveau d&apos;étude et votre établissement d&apos;études supérieures (au Maroc ou à l&apos;étranger) dans <span className='font-semibold'> l&apos;année scolaire courante 2024/2025</span>
+      Provide information on your level of study and your institution of higher education (in Morocco or abroad) in <span className='font-semibold'> the current academic year 2024/2025</span>.
         <Separator className='mt-4 bg-[#0284C7]'/>
       </p>
       
@@ -63,7 +63,7 @@ export const EducationStep = ({
           name="educationLevel"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Niveau d&apos;étude <RequiredAsterisk /></FormLabel>
+              <FormLabel>Level of study <RequiredAsterisk /></FormLabel>
               <FormControl>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <SelectTrigger>
@@ -89,7 +89,7 @@ export const EducationStep = ({
           name="universityType"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Type d&apos;étude <RequiredAsterisk /></FormLabel>
+              <FormLabel>Type of study <RequiredAsterisk /></FormLabel>
               <FormControl>
                 <Select onValueChange={field.onChange} defaultValue={field.value}>
                   <SelectTrigger>
@@ -115,7 +115,7 @@ export const EducationStep = ({
           name="universityName"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Nom du lycée ou de l’université<RequiredAsterisk /></FormLabel>
+              <FormLabel>Name of University<RequiredAsterisk /></FormLabel>
               <FormControl>
                 <Input placeholder="Enter a value" {...field} />
               </FormControl>
@@ -130,7 +130,7 @@ export const EducationStep = ({
           name="educationField"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Filière<RequiredAsterisk /></FormLabel>
+              <FormLabel>Field of study (Filière)<RequiredAsterisk /></FormLabel>
               <FormControl>
                 <Input placeholder="Enter a value" {...field} />
               </FormControl>

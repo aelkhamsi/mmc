@@ -95,7 +95,7 @@ export const ApplicationForm = ({
                 {isFormLoading ? (
                   <LoadingDots color="#808080" />
                 ) : (
-                  <div>Soumettre ma candidature</div>
+                  <div>Submit my application</div>
                 )}
               </Button>
             </div>

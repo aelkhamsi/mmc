@@ -30,7 +30,7 @@ export const ValidationStep = ({
         Validation
       </h2>
       <p className='mt-1 text-sm leading-6 text-gray-600'>
-        Lisez attentivement nos Conditions Générales et validez votre candidature
+        Please read our General Terms and Conditions carefully before submitting your application.
         <Separator className='mt-4 bg-[#0284C7]'/>
       </p>
 
@@ -49,11 +49,11 @@ export const ValidationStep = ({
                 </FormControl>
                 <div className="space-y-1 leading-none">
                   <FormLabel>
-                    Conditions Générales <RequiredAsterisk />
+                    General Conditions <RequiredAsterisk />
                   </FormLabel>
                   <FormDescription>
-                  Je confirme avoir lu entièrement le règlement <Link className="text-blue-500 font-bold" href="https://drive.google.com/file/d/1ftLHsg2iXXupb8Yp_Mma54V82VgpPf-c/view?usp=sharing" target="_blank">(lien)</Link> de l&apos;événement et m'engage à le respecter.<br/>
-                  En particulier, je m'engage à participer à toutes les compétitions choisies après validation de ma candidature (sauf dérogation demandée par mail et approuvée explicitement par le comité d'organisation).
+                  I confirm that I have read the regulations <Link className="text-blue-500 font-bold underline" href='https://drive.google.com/file/d/1spkc0-KyaBbeq9sWT2x8Vj0EEoO-FGi7/view?usp=sharing' target="_blank">(file)</Link> of the event and i undertake to respect it.<br/>
+                  In particular, I undertake to be present on the UM6P Rabat campus for the entire duration of the competition (unless an exception is requested by e-mail and explicitly approved by the organizing committee).
                   </FormDescription>
                 </div>
               </FormItem>

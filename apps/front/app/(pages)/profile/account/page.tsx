@@ -5,9 +5,9 @@ export default function ProfilePage() {
   return (
     <div className="space-y-6">
       <div>
-        <h3 className="text-lg font-medium">Compte</h3>
+        <h3 className="text-lg font-medium">Account</h3>
         <p className="text-sm text-muted-foreground">
-          C&apos;est ainsi que les autres vous verront sur le site.
+          That&apos;s how others will see you on the website and application.
         </p>
       </div>
       <Separator />

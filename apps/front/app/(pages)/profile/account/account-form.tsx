@@ -71,7 +71,7 @@ export function AccountForm() {
           name="firstName"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Prénom</FormLabel>
+              <FormLabel>First Name</FormLabel>
               <FormControl>
                 <Input placeholder="First Name" {...field} />
               </FormControl>
@@ -84,7 +84,7 @@ export function AccountForm() {
           name="lastName"
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Nom</FormLabel>
+              <FormLabel>Last Name</FormLabel>
               <FormControl>
                 <Input placeholder="Last Name" {...field} />
               </FormControl>
@@ -105,7 +105,7 @@ export function AccountForm() {
             </FormItem>
           )}
         />
-        <Button type="submit">Mettre à jour</Button>
+        <Button type="submit">Update informations</Button>
       </form>
     </Form>
   )
