@@ -22,7 +22,7 @@ const FourthSection = () => {
           </div>
 
           <div className='text-center p-6'>
-            You have to fill and submit your application before the  <span className='font-semibold'>(month) (day)th</span>
+            You have to fill and submit your application before  <span className='font-bold'>June 4th</span>
           </div>
 
           <CtaButton label="Application Form"/>
@@ -38,7 +38,7 @@ const FourthSection = () => {
           </div>
 
           <div className='text-center p-6'>
-            After the <span className='font-bold'>(month) (day)th</span>, participants with complete applications will be required to take a selection test.
+            After <span className='font-bold'>June 4th</span>, participants with complete applications will be required to take a selection test.
           </div>
 
           <Link href="selection">

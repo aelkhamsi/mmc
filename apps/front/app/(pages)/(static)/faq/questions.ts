@@ -5,7 +5,7 @@ export const generalQuestions = [
   },
   {
     question: "When is the deadline to apply?",
-    anwser: "The deadline is May 31st at 23:59 Moroccan time. Do not wait until the last day to submit your application. No exceptions will be granted for late submissions, regardless of reasons such as forgetting to submit the application or experiencing internet connectivity issues or any other excuse."
+    anwser: "The deadline is June 4th at 23:59 Moroccan time. Do not wait until the last day to submit your application. No exceptions will be granted for late submissions, regardless of reasons such as forgetting to submit the application or experiencing internet connectivity issues or any other excuse."
   },
   {
     question: "What is the level of the exams?",
