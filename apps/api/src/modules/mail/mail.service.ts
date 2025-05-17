@@ -13,12 +13,12 @@ export class MailService {
   async sendResetPasswordEmail(user: User, token: string) {
     const link =
       this.configService.get('NODE_ENV') === 'production'
-        ? `https://summercamp.mathmaroc.org/reset-password?token=${token}`
+        ? `https://mmc.mathmaroc.org/reset-password?token=${token}`
         : `http://localhost:3000/reset-password?token=${token}`;
 
     await this.mailerService.sendMail({
       to: user.email,
-      subject: 'Summer Camp | Reset your password',
+      subject: 'MMC | Reset your password',
       template: './reset-password',
       context: {
         firstName: user.firstName,
@@ -30,7 +30,7 @@ export class MailService {
   async sendEmailVerificationEmail(user: User, verificationCode: string) {
     await this.mailerService.sendMail({
       to: user.email,
-      subject: 'Summer Camp | Email verification',
+      subject: 'MMC | Email verification',
       template: './email-verification',
       context: {
         firstName: user.firstName,
