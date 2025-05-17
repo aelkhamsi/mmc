@@ -139,6 +139,11 @@ export const organizingCommittee = [
     imageSrc: '/organizing-team/ayoub_elmoussaoui.webp',
     linkedinSrc: 'https://www.linkedin.com/in/ayoub-elmoussaoui-77066a283/',
   },
+  {
+    name: 'Nour El Houda El Bouz',
+    imageSrc: '/organizing-team/nour_el_houda_el_bouz.webp',
+    linkedinSrc: 'https://www.linkedin.com/in/el-bouz-nour-el-houda-631425308',
+  },
 ];
 
 export const webDevelopment = [
