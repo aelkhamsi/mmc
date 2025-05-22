@@ -7,7 +7,7 @@ function validateToken(token: string) {
 }
 
 export function middleware(req: NextRequest) {
-  const isInMaintenanceMode = true
+  const isInMaintenanceMode = false
   if (isInMaintenanceMode) {
     req.nextUrl.pathname = `/maintenance`
     return NextResponse.rewrite(req.nextUrl)
@@ -27,6 +27,6 @@ export function middleware(req: NextRequest) {
 }
 
 // See "Matching Paths" below to learn more
-// export const config = {
-//   matcher: ['/profile/:path*', '/application/:path*'],
-// }
+export const config = {
+  matcher: ['/profile/:path*', '/application/:path*'],
+}
