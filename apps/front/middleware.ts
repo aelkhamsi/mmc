@@ -27,7 +27,6 @@ export function middleware(req: NextRequest) {
 }
 
 // See "Matching Paths" below to learn more
-export const config = {
-  matcher: ['/'],
-  //matcher: ['/profile/:path*', '/application/:path*'],
-}
+// export const config = {
+//   matcher: ['/profile/:path*', '/application/:path*'],
+// }
