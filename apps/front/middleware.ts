@@ -7,7 +7,7 @@ function validateToken(token: string) {
 }
 
 export function middleware(req: NextRequest) {
-  const isInMaintenanceMode = false
+  const isInMaintenanceMode = true
   if (isInMaintenanceMode) {
     req.nextUrl.pathname = `/maintenance`
     return NextResponse.rewrite(req.nextUrl)
