@@ -5,7 +5,6 @@ import Image from "next/image";
 import Stats from "./stats";
 import { useRecoilValue } from "recoil";
 import { applicationsState } from "@/store/applicationsState";
-import { ActivityChoiceValues } from "./applications/components/application-activity-choices";
 
 const links = [
   {
@@ -22,48 +21,61 @@ const links = [
   },
 ];
 
-const countApplications = (applications: any[], activityChoice?: ActivityChoiceValues) => {
+const countApplications = (applications: any[]) => {
   return (applications||[])?.reduce(
     (count: any[], application: any) => {
-      const activityChoices = JSON.parse(application?.activityChoices || '[]');
-      if (!activityChoice || activityChoices.includes(activityChoice)) {
-        count[0]++;
-        if (application?.status?.status === 'PENDING') {
-          count[1]++
+      count[0]++;
+      const status = application?.status?.status
+      const educationLevel = application?.educationLevel
+
+      if (status === 'PENDING') {
+        count[1]++
+
+        if (educationLevel === 'bac-plus-1') {
+          count[2]++
+        }
+        if (educationLevel === 'bac-plus-2') {
+          count[3]++
+        }
+        if (educationLevel === 'bac-plus-3') {
+          count[4]++
+        }
+        if (educationLevel === 'bac-plus-4') {
+          count[5]++
         }
       }
-    
+      
       return count;
     }, 
-    [0, 0]
+    [0, 0, 0, 0, 0, 0]
   );
 }
 
 export default function Home() {
   const applications = useRecoilValue(applicationsState);
-  const [countAll, countPending] = countApplications(applications)
-  const [mathSprintAll, mathSprintPending] = countApplications(applications, ActivityChoiceValues.MATH_SPRINT)
-  const [bestMathVideoAll, bestMathVideoPending] = countApplications(applications, ActivityChoiceValues.BEST_MATH_VIDEO)
-  const [standAll, standPending] = countApplications(applications, ActivityChoiceValues.STAND)
-  const [visitorAll, visitorPending] = countApplications(applications, ActivityChoiceValues.VISITOR)
+  const [countAll, countPending, countBac1, countBac2, countBac3, countBac4] = countApplications(applications)
 
   return (
     <>
       <Image
-        src="/mdm.png"
-        alt="MDM logo"
-        width='100'
+        src="/mmc.png"
+        alt="Summer Camp"
+        width='350'
         height='100'
       />
 
-      <HoverEffect items={links} className="flex justify-center gap-x-4"/>
+      <HoverEffect items={links} className="flex justify-center gap-x-4 xl:w-1/2"/>
 
       <div className="flex gap-x-4">
-        <Stats title='General' className="text-white bg-[#272162]" valueAll={countAll} valuePending={countPending} />
-        <Stats title='🏁 Math Sprint' className="bg-gray-300" valueAll={mathSprintAll} valuePending={mathSprintPending} />
-        <Stats title='📽️ Best Math Video' className="bg-gray-300" valueAll={bestMathVideoAll} valuePending={bestMathVideoPending} />
-        <Stats title='🎤 Stand' className="bg-gray-300" valueAll={standAll} valuePending={standPending} />
-        <Stats title='🏖️ Visitor' className="bg-gray-300" valueAll={visitorAll} valuePending={visitorPending} />
+        <Stats 
+          className="text-white bg-[#413A9C]" 
+          valueAll={countAll} 
+          valuePending={countPending} 
+          valueBac1={countBac1} 
+          valueBac2={countBac2} 
+          valueBac3={countBac3} 
+          valueBac4={countBac4} 
+        />
       </div>
     </>
   )
