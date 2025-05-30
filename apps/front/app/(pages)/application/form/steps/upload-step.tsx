@@ -80,6 +80,9 @@ export const UploadStep = ({
                 <FormControl>
                   <FileInput form={form} id="fileSchoolCertificate" />
                 </FormControl>
+                <FormDescription>
+                  <span className="text-blue-500">Remark</span>: If you can't obtain them, please email us to request an exception
+                </FormDescription>
                 <FormMessage />
               </FormItem>
             )
@@ -121,6 +124,9 @@ export const UploadStep = ({
                 <FormControl>
                   <FileInput form={form} id="fileGrades" />
                 </FormControl>
+                <FormDescription>
+                  <span className="text-blue-500">Remark</span>: If you can't obtain them, please email us to request an exception
+                </FormDescription>
                 <FormMessage />
               </FormItem>
             )
