@@ -5,7 +5,7 @@ import ApplicationStatus from './application-status'
 import { Button } from '@/components/shared/button'
 import { useRouter } from 'next/navigation'
 import { ArrowUpDown } from 'lucide-react'
-import ApplicationActivityChoices from './application-activity-choices'
+import ApplicationEducationLevel from './application-education-level'
 
 export type ApplicationRow = {
   id: string
@@ -13,7 +13,7 @@ export type ApplicationRow = {
   lastName: string,
   city: string,
   establishment: string,
-  activityChoices: string,
+  educationLevel: string,
   status: string,
 }
 
@@ -115,23 +115,21 @@ export const columns: ColumnDef<ApplicationRow>[] = [
     },
   },
   {
-    accessorKey: "activityChoices",
+    accessorKey: "educationLevel",
     header: ({ column }) => {
       return (
         <Button
           variant="ghost"
+          onClick={() => column.toggleSorting(column.getIsSorted() === "asc")}
         >
-          Activity Choices
+          Level
+          <ArrowUpDown className="ml-2 h-4 w-4" />
         </Button>
       )
     },
     cell: ({ row }) => {
-      const choices = JSON.parse(row.getValue('activityChoices'))
-      return <ApplicationActivityChoices activityChoices={choices ? choices.sort() : undefined} className='flex flex-col gap-y-1 items-center' />
-    },
-    filterFn: (row, id, value) => {      
-      const choices = JSON.parse(row.getValue(id))
-      return value.some((filterValue: string) => choices.includes(filterValue))
+      const educationLevel = row.getValue("educationLevel") as string;
+      return <ApplicationEducationLevel educationLevel={educationLevel} />
     },
   },
   {

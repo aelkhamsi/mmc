@@ -9,86 +9,53 @@ export const columns = [
   { header: 'Region', key: 'region', width: 20 },
   { header: 'Phone number', key: 'phone-number', width: 17 },
   {
-    header: 'Guardian full name',
-    key: 'guardian-full-name',
+    header: 'Emergency Contact Full Name',
+    key: 'emergency-contact-full-name',
     width: 20,
   },
   {
-    header: 'Guardian phone number',
-    key: 'guardian-phone-number',
+    header: 'Emergency Contact Phone Number',
+    key: 'emergency-contact-phone-number',
     width: 20,
   },
   {
-    header: 'Relationship with Guardian',
-    key: 'relationship-with-guardian',
+    header: 'Emergency Contact Relationship',
+    key: 'emergency-contact-relationship',
     width: 20,
-  },
-  {
-    header: 'Activity Choices',
-    key: 'activity-choices',
-    width: 30,
   },
 
   { header: 'Education Level', key: 'education-level', width: 20 },
-  { header: 'Education Field', key: 'education-field', width: 20 },
-  { header: 'Highschool', key: 'highschool', width: 15 },
-  {
-    header: 'Moyenne générale',
-    key: 'semester-average-grade',
-    width: 15,
-  },
-  {
-    header: 'Moyenne en Mathématique',
-    key: 'semester-math-average-grade',
-    width: 15,
-  },
-  {
-    header: 'Classement général',
-    key: 'semester-ranking',
-    width: 15,
-  },
-  {
-    header: 'Classement en Mathématique',
-    key: 'semester-math-ranking',
-    width: 15,
-  },
-  {
-    header: 'Nb of students in class',
-    key: 'nb-of-students-in-class',
-    width: 15,
-  },
+  { header: 'University Type', key: 'university-type', width: 20 },
+  { header: 'University Name', key: 'university-name', width: 15 },
+  { header: 'Education Field', key: 'education-field', width: 15 },
 
   {
-    header: '[SPRINT] Have you participated in competitions before ?',
+    header: 'Have you participated in MMC before ?',
+    key: 'has-previously-participated-in-mmc',
+    width: 15,
+  },
+  {
+    header: 'Results in MMC',
+    key: 'details-of-mmc',
+    width: 20,
+  },
+  {
+    header: 'Have you participated in competitions before ?',
     key: 'has-previously-participated',
     width: 15,
   },
   {
-    header: '[SPRINT] Details of experiences',
+    header: 'Details of experiences',
     key: 'details-of-experience',
     width: 20,
   },
-  { header: '[BMV] Video Title', key: 'education-level', width: 20 },
-  { header: '[BMV] Video Link', key: 'education-field', width: 20 },
-  { header: '[BMV] Video Subject', key: 'highschool', width: 15 },
-  { header: '[BMV] Video Motivations', key: 'highschool', width: 15 },
-  { header: '[BMV] Video Ressources', key: 'highschool', width: 15 },
-
-  { header: '[STAND] Subject Title', key: 'highschool', width: 15 },
-  { header: '[STAND] Subject Details', key: 'highschool', width: 15 },
-  { header: '[STAND] Members', key: 'highschool', width: 15 },
-
   { header: 'Motivations', key: 'id', width: 30 },
   { header: 'Comments', key: 'id', width: 30 },
 
   { header: 'CNIE', key: 'cnie', width: 10 },
-  { header: '[STAND] Members CNIE', key: 'members-cnie', width: 10 },
-  { header: '[SPRINT] Grades', key: 'grades', width: 10 },
-  {
-    header: 'Parental Authorization',
-    key: 'parental-authorization',
-    width: 10,
-  },
+  { header: 'School Certificate', key: 'school-certificate', width: 10 },
+  { header: 'Grades', key: 'grades', width: 10 },
+  { header: 'Regulations', key: 'regulations', width: 10 },
 
   { header: 'Status', key: 'status', width: 15 },
 ];

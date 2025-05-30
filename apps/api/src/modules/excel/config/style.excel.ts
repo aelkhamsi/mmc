@@ -10,7 +10,7 @@ export const styleSheet = (sheet) => {
   }
 
   // personal informations style
-  for (let i = 2; i <= 13; i++) {
+  for (let i = 2; i <= 12; i++) {
     sheet.getColumn(i).fill = {
       type: 'pattern',
       pattern: 'solid',
@@ -20,7 +20,7 @@ export const styleSheet = (sheet) => {
   }
 
   // education style
-  for (let i = 14; i <= 21; i++) {
+  for (let i = 13; i <= 16; i++) {
     sheet.getColumn(i).fill = {
       type: 'pattern',
       pattern: 'solid',
@@ -29,38 +29,8 @@ export const styleSheet = (sheet) => {
     };
   }
 
-  // // math sprint style
-  for (let i = 22; i <= 23; i++) {
-    sheet.getColumn(i).fill = {
-      type: 'pattern',
-      pattern: 'solid',
-      bgColor: { argb: 'baf9ff' },
-      fgColor: { argb: 'baf9ff' },
-    };
-  }
-
-  // best math video style
-  for (let i = 24; i <= 28; i++) {
-    sheet.getColumn(i).fill = {
-      type: 'pattern',
-      pattern: 'solid',
-      bgColor: { argb: '8ecaff' },
-      fgColor: { argb: '8ecaff' },
-    };
-  }
-
-  // stand style
-  for (let i = 29; i <= 31; i++) {
-    sheet.getColumn(i).fill = {
-      type: 'pattern',
-      pattern: 'solid',
-      bgColor: { argb: 'baf9ff' },
-      fgColor: { argb: 'baf9ff' },
-    };
-  }
-
   // motivations style
-  for (let i = 32; i <= 33; i++) {
+  for (let i = 17; i <= 22; i++) {
     sheet.getColumn(i).fill = {
       type: 'pattern',
       pattern: 'solid',
@@ -69,8 +39,8 @@ export const styleSheet = (sheet) => {
     };
   }
 
-  // status style
-  for (let i = 34; i <= 37; i++) {
+  // files style
+  for (let i = 23; i <= 26; i++) {
     sheet.getColumn(i).fill = {
       type: 'pattern',
       pattern: 'solid',
@@ -80,7 +50,7 @@ export const styleSheet = (sheet) => {
   }
 
   // status style
-  for (let i = 38; i <= 38; i++) {
+  for (let i = 27; i <= 27; i++) {
     sheet.getColumn(i).fill = {
       type: 'pattern',
       pattern: 'solid',

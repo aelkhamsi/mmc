@@ -16,7 +16,6 @@ import { useRouter } from 'next/navigation';
 import { ExpandingArrow } from '@/components/shared/icons';
 import ApplicationStatus from '../components/application-status';
 import FilesTable from './files-table';
-import ApplicationActivityChoices from '../components/application-activity-choices';
 
 const regionLabels = {
   'tanger-tetouan-al-houceima': "Tanger-Tétouan-Al Hoceïma",
@@ -35,37 +34,24 @@ const regionLabels = {
 } as any;
 
 const relationshipWithGuardianLabels = {
-  'father': 'Père',
-  'mother': 'Mère',
-  'guardian': 'Tuteur'
+  'father': 'Father',
+  'mother': 'Mother',
+  'guardian': 'Tutor',
+  'other': 'Other'
 } as any;
 
 const educationLevelLabels = {
-  "tronc-commun": "Tronc commun",
-  "1bac": "1ère année Bac",
-  "2bac": "2ème année Bac",
- } as any;
+  "bac-plus-1": "Bac +1",
+  "bac-plus-2": "Bac +2",
+  "bac-plus-3": "Bac +3",
+  "bac-plus-4": "Bac +4",
+} as any;
 
-const educationFieldLabels = {
-  "tc-sciences": "TC sciences",
-  "tc-technologique": "TC technologique",
-  "1bac-sciences-economiques-et-gestion": "1BAC Sciences Economiques et Gestion",
-  "1bac-arts-appliques": "1BAC Arts Appliqués",
-  "1bac-sciences-experimentales": "1BAC Sciences Expérimentales",
-  "1bac-sciences-mathematiques": "1BAC Sciences Mathématiques",
-  "1bac-sciences-et-technologies-electriques": "1BAC Sciences et Technologies Electriques",
-  "1bac-sciences-et-technologies-mecaniques": "1BAC Sciences et Technologies Mécaniques",
-  "2bac-sciences-economiques": "2BAC Sciences Economiques",
-  "2bac-sciences-de-gestion-et-comptabilite": "2BAC Sciences de Gestion et Comptabilité",
-  "2bac-arts-appliques": "2BAC Arts Appliqués",
-  "2bac-sciences-de-la-vie-et-de-la-terre": "2BAC Sciences de la Vie et de la Terre",
-  "2bac-sciences-physique-chimie": "2BAC Sciences Physique Chimie",
-  "2bac-sciences-agronomiques": "2BAC Sciences Agronomiques",
-  "2bac-sciences-mathematiques-a": "2BAC Sciences Mathématiques A",
-  "2bac-sciences-mathematiques-b": "2BAC Sciences Mathématiques B",
-  "2bac-sciences-et-technologies-electrique": "2BAC Sciences et Technologies Electrique",
-  "2bac-sciences-et-technologies-mecanique": "2BAC Sciences et Technologies Mécanique",
-  "autre": "Autre",
+const universityTypesLabels = {
+  "cpge": "Classes préparatoires (CPGE)",
+  "university": "University",
+  "engineering-post-bac": "Engineering School post-Bac",
+  "engineering-post-cpge": "Engineering School post-CPGE",
 } as any;
 
 const booleanLabels = {
@@ -94,9 +80,8 @@ const Field = ({
 }
 
 export default function ApplicationDetailsPage({ params }: { params: { id: string } }) {
-  const [applications, setApplications] = useRecoilState(applicationsState);
+  const [applications, _] = useRecoilState(applicationsState);
   const [application, setApplication] = useState<any>(undefined);
-  const [activityChoices, setActivityChoices] = useState<any>(undefined)
   const id = parseInt(params.id);
   const router = useRouter();
 
@@ -104,11 +89,6 @@ export default function ApplicationDetailsPage({ params }: { params: { id: strin
     if (applications) {
       const searchResult = applications.find((application: any) => application?.id === id)
       setApplication(searchResult)
-      const activityChoices = JSON.parse(searchResult?.activityChoices)
-      setActivityChoices(activityChoices
-        ? activityChoices?.sort()
-        : undefined
-      )
     }
   }, [applications])
 
@@ -134,10 +114,6 @@ export default function ApplicationDetailsPage({ params }: { params: { id: strin
               <ApplicationStatus applicationId={application?.id} status={application?.status?.status} />
             </div>
 
-            <>
-              <ApplicationActivityChoices activityChoices={activityChoices} className='flex flex-start gap-x-2' />
-            </>
-
             <TabsList className="flex justify-start space-x-8 h-[4rem] bg-slate-200 text-black">
               <TabsTrigger value="personal-informations" className='text-base h-full'>Personal Informations</TabsTrigger>
               <TabsTrigger value="education" className='text-base h-full'>Education</TabsTrigger>
@@ -157,61 +133,35 @@ export default function ApplicationDetailsPage({ params }: { params: { id: strin
                 <Field label='Region of residence'>{renderText(regionLabels[application?.region])}</Field>
                 <Field label='Phone number'>{renderText(application?.phoneNumber)}</Field>
                 <Separator className="my-6" />
-                <Field label='Guardian full name'>{renderText(application?.guardianFullName)}</Field>
-                <Field label='Guardian phone number'>{renderText(application?.guardianPhoneNumber)}</Field>
-                <Field label='Relationship with guardian'>{renderText(relationshipWithGuardianLabels[application?.relationshipWithGuardian])}</Field>
+                <Field label='Emergency Contact Full Name'>{renderText(application?.emergencyContactFullName)}</Field>
+                <Field label='Emergency Contact Phone Number'>{renderText(application?.emergencyContactPhoneNumber)}</Field>
+                <Field label='Emergency Contact Relationship'>{renderText(relationshipWithGuardianLabels[application?.emergencyContactRelationship])}</Field>
               </div>
             </TabsContent>
             
             {/* EDUCATION */}
             <TabsContent value="education">
               <div className='space-y-6'>
-                <Field label='Education levels'>{renderText(educationLevelLabels[application?.educationLevel])}</Field>
-                <Field label='Education program'>{renderText(educationFieldLabels[application?.educationField])}</Field>
-                <Field label='Highschool'>{renderText(application?.highschool)}</Field>
-                <Separator className="my-6" />
-
-                <Field label='Average grade'>{renderText(application?.averageGrade)}</Field>
-                <Field label='Math average grade'>{renderText(application?.mathAverageGrade)}</Field>
-                <Field label='Ranking'>{renderText(application?.ranking)}</Field>
-                <Field label='Math ranking'>{renderText(application?.mathRanking)}</Field>
-                <Field label='Number of students in class'>{renderText(application?.numberOfStudentsInClass)}</Field>                 
+                <Field label='Education Level'>{renderText(educationLevelLabels[application?.educationLevel])}</Field>
+                <Field label='University Type'>{renderText(universityTypesLabels[application?.universityType])}</Field>
+                <Field label='University Name'>{renderText(application?.universityName)}</Field>
+                <Field label='Field of study'>{renderText(application?.educationField)}</Field>               
               </div>
             </TabsContent>
               
             {/* COMPETTION */}
             <TabsContent value="competition">
               <div className='space-y-6'>
-                <h2 className='font-bold text-lg'>
-                  Math Sprint
-                  <Separator />
-                </h2>
+                <Field label='Have you taken part in competitions before (Olympiads, concour, etc.)?'>{renderText(booleanLabels[application?.hasPreviousExperiences])}</Field>
+                <Field label='Please specify which ones and the result obtained'>{renderText(application?.previousExperiences)}</Field>
+
+                <Separator />
+
+                <Field label='Have you ever taken part in Math Maroc Competition (MMC)?'>{renderText(booleanLabels[application?.hasPreviousMathMarocParticipations])}</Field>
+                <Field label='Please specify in which edition (2023 or 2024) and what was your ranking'>{renderText(application?.previousMathMarocParticipations)}</Field>
+
+                <Separator />
                 
-                <Field label='Have you participated in competitions before (Olympiads, national contests...) ?'>{renderText(booleanLabels[application?.hasPreviouslyParticipated])}</Field>
-                <Field label='If yes, please specify which ones and the achieved result.'>{renderText(application?.previousCompetitions)}</Field>
-
-                <h2 className='font-bold text-lg'>
-                  Best Math Video
-                  <Separator />
-                </h2>
-                <Field label='Title'>{renderText(application?.videoTitle)}</Field>
-                <Field label='Link'>{renderText(application?.videoLink)}</Field>
-                <Field label='Subject'>{renderText(application?.videoSubject)}</Field>
-                <Field label='Motivations'>{renderText(application?.videoMotivations)}</Field>
-                <Field label='Ressources'>{renderText(application?.videoRessources)}</Field>
-
-                <h2 className='font-bold text-lg'>
-                  Stand
-                  <Separator />
-                </h2>
-                <Field label='Subject Title'>{renderText(application?.standSubjectTitle)}</Field>
-                <Field label='Subject Details'>{renderText(application?.standSubjectDetails)}</Field>
-                <Field label='Members'>{renderText(application?.standMembers)}</Field>
-
-                <h2 className='font-bold text-lg'>
-                  General
-                  <Separator />
-                </h2>
                 <Field label='Motivations'>{renderText(application?.motivations)}</Field>
                 <Field label='Comments'>{renderText(application?.comments)}</Field>
               </div>

@@ -9,7 +9,6 @@ import { ApplicationsFacetedFilter } from "./applications-faceted-filter"
 import { FileTextIcon } from "@radix-ui/react-icons"
 import axios from 'axios-typescript';
 import { getToken } from "@/lib/utils"
-import { activityOptions } from "./application-activity-choices"
 
 export interface ApplicationsToolbarProps<TData> {
   table: Table<TData>
@@ -46,13 +45,6 @@ export function ApplicationsToolbar<TData>({
             column={table.getColumn("status")}
             title="Status"
             options={statusOptions}
-          />
-        )}
-        {table.getColumn("activityChoices") && (
-          <ApplicationsFacetedFilter
-            column={table.getColumn("activityChoices")}
-            title="Competitions"
-            options={activityOptions}
           />
         )}
         {isFiltered && (
