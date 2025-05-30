@@ -16,7 +16,6 @@ import { useRouter } from 'next/navigation';
 import { ExpandingArrow } from '@/components/shared/icons';
 import ApplicationStatus from '../components/application-status';
 import FilesTable from './files-table';
-import ApplicationActivityChoices from '../components/application-activity-choices';
 
 const regionLabels = {
   'tanger-tetouan-al-houceima': "Tanger-Tétouan-Al Hoceïma",
@@ -133,10 +132,6 @@ export default function ApplicationDetailsPage({ params }: { params: { id: strin
 
               <ApplicationStatus applicationId={application?.id} status={application?.status?.status} />
             </div>
-
-            <>
-              <ApplicationActivityChoices activityChoices={activityChoices} className='flex flex-start gap-x-2' />
-            </>
 
             <TabsList className="flex justify-start space-x-8 h-[4rem] bg-slate-200 text-black">
               <TabsTrigger value="personal-informations" className='text-base h-full'>Personal Informations</TabsTrigger>

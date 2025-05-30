@@ -20,8 +20,8 @@ export default function ApplicationsPage() {
           lastName: application?.user?.lastName,
           email: application?.user?.email,
           city: application?.city,
-          establishment: application?.highschool,
-          activityChoices: application?.activityChoices,
+          establishment: application?.universityName,
+          educationLevel: application?.educationLevel,
           status: application?.status?.status,
         }))
       )
