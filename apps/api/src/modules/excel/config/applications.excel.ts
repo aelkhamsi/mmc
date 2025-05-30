@@ -1,4 +1,4 @@
-import { educationFields, educationLevels, regionLabels } from '../labels';
+import { educationLevels, regionLabels, universityTypes } from '../labels';
 
 export const rowFactory = (applications: any[], configService) => {
   const awsBucketName = configService.get('AWS_BUCKET_NAME');
@@ -14,41 +14,25 @@ export const rowFactory = (applications: any[], configService) => {
     city: application?.city,
     region: regionLabels[application?.region],
     phoneNumber: application?.phoneNumber,
-    guardianFullName: application?.guardianFullName,
-    guardianPhoneNumber: application?.guardianPhoneNumber,
-    relationshipWithGuardian: application?.relationshipWithGuardian,
-
-    activityChoices:
-      application?.activityChoices != '""'
-        ? JSON.parse(application?.activityChoices)?.join(';')
-        : '',
+    emergencyContactFullName: application?.emergencyContactFullName,
+    emergencyContactPhoneNumber: application?.emergencyContactPhoneNumber,
+    emergencyContactRelationship: application?.emergencyContactRelationship,
 
     educationLevel: educationLevels.find(
       (level) => level.value == application?.educationLevel,
     )?.label,
-    educationField: educationFields.find(
-      (field) => field.value == application?.educationField,
+    universityType: universityTypes.find(
+      (type) => type.value == application?.universityType,
     )?.label,
-    highschool: application?.highschool,
-    averageGrade: application?.averageGrade,
-    mathAverageGrade: application?.mathAverageGrade,
-    ranking: application?.ranking,
-    mathRanking: application?.mathRanking,
-    numberOfStudentsInClass: application?.numberOfStudentsInClass,
+    educationField: application?.educationField,
+    universityName: application?.universityName,
 
-    hasPreviouslyParticipated: application?.hasPreviouslyParticipated,
-    previousCompetitions: application?.previousCompetitions,
-    videoTitle: application?.videoTitle,
-    videoLink: application?.videoLink,
-    videoSubject: application?.videoSubject,
-    videoMotivations: application?.videoMotivations,
-    videoRessources: application?.videoRessources,
-    standSubjectTitle: application?.standSubjectTitle,
-    standSubjectDetails: application?.standSubjectDetails,
-    standMembers:
-      application?.standMembers != '""'
-        ? JSON.parse(application?.standMembers)?.join(';')
-        : '',
+    hasPreviousMathMarocParticipations:
+      application?.hasPreviousMathMarocParticipations,
+    previousMathMarocParticipations:
+      application?.previousMathMarocParticipations,
+    hasPreviousExperiences: application?.hasPreviousExperiences,
+    previousExperiences: application?.previousExperiences,
     motivations: application?.motivations,
     comments: application?.comments,
 
@@ -56,17 +40,17 @@ export const rowFactory = (applications: any[], configService) => {
       text: application?.fileCnieUrl ? 'link' : ' ',
       hyperlink: `https://${awsBucketName}.s3.${awsBucketRegion}.amazonaws.com/${application?.fileCnieUrl}`,
     },
-    fileMembersCnie: {
-      text: application?.fileMembersCnieUrl ? 'link' : ' ',
-      hyperlink: `https://${awsBucketName}.s3.${awsBucketRegion}.amazonaws.com/${application?.fileMembersCnieUrl}`,
+    fileSchoolCertificateUrl: {
+      text: application?.fileSchoolCertificateUrl ? 'link' : ' ',
+      hyperlink: `https://${awsBucketName}.s3.${awsBucketRegion}.amazonaws.com/${application?.fileSchoolCertificateUrl}`,
     },
     fileGrades: {
       text: application?.fileGradesUrl ? 'link' : ' ',
       hyperlink: `https://${awsBucketName}.s3.${awsBucketRegion}.amazonaws.com/${application?.fileGradesUrl}`,
     },
-    fileParentalAuthorization: {
-      text: application?.fileParentalAuthorizationUrl ? 'link' : ' ',
-      hyperlink: `https://${awsBucketName}.s3.${awsBucketRegion}.amazonaws.com/${application?.fileParentalAuthorizationUrl}`,
+    fileRegulationsUrl: {
+      text: application?.fileRegulationsUrl ? 'link' : ' ',
+      hyperlink: `https://${awsBucketName}.s3.${awsBucketRegion}.amazonaws.com/${application?.fileRegulationsUrl}`,
     },
 
     status: application?.status?.status,
