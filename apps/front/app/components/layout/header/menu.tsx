@@ -27,6 +27,29 @@ export const Menu = () => {
     <NavigationMenu>
       <NavigationMenuList className={(isMobile || isTablet) ? 'flex flex-col space-y-4' : ''}>
         <NavigationMenuItem>
+          <NavigationMenuTrigger className="text-sm mr-6">Activities & Conferences</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid w-[200px] gap-2 p-2 md:w-[300px] md:grid-cols-2 lg:w-[400px]">
+              <Link href="/" onClick={() => {setShowMenu(false)}}>
+                <ListItem title="Math Competition" />
+              </Link>
+
+              <Link href="/" onClick={() => {setShowMenu(false)}}>
+                <ListItem title="Conferences" />
+              </Link>
+
+              <Link href="/" onClick={() => {setShowMenu(false)}}>
+                <ListItem title="Workshops" />
+              </Link>
+
+              <Link href="/" onClick={() => {setShowMenu(false)}}>
+                <ListItem title="Games & fun" />
+              </Link>
+            </ul>
+          </NavigationMenuContent>
+        </NavigationMenuItem>
+
+        <NavigationMenuItem>
           <Link 
             className="text-sm font-medium mr-6 hover:cursor-pointer hover:underline"
             href="/selection"
@@ -37,33 +60,18 @@ export const Menu = () => {
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <Link 
-            className="text-sm font-medium mr-6 hover:cursor-pointer hover:underline"
-            href="/past-editions"
-            onClick={() => {setShowMenu(false)}}
-          >
-            Past Editions
-          </Link>
-        </NavigationMenuItem>
+          <NavigationMenuTrigger className="text-sm mr-6">Organizers & Partners</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid w-[200px] gap-2 p-2 md:w-[300px] md:grid-cols-2 lg:w-[400px]">
+              <Link href="/organizing-team" onClick={() => {setShowMenu(false)}}>
+                <ListItem title="Organizing Team" />
+              </Link>
 
-        <NavigationMenuItem>
-          <Link 
-            className="text-sm font-medium mr-6 hover:cursor-pointer hover:underline"
-            href="/organizing-team"
-            onClick={() => {setShowMenu(false)}}
-          >
-            Organizing Team
-          </Link>
-        </NavigationMenuItem>
-
-        <NavigationMenuItem>
-          <Link 
-            className="text-sm font-medium mr-6 hover:cursor-pointer hover:underline" 
-            href="/partners"
-            onClick={() => {setShowMenu(false)}}
-          >
-            Partners
-          </Link>
+              <Link href="/partners" onClick={() => {setShowMenu(false)}}>
+                <ListItem title="Partners" />
+              </Link>
+            </ul>
+          </NavigationMenuContent>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
