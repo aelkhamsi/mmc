@@ -27,26 +27,13 @@ export const Menu = () => {
     <NavigationMenu>
       <NavigationMenuList className={(isMobile || isTablet) ? 'flex flex-col space-y-4' : ''}>
         <NavigationMenuItem>
-          <NavigationMenuTrigger className="text-sm mr-6">Activities & Conferences</NavigationMenuTrigger>
-          <NavigationMenuContent>
-            <ul className="grid w-[200px] gap-2 p-2 md:w-[300px] md:grid-cols-2 lg:w-[400px]">
-              <Link href="/" onClick={() => {setShowMenu(false)}}>
-                <ListItem title="Math Competition" />
-              </Link>
-
-              <Link href="/" onClick={() => {setShowMenu(false)}}>
-                <ListItem title="Conferences" />
-              </Link>
-
-              <Link href="/" onClick={() => {setShowMenu(false)}}>
-                <ListItem title="Workshops" />
-              </Link>
-
-              <Link href="/" onClick={() => {setShowMenu(false)}}>
-                <ListItem title="Games & fun" />
-              </Link>
-            </ul>
-          </NavigationMenuContent>
+          <Link 
+            className="text-sm font-medium mr-6 hover:cursor-pointer hover:underline"
+            href="/conferences"
+            onClick={() => {setShowMenu(false)}}
+          >
+            Conferences
+          </Link>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
@@ -56,6 +43,16 @@ export const Menu = () => {
             onClick={() => {setShowMenu(false)}}
           >
             Selection Test
+          </Link>
+        </NavigationMenuItem>
+
+        <NavigationMenuItem>
+          <Link 
+            className="text-sm font-medium mr-6 hover:cursor-pointer hover:underline"
+            href="/past-editions"
+            onClick={() => {setShowMenu(false)}}
+          >
+            Past Editions
           </Link>
         </NavigationMenuItem>
 

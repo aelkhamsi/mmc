@@ -17,14 +17,23 @@ export default function ConferencesPage() {
 
   return (
     <TextureBg className="bg-[#fff9f3]">
-      <div className="w-full flex flex-col items-center max-w-sm md:max-w-screen-2xl px-5 xl:px-0 space-y-20 mb-20">
-        <h1 className="text-center text-4xl font-bold drop-shadow-sm">
-          <span className='bg-gradient-to-br from-sky-600 to-[#1C55FF] inline-block text-transparent bg-clip-text'>Conférences</span>
+      <div className="w-full flex flex-col max-w-sm md:max-w-screen-2xl mb-20 space-y-10">
+        <h1 className="text-[#1C55FF] text-center text-4xl font-bold drop-shadow-sm">
+          Conferences
         </h1>
+
+        <div className="flex justify-center">
+          <div className="text-center md:max-w-screen-lg space-y-2">
+            <p>Immerse yourself in the world of mathematics through a series of captivating lectures by renowned experts in the field.</p>
+            <p>These talks will offer fresh perspectives, in-depth discussions and insights into a wide range of mathematical topics, from classical theories to the latest advances.</p>
+          </div>
+        </div>
 
         <ConferencesSection />
 
-        <CtaSection />
+        <div className="flex justify-center">
+          <CtaSection />
+        </div>        
       </div>
     </TextureBg>
   )

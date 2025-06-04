@@ -10,12 +10,15 @@ const ConferenceCard = ({
   children: ReactNode
 }) => {
   return (
-    <div className="flex flex-col space-y-4 h-3/4 w-3/4 md:h-1/4 md:w-1/4">
-      <img
-        src={pictureUrl}
-      />
-
-      <div className='flex flex-col mb-4 md:mb-0'>
+    <div className="flex flex-col w-full px-4 space-y-4 md:flex-row xl:w-1/2">
+      <div className='flex justify-center'>
+        <img
+          src={pictureUrl}
+          width={300}
+        />
+      </div>
+      
+      <div className='flex flex-col ml-4 md:ml-10'>
         <div className='text-2xl font-semibold'>{fullName}</div>
         {children}        
       </div>
@@ -23,13 +26,17 @@ const ConferenceCard = ({
   )
 }
 
-const ConferencesSection = () => {
+const ConferencesSection = ({
+  className
+}:{
+  className?: string
+}) => {
   return (
     <div
       className="rounded-lg animate-fade-up opacity-0"
       style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
     >
-      <div className="flex flex-col items-center gap-y-4 md:flex-row md:justify-around md:items-start py-4">
+      <div className={`flex flex-row flex-wrap gap-y-4 py-4 w-full ${className}`}>
         <ConferenceCard
           fullName='Omar MOUCHTAKI'
           pictureUrl='/conferences/omar_mouchtaki.jpeg'
