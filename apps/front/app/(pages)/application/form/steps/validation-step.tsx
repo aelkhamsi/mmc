@@ -53,7 +53,7 @@ export const ValidationStep = ({
                   </FormLabel>
                   <FormDescription>
                   I confirm that I have read the regulations <Link className="text-blue-500 font-bold underline" href='https://drive.google.com/file/d/1spkc0-KyaBbeq9sWT2x8Vj0EEoO-FGi7/view?usp=sharing' target="_blank">(file)</Link> of the event and i undertake to respect it.<br/>
-                  In particular, I undertake to be present on the UM6P Rabat campus for the entire duration of the competition (unless an exception is requested by e-mail and explicitly approved by the organizing committee).
+                  In particular, I undertake to be present on the UM6P Benguerir campus for the entire duration of the competition (unless an exception is requested by e-mail and explicitly approved by the organizing committee).
                   </FormDescription>
                 </div>
               </FormItem>
