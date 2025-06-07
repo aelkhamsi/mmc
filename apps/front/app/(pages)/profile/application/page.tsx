@@ -51,21 +51,21 @@ export default function ApplicationPage() {
 
     if (!application) {
       setContent({
-        title: "You have not submitted an application",
-        subtitle: "We look forward to receiving your application! Don't hesitate to create one.",
-        ctaLabel: "Create an application",
+        title: "Vous n'avez pas soumis une candidature",
+        subtitle: "Merci pour l'intérêt que vous portez à MMC! Malheureusement les inscriptions sont désormais closes. Néanmoins, restez à l'écoute pour ne pas manquer de futures opportunités.",
+        ctaLabel: "Créer votre candidature",
       })
     } else if (applicationStatus === 'DRAFT') {
       setContent({
-        title: "You have saved a draft application. It has not yet been submitted.",
-        subtitle: "We look forward to receiving your application! You haven't finalized it yet!",
-        ctaLabel: "Continue your application",
+        title: "Vous avez sauvegardé un brouillon de candidature. Elle n'est pas encore soumise.",
+        subtitle: "Merci pour l'intérêt que vous portez à MMC! Malheureusement les inscriptions sont désormais closes. Néanmoins, restez à l'écoute pour ne pas manquer de futures opportunités.",
+        ctaLabel: "Continuer votre candidature",
       })
     } else {
       setContent({
-        title: "You have already submitted an application",
-        subtitle: "You'll find the status of your application below. You will be notified of the next steps by e-mail.",
-        ctaLabel: "Update your application",
+        title: "Vous avez déjà soumis une candidature",
+        subtitle: "Vous trouverez l'avancement de votre candidature ci-dessous. On vous notifiera des prochaines étapes par mail.",
+        ctaLabel: "Mettre à jour votre candidature",
       })
     }
   }, [user])
@@ -84,30 +84,31 @@ export default function ApplicationPage() {
       <CardContent>
         {user?.application && 
           <>
-            <div className="text-sm"><span className="font-bold">Submission date</span>: {formatDate(user?.application?.createdAt)}</div>
-            <div className="text-sm"><span className="font-bold">Last update</span>: {formatDate(user?.application?.updatedAt)}</div>
+            <div className="text-sm"><span className="font-bold">Date de soumission</span>: {formatDate(user?.application?.createdAt)}</div>
+            <div className="text-sm"><span className="font-bold">Date de sauvegarde</span>: {formatDate(user?.application?.updatedAt)}</div>
             <div className="text-sm"><span className="font-bold">Status</span>: <Badge className={`px-4 ${getBadgeClassname(user?.application?.status?.status)}`}>{user?.application?.status?.status}</Badge></div>
           </>
         }
       </CardContent>
 
-      
-      <CardFooter>
-        <Button
-          onClick={() => router.push('/application')}
-        >
-          {content?.ctaLabel}
-        </Button>
-      </CardFooter> 
+      {user?.application && user?.application?.status?.status !== 'DRAFT' &&
+        <CardFooter>
+          <Button
+            onClick={() => router.push('/application')}
+          >
+            {content?.ctaLabel}
+          </Button>
+        </CardFooter> 
+      }
     </Card>
   );
 
   return (
     <div className="space-y-6">
       <div>
-        <div className="text-lg font-medium">Applicationœ</div>
+        <div className="text-lg font-medium">Candidature</div>
         <p className="text-sm text-muted-foreground">
-          This is where you'll find the status of your application.
+          C&apos;est ici que vous trouverez le statut de votre candidature.
         </p>
       </div>
 
