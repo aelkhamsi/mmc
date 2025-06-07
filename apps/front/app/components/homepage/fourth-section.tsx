@@ -2,9 +2,9 @@ import Link from "next/link";
 import CtaButton from '../cta/cta-button';
 import { Button } from "@mdm/ui";
 
-const FourthSection = () => {
+const ParticipationStepsSection = () => {
   return (
-    <div className='relative isolate overflow-hidden w-full flex flex-col justify-center items-center py-12 px-2 space-y-6'>
+    <div className="w-full flex flex-col justify-center items-center py-12 px-2 space-y-6">
       <h1 className='text-3xl text-center font-bold font-neco'>
         How to participate ?
       </h1>
@@ -48,6 +48,36 @@ const FourthSection = () => {
           </Link>
         </div>
       </div>
+    </div>
+  )
+}
+
+const SyllabusSection = () => {
+  return (
+    <div className="space-y-8">
+      <h1 className='text-3xl text-center font-bold font-neco'>
+        How to prepare for the competition ?
+      </h1>
+
+      <div
+        className="flex flex-col items-center text-center w-full space-y-4"
+      >
+        <div>To help you prepare thoroughly for the selection test, there is all you need to know about the mathematical topics covered in the competition.</div>
+        <Link href='/syllabus'>
+          <div className="bg-[#252162] w-fit py-4 px-8 text-white rounded-xl hover:pointer-cursor hover:bg-[#393292]">
+            Competition Syllabus
+          </div>
+        </Link>
+      </div>
+    </div>
+  )
+}
+
+const FourthSection = () => {
+  return (
+    <div className='space-y-10 mb-10'>
+      <ParticipationStepsSection />
+      <SyllabusSection />
     </div>
   )
 }

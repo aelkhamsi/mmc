@@ -29,10 +29,10 @@ export const Menu = () => {
         <NavigationMenuItem>
           <Link 
             className="text-sm font-medium mr-6 hover:cursor-pointer hover:underline"
-            href="/conferences"
+            href="/syllabus"
             onClick={() => {setShowMenu(false)}}
           >
-            Conferences
+            Syllabus
           </Link>
         </NavigationMenuItem>
 
@@ -43,6 +43,16 @@ export const Menu = () => {
             onClick={() => {setShowMenu(false)}}
           >
             Selection Test
+          </Link>
+        </NavigationMenuItem>
+
+        <NavigationMenuItem>
+          <Link 
+            className="text-sm font-medium mr-6 hover:cursor-pointer hover:underline"
+            href="/conferences"
+            onClick={() => {setShowMenu(false)}}
+          >
+            Conferences
           </Link>
         </NavigationMenuItem>
 
