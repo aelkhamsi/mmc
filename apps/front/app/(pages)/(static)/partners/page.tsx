@@ -36,22 +36,16 @@ const sponsors = [
     imageHeight: '45px',
   },
   {
-    key: 'evasan',
-    label: 'EVASAN',
-    imageHref: '/evasan.png',
-    imageHeight: '45px',
-  },
-  {
-    key: 'managem',
-    label: 'MANAGEM',
-    imageHref: '/managem.png',
+    key: 'oncf',
+    label: 'ONCF',
+    imageHref: '/oncf.svg',
     imageHeight: '90px',
   },
   {
-    key: 'sidi_ali',
-    label: 'SIDI ALI',
-    imageHref: '/sidi_ali.png',
-    imageHeight: '170px',
+    key: 'ram',
+    label: 'RAM',
+    imageHref: '/ram.svg',
+    imageHeight: '110px',
   },
 ]
 
@@ -160,7 +154,29 @@ export default function PartnersPage() {
                   imageSrc={sponsors[0].imageHref}
                   imageHeight={sponsors[0].imageHeight}
                 >
-                  <div><span className='mb-8 bg-gradient-to-br from-[#7cb9ff] to-[#3691FB] text-transparent bg-clip-text font-semibold'>Evalmee</span> is a remote examination platform that is simple, secure, and educational. Its goal is to support teachers and students towards comprehensive and caring education.</div>
+                  <div className="text-sm"><span className='mb-8 bg-gradient-to-br from-[#7cb9ff] to-[#3691FB] text-transparent bg-clip-text font-semibold'>Evalmee</span> is a remote examination platform that is simple, secure, and educational. Its goal is to support teachers and students towards comprehensive and caring education.</div>
+                </PartnerCard>
+
+                <PartnerCard
+                  key={sponsors[1].key}
+                  imageSrc={sponsors[1].imageHref}
+                  imageHeight={sponsors[1].imageHeight}
+                >
+                  <div className="text-sm">
+                    <span className='mb-8 text-[#f47216] font-semibold'>ONCF (Office National des Chemins de Fer)</span> is Morocco&apos;s national railway company.<br/>
+                    As a key player in transportation and infrastructure, ONCF supports educational and scientific initiatives that contribute to the country&apos;s development.
+                  </div>
+                </PartnerCard>
+
+                <PartnerCard
+                  key={sponsors[2].key}
+                  imageSrc={sponsors[2].imageHref}
+                  imageHeight={sponsors[2].imageHeight}
+                >
+                  <div className="text-sm">
+                    <span className='mb-8 text-[#c20831] font-semibold'>Royal Air Maroc (RAM)</span> is the national airline of Morocco.<br/>
+                    As a leading African carrier, RAM supports educational and cultural initiatives that promote knowledge, innovation, and international collaboration.
+                  </div>
                 </PartnerCard>
               </div>
             </div>
