@@ -29,21 +29,26 @@ export const Menu = () => {
         <NavigationMenuItem>
           <Link 
             className="text-sm font-medium mr-6 hover:cursor-pointer hover:underline"
-            href="/syllabus"
+            href="/schedule"
             onClick={() => {setShowMenu(false)}}
           >
-            Syllabus
+            Schedule
           </Link>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
-          <Link 
-            className="text-sm font-medium mr-6 hover:cursor-pointer hover:underline"
-            href="/selection"
-            onClick={() => {setShowMenu(false)}}
-          >
-            Selection Test
-          </Link>
+          <NavigationMenuTrigger className="text-sm mr-6">Preparation</NavigationMenuTrigger>
+          <NavigationMenuContent>
+            <ul className="grid w-[200px] gap-2 p-2 md:w-[300px] md:grid-cols-2 lg:w-[400px]">
+              <Link href="/selection" onClick={() => {setShowMenu(false)}}>
+                <ListItem title="Selection Test" />
+              </Link>
+
+              <Link href="/syllabus" onClick={() => {setShowMenu(false)}}>
+                <ListItem title="Syllabus" />
+              </Link>
+            </ul>
+          </NavigationMenuContent>
         </NavigationMenuItem>
 
         <NavigationMenuItem>
