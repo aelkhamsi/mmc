@@ -163,7 +163,7 @@ export default function PartnersPage() {
                   imageHeight={sponsors[1].imageHeight}
                 >
                   <div className="text-sm">
-                    <span className='mb-8 text-[#f47216] font-semibold'>ONCF (Office National des Chemins de Fer)</span> is Morocco&apos;s national railway company.<br/>
+                    <span className='mb-8 text-[#f47216] font-semibold'>ONCF Partenaire Transport (Office National des Chemins de Fer)</span> is Morocco&apos;s national railway company.<br/>
                     As a key player in transportation and infrastructure, ONCF supports educational and scientific initiatives that contribute to the country&apos;s development.
                   </div>
                 </PartnerCard>
