@@ -46,7 +46,7 @@ export const schedule: DaySchedule[] = [
     { rowspan: 2, label: 'Breakfast', bgColor: getBgColor('eating') },
     { rowspan: 8, label: 'Contest Day 1', description: 'EMINES building', bgColor: getBgColor('contest') },
     { rowspan: 4, label: 'Lunch', bgColor: getBgColor('eating') },
-    { rowspan: 3, label: 'Conference Pr. Omar Mouchtaki', description: 'Amphi CCI', bgColor: getBgColor('talks') },
+    { rowspan: 3, label: 'Conference Pr. Omar Mouchtaki (NYU)', description: 'Amphi CCI', bgColor: getBgColor('talks') },
     { rowspan: 1, label: 'Coffee break', bgColor: getBgColor('other') },
     [
       { rowspan: 3, label: 'Orientation workshop', description: 'Amphi CCI', bgColor: getBgColor('workshop') },
@@ -69,7 +69,7 @@ export const schedule: DaySchedule[] = [
     { rowspan: 4, label: 'Lunch', bgColor: getBgColor('eating') },
     { rowspan: 4, label: 'Industry Panel', description: 'Amphi CCI', bgColor: getBgColor('talks') },
     { rowspan: 2, label: 'Coffee break / Group picture', bgColor: getBgColor('other') },
-    { rowspan: 3, label: 'Conference Pr. Mohamed Abouzaid', description: 'Amphi CCI', bgColor: getBgColor('talks') },
+    { rowspan: 3, label: 'Conference Pr. Mohamed Abouzaid (Stanford)', description: 'Amphi CCI', bgColor: getBgColor('talks') },
     { rowspan: 2, label: '', bgColor: getBgColor('other') },
     { rowspan: 2, label: 'Dinner', bgColor: getBgColor('eating') },
     [
@@ -81,7 +81,7 @@ export const schedule: DaySchedule[] = [
     { rowspan: 2, label: 'Breakfast', bgColor: getBgColor('eating') },
     { rowspan: 8, label: 'Sports Tournament', description: 'Sports fields', bgColor: getBgColor('fun') },
     { rowspan: 4, label: 'Lunch', bgColor: getBgColor('eating') },
-    { rowspan: 3, label: 'Conference Pr. Nader Masmoudi', description: 'Amphi CCI', bgColor: getBgColor('talks') },
+    { rowspan: 3, label: 'Conference Pr. Nader Masmoudi (NYU)', description: 'Amphi CCI', bgColor: getBgColor('talks') },
     { rowspan: 1, label: 'Coffee break', bgColor: getBgColor('other') },
     [
       { rowspan: 3, label: 'Grades dispute', description: 'CoC', bgColor: getBgColor('contest') },
