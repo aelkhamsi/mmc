@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Loop through all PNG files in the current directory
-for img in *.jpeg; do
+for img in *.jpg; do
   # Check if there are any PNG files
   if [[ -f "$img" ]]; then
     # Convert PNG to WebP using cwebp and rename the output to lowercase
