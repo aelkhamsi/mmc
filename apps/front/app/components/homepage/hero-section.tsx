@@ -41,7 +41,7 @@ const HeroSection = () => {
               style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
             >
               <span className='text-[#000102] font-neco'>
-                The Ultimate University Math Challenge
+                The results of MMC 2025 are available!
               </span>
             </h1>
           </div>

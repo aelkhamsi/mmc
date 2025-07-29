@@ -19,13 +19,7 @@ const CtaButton = ({
   const router = useRouter()
 
   const handleClick = () => {
-    if (user) {
-      setIsLoading(true)
-      router.push('/application')
-    }
-    else {
-      setShowAuthModal(true)
-    }
+    router.push('/results')
   }
 
   return (
@@ -41,7 +35,7 @@ const CtaButton = ({
           <Scroll className='h-5 w-5'/>
 
           {!isLoading
-            ? label ?? 'Participate'
+            ? label ?? 'Results'
             : <LoadingDots color="#808080" />
           }
         </span>
