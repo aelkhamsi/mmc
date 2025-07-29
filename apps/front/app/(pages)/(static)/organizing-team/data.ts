@@ -144,6 +144,16 @@ export const organizingCommittee = [
     imageSrc: '/organizing-team/nour_el_houda_el_bouz.webp',
     linkedinSrc: 'https://www.linkedin.com/in/el-bouz-nour-el-houda-631425308',
   },
+  {
+    name: 'Mohamed Taha Afif',
+    imageSrc: '/organizing-team/mohamed_taha_afif.webp',
+    linkedinSrc: 'https://www.linkedin.com/in/mohamed-taha-afif',
+  },
+  {
+    name: 'Haitam Yassine Oujaâ',
+    imageSrc: '/organizing-team/haitam_yassine_oujaa.webp',
+    linkedinSrc: 'https://www.linkedin.com/in/haitam-yassine-ouja%C3%A2-152385172',
+  },
 ];
 
 export const webDevelopment = [
