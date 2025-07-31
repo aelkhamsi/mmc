@@ -34,11 +34,10 @@ const results = [
   {"Ranking": 19, "Candidate - ID":"25073","First Name":"Mohamed Yassine","Last Name":"Chebil","Education level":"Bac +1","Affiliation":"IPEST","P1":"6","P2":"1","P3":"0","P4":"0","DAY 1":"7","P5":"8","P6":"4","P7":"10","P8":"1","DAY 2":"23","Total":"30"},
   {"Candidate - ID":"25205","First Name":"Majd","Last Name":"Sebbah","Education level":"Bac +3","Affiliation":"Centrale supélec","P1":"9","P2":"9","P3":"0","P4":"0","DAY 1":"18","P5":"0","P6":"10","P7":"0","P8":"1","DAY 2":"11","Total":"29"}
   ,
-  {"Candidate - ID":"25008","First Name":"Ali","Last Name":"AHJYAGE","Education level":"Bac +2","Affiliation":"LYMED","P1":"10","P2":"0","P3":"6","P4":"0","DAY 1":"16","P5":"10","P6":"1","P7":"0","P8":"0","DAY 2":"11","Total":"27"},
-  {"Ranking": 23, "Candidate - ID":"25118","First Name":"Mariam","Last Name":"Gharbi","Education level":"Bac +2","Affiliation":"Lycée Louis-le-Grand","P1":"8","P2":"0","P3":"0","P4":"0","DAY 1":"8","P5":"10","P6":"7","P7":"0","P8":"1","DAY 2":"18","Total":"26"}
-  ,
-  {"Ranking": 23, "Candidate - ID":"25085","First Name":"Nouemane","Last Name":"EL GAOU","Education level":"Bac +3","Affiliation":"ENSIAS","P1":"0","P2":"0","P3":"0","P4":"6","DAY 1":"6","P5":"10","P6":"0","P7":"10","P8":"0","DAY 2":"20","Total":"26"},
-  {"Ranking": 23, "Candidate - ID":"25009","First Name":"SOUFIANE","Last Name":"AIT ABBOU","Education level":"Bac +2","Affiliation":"LYMED","P1":"7","P2":"0","P3":"0","P4":"0","DAY 1":"7","P5":"10","P6":"9","P7":"0","P8":"0","DAY 2":"19","Total":"26"},
+  {"Ranking": 22, "Candidate - ID":"25008","First Name":"Ali","Last Name":"AHJYAGE","Education level":"Bac +2","Affiliation":"LYMED","P1":"10","P2":"0","P3":"6","P4":"0","DAY 1":"16","P5":"10","P6":"1","P7":"0","P8":"0","DAY 2":"11","Total":"27"},
+  {"Ranking": 22, "Candidate - ID":"25085","First Name":"Nouemane","Last Name":"EL GAOU","Education level":"Bac +3","Affiliation":"ENSIAS","P1":"0","P2":"0","P3":"0","P4":"6","DAY 1":"6","P5":"10","P6":"1","P7":"10","P8":"0","DAY 2":"20","Total":"27"},
+  {"Ranking": 24, "Candidate - ID":"25118","First Name":"Mariam","Last Name":"Gharbi","Education level":"Bac +2","Affiliation":"Lycée Louis-le-Grand","P1":"8","P2":"0","P3":"0","P4":"0","DAY 1":"8","P5":"10","P6":"7","P7":"0","P8":"1","DAY 2":"18","Total":"26"},
+  {"Ranking": 24, "Candidate - ID":"25009","First Name":"SOUFIANE","Last Name":"AIT ABBOU","Education level":"Bac +2","Affiliation":"LYMED","P1":"7","P2":"0","P3":"0","P4":"0","DAY 1":"7","P5":"10","P6":"9","P7":"0","P8":"0","DAY 2":"19","Total":"26"},
   {"Candidate - ID":"25023","First Name":"Mehdi","Last Name":"Assalih","Education level":"Bac +2","Affiliation":"Lycée Mohammed VI d’Excellence","P1":"10","P2":"0","P3":"5","P4":"0","DAY 1":"15","P5":"9","P6":"1","P7":"0","P8":"0","DAY 2":"10","Total":"25"}
   ,
   {"Candidate - ID":"25102","First Name":"SAKINA","Last Name":"EL-BRANSI","Education level":"Bac +1","Affiliation":"Lycée Mohammed VI d’Excellence","P1":"10","P2":"0","P3":"0","P4":"0","DAY 1":"10","P5":"9","P6":"1","P7":"3","P8":"0","DAY 2":"13","Total":"23"}

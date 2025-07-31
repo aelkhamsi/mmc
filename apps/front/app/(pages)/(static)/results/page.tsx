@@ -19,8 +19,8 @@ export default function PastEditionPage() {
     const parseRank = parseInt(ranking);
 
     if (parseRank <= 10) return goldGradient;
-    else if (parseRank >=11 && parseRank <= 21) return silverGradient;
-    else if (parseRank >= 22 && parseRank <= 36) return bronzeGradient;
+    else if (parseRank >=11 && parseRank <= 22) return silverGradient;
+    else if (parseRank >= 23 && parseRank <= 36) return bronzeGradient;
     else if (parseRank >= 37 && parseRank <= 46) return honorableGradient;
     else return '';
   }
@@ -32,8 +32,8 @@ export default function PastEditionPage() {
     else if (parseRank == 2) return "Second Prize";
     else if (parseRank == 3) return "Third Prize";
     else if (parseRank <= 10) return "Gold Medal";
-    else if (parseRank >=11 && parseRank <= 21) return "Silver Medal";
-    else if (parseRank >= 22 && parseRank <= 36) return "Bronze Medal";
+    else if (parseRank >=11 && parseRank <= 22) return "Silver Medal";
+    else if (parseRank >= 23 && parseRank <= 36) return "Bronze Medal";
     else if (parseRank >= 37 && parseRank <= 46) return "Honorable Mention";
     else return '';
   }
