@@ -69,7 +69,7 @@ export default function ConferencesPage() {
                 </div>
               </Link>
 
-              <Link href='https://drive.google.com/file/d/11BYZKiLTIaLjVTIJ4snVJra91Ik0n5-j/view?usp=sharing' target="_blank">
+              <Link href='https://drive.google.com/file/d/1Bug8fSR9Ba0mQbJOOG8PJorqgNk4w4FA/view?usp=sharing' target="_blank">
                 <div 
                   className="h-[7rem] w-[8rem] bg-white border-b-4 border-red-500 flex justify-center items-center rounded-md py-2 hover:cursor-pointer shadow-lg"
                 > 
